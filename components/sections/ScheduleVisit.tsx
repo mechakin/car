@@ -43,15 +43,12 @@ export default function ScheduleVisit({
         )}
       </div>
 
-      {/* Electric Blue Floor Effect Overlay */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-[#0A56FF]/20" />
-
       {/* Content */}
       <div className="relative z-10 flex h-screen flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
         {/* Top Left - Schedule A Visit */}
         <SectionContent delay={0.1}>
           <div className="max-w-md">
-            <h2 className="mb-2 text-4xl font-bold uppercase leading-none sm:text-5xl lg:text-6xl">
+            <h2 className="mb-2 text-4xl font-bold uppercase leading-none text-white sm:text-5xl lg:text-6xl">
               SCHEDULE A
             </h2>
             <h2 className="text-5xl font-bold uppercase leading-none text-[#0A56FF] sm:text-6xl lg:text-7xl">
@@ -67,12 +64,17 @@ export default function ScheduleVisit({
           </SectionContent>
         </div>
 
-        {/* Bottom Right - Showroom Tagline */}
-        <div className="flex justify-end">
+        {/* Bottom Center - Showroom Tagline (centered on right image) */}
+        <div className="absolute bottom-0 left-1/2 right-0 flex justify-center pb-6 sm:pb-10 lg:pb-12">
           <SectionContent delay={0.3}>
-            <p className="text-lg font-semibold uppercase sm:text-xl">
-              OUR LOS ANGELES SHOWROOM
-            </p>
+            <div className="text-center">
+              <p className="text-lg font-bold uppercase leading-tight text-white sm:text-xl lg:text-2xl">
+                OUR LOS ANGELES
+              </p>
+              <p className="text-lg font-bold uppercase leading-tight text-white sm:text-xl lg:text-2xl">
+                SHOWROOM
+              </p>
+            </div>
           </SectionContent>
         </div>
       </div>
