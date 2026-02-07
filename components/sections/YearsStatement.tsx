@@ -42,10 +42,10 @@ export default function YearsStatement({
         {/* Top Section - 32 YEARS */}
         <SectionContent delay={0.1}>
           <div className="max-w-2xl">
-            <div className="mb-4 text-8xl font-bold leading-none sm:text-9xl lg:text-[12rem]">
+            <div className="mb-4 text-8xl font-bold sm:text-9xl lg:text-[12rem]" style={{ lineHeight: "0.9" }}>
               32
             </div>
-            <div className="mb-6 text-5xl font-bold uppercase leading-none sm:text-6xl lg:text-7xl">
+            <div className="mb-6 text-5xl font-bold uppercase sm:text-6xl lg:text-7xl" style={{ lineHeight: "0.9" }}>
               YEARS
             </div>
             <p className="text-sm leading-relaxed text-white sm:text-base">
@@ -58,7 +58,7 @@ export default function YearsStatement({
         {/* Bottom Section - Statement */}
         <SectionContent delay={0.3}>
           <div className="max-w-3xl">
-            <h2 className="text-5xl font-bold uppercase leading-none sm:text-6xl lg:text-7xl">
+            <h2 className="text-5xl font-bold uppercase sm:text-6xl lg:text-7xl" style={{ lineHeight: "0.9" }}>
               WE AREN'T
               <br />
               GOING ANYWHERE

@@ -11,7 +11,7 @@ export default function WhoWhat() {
         <div className="relative w-1/2 bg-black px-6 py-20 sm:px-10 sm:py-20 lg:px-12 lg:py-20 flex justify-center">
           <SectionContent delay={0.1}>
             <div className="text-center max-w-md">
-              <h2 className="mb-6 text-3xl font-bold uppercase leading-none sm:text-4xl lg:text-5xl text-white">
+              <h2 className="mb-6 text-3xl font-bold uppercase sm:text-4xl lg:text-5xl text-white" style={{ lineHeight: "0.9" }}>
                 WHO WE ARE
               </h2>
               <p className="text-sm leading-relaxed text-white sm:text-base">
@@ -28,7 +28,7 @@ export default function WhoWhat() {
         <div className="relative w-1/2 bg-[#0A56FF] px-6 py-20 sm:px-10 sm:py-20 lg:px-12 lg:py-20 flex justify-center">
           <SectionContent delay={0.2}>
             <div className="text-center max-w-md">
-              <h2 className="mb-6 text-3xl font-bold uppercase leading-none sm:text-4xl lg:text-5xl text-white">
+              <h2 className="mb-6 text-3xl font-bold uppercase sm:text-4xl lg:text-5xl text-white" style={{ lineHeight: "0.9" }}>
                 WHAT WE DO
               </h2>
               <p className="text-sm leading-relaxed text-white sm:text-base">

@@ -19,7 +19,7 @@ export default function Academy({
         {/* Left Side - Black Background with Logo and Text */}
         <div className="relative w-1/2 bg-black text-white flex flex-col px-6 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12">
           {/* Logo in corner */}
-          <div className="relative w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] 2xl:max-w-[800px] aspect-square mb-8 sm:mb-10 lg:mb-12">
+          <div className="relative w-full max-w-[340px] sm:max-w-[425px] lg:max-w-[510px] xl:max-w-[595px] 2xl:max-w-[680px] aspect-square mb-8 sm:mb-10 lg:mb-12">
             {logoImage && (
               <Image
                 src={logoImage}
@@ -27,7 +27,7 @@ export default function Academy({
                 fill
                 className="object-contain"
                 priority
-                sizes="(max-width: 640px) 600px, (max-width: 1024px) 700px, (max-width: 1280px) 800px, (max-width: 1536px) 900px, 1000px"
+                sizes="(max-width: 640px) 340px, (max-width: 1024px) 425px, (max-width: 1280px) 510px, (max-width: 1536px) 595px, 680px"
               />
             )}
           </div>
@@ -35,10 +35,10 @@ export default function Academy({
           {/* Text below logo */}
           <SectionContent delay={0.2}>
             <div className="space-y-1 sm:space-y-2">
-              <p className="font-bold uppercase leading-none text-white tracking-tighter" style={{ letterSpacing: "-0.1em", lineHeight: "0.9", fontSize: "clamp(1.5rem, 7vw, 8rem)" }}>
+              <p className="font-bold uppercase leading-none text-white tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1.5rem, 7vw, 8rem)" }}>
                 WHERE THE LEADERS OF TOMORROW ARE BUILT
               </p>
-              <p className="uppercase leading-none !text-[#0A56FF] tracking-tighter" style={{ letterSpacing: "-0.1em", lineHeight: "0.9", fontSize: "clamp(1rem, 4vw, 4.5rem)" }}>
+              <p className="uppercase leading-none !text-[#0A56FF] tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4vw, 4.5rem)" }}>
                 IN LOS ANGELES CALIFORNIA
               </p>
             </div>
@@ -62,7 +62,7 @@ export default function Academy({
           {/* Learn More Button - Top Right */}
           <div className="absolute top-6 right-6 sm:top-8 sm:right-8 lg:top-12 lg:right-12 z-10">
             <SectionContent delay={0.1}>
-              <button className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity" style={{ letterSpacing: "-0.1em", lineHeight: "0.9", fontSize: "clamp(0.75rem, 3vw, 3.5rem)" }}>
+              <button className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(0.75rem, 3vw, 3.5rem)" }}>
                 LEARN MORE <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>→</span>
               </button>
             </SectionContent>

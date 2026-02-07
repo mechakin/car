@@ -27,7 +27,7 @@ export default function StorageForm({
         {/* Top Section */}
         <div className="mx-auto max-w-2xl text-center">
           <SectionContent delay={0.1}>
-            <h2 className="mb-3 text-3xl font-bold uppercase leading-none sm:text-4xl lg:text-5xl">
+            <h2 className="mb-3 text-3xl font-bold uppercase sm:text-4xl lg:text-5xl" style={{ lineHeight: "0.9" }}>
               PREMIUM STORAGE CONCIERGE
             </h2>
             <p className="text-sm uppercase">

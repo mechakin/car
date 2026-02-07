@@ -29,7 +29,7 @@ export default function BuiltByDreamers({
       </div>
 
       {/* Top Text - "BUILT BY DREAMERS" */}
-      <div className="absolute top-0 left-0 right-0 z-20 pt-6 sm:pt-8 lg:pt-12">
+      <div className="absolute top-0 left-0 right-0 z-20 ">
         <div className="flex items-start justify-center px-2 sm:px-4">
           <SectionContent delay={0.1}>
             <div className="relative inline-block">
@@ -71,7 +71,7 @@ export default function BuiltByDreamers({
               </div>
               {/* Third line: SINCE 1993 */}
               <div 
-                className="font-normal uppercase mt-2 sm:mt-3"
+                className="font-normal uppercase mt-2 sm:mt-3 text-white/50"
                 style={{ 
                   fontSize: "min(2vw, 3vh)",
                   letterSpacing: "0.5em",
@@ -93,7 +93,7 @@ export default function BuiltByDreamers({
           <SectionContent delay={0.3}>
             <p
               className="text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl xl:text-5xl"
-              style={{ letterSpacing: "-0.075em", color: "#0A56FF", lineHeight: "0.6" }}
+              style={{ letterSpacing: "-0.075em", color: "#0A56FF", lineHeight: "0.9" }}
             >
               Built by Dreamers is more than a phrase
             </p>

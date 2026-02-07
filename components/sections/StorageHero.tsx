@@ -33,7 +33,7 @@ export default function StorageHero({
       <div className="relative z-10 flex h-screen flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
         {/* Top Left - Main Headline */}
         <SectionContent delay={0.1}>
-          <h2 className="mb-3 text-3xl font-bold uppercase leading-none sm:text-4xl lg:text-5xl">
+          <h2 className="mb-3 text-3xl font-bold uppercase sm:text-4xl lg:text-5xl" style={{ lineHeight: "0.9" }}>
             PREMIUM STORAGE CONCIERGE
           </h2>
           <p className="text-sm uppercase text-white">
@@ -45,7 +45,7 @@ export default function StorageHero({
         {/* Top Right - CTA */}
         <div className="absolute right-6 top-20 sm:right-10 lg:right-12">
           <SectionContent delay={0.2}>
-            <button className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity" style={{ letterSpacing: "-0.1em", lineHeight: "0.9", fontSize: "clamp(0.75rem, 3vw, 3.5rem)" }}>
+            <button className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(0.75rem, 3vw, 3.5rem)" }}>
               GET STARTED <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>→</span>
             </button>
           </SectionContent>
@@ -54,7 +54,7 @@ export default function StorageHero({
         {/* Bottom Center - Tagline and Services */}
         <div className="mx-auto max-w-4xl text-center">
           <SectionContent delay={0.3}>
-            <h3 className="mb-6 text-3xl font-bold uppercase leading-none sm:text-4xl lg:text-5xl">
+            <h3 className="mb-6 text-3xl font-bold uppercase sm:text-4xl lg:text-5xl" style={{ lineHeight: "0.9" }}>
               ULTIMATE CARE FOR YOUR EXOTICS & CLASSICS
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-4 text-xs uppercase text-white">
