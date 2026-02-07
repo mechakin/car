@@ -9,7 +9,7 @@ type BuiltByDreamersProps = {
 };
 
 export default function BuiltByDreamers({
-  backgroundImage = "/images/built-by-dreamers-bg.png",
+  backgroundImage = "/images/built-by-dreamers-bg.jpg",
 }: BuiltByDreamersProps) {
   return (
     <Section id="built-by-dreamers" className="relative">
@@ -28,12 +28,12 @@ export default function BuiltByDreamers({
         )}
       </div>
 
-      {/* Top Black Bar with "BUILT BY DREAMERS" */}
-      <div className="absolute top-0 left-0 right-0 z-20 bg-black h-[20vh] min-h-[140px]">
-        <div className="flex h-full items-center justify-center px-2 sm:px-4">
+      {/* Top Text - "BUILT BY DREAMERS" */}
+      <div className="absolute top-0 left-0 right-0 z-20 pt-6 sm:pt-8 lg:pt-12">
+        <div className="flex items-center justify-center px-2 sm:px-4">
           <SectionContent delay={0.1}>
             <h2
-              className="flex items-baseline justify-center gap-2 font-bold uppercase leading-none w-full sm:gap-3 md:gap-4"
+              className="flex items-baseline justify-center gap-2 font-bold uppercase leading-none w-full sm:gap-3 md:gap-4 text-white"
               style={{ 
                 letterSpacing: "-0.075em",
                 fontSize: "min(12vw, 19.5vh)"

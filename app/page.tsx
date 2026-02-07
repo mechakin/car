@@ -1,8 +1,5 @@
 import Academy from "@/components/sections/Academy";
 import BuiltByDreamers from "@/components/sections/BuiltByDreamers";
-import HeroModelW from "@/components/sections/HeroModelW";
-import HeroRocket from "@/components/sections/HeroRocket";
-import HeroUriel from "@/components/sections/HeroUriel";
 import ScheduleVisit from "@/components/sections/ScheduleVisit";
 import StorageForm from "@/components/sections/StorageForm";
 import StorageHero from "@/components/sections/StorageHero";
@@ -13,16 +10,10 @@ export default function Home() {
   return (
     <div className="bg-black text-white">
       <main>
-        <HeroRocket carImage="/images/rocket-hero.png" />
-        <BuiltByDreamers backgroundImage="/images/built-by-dreamers-bg.png" />
-        <HeroModelW
-          carImage1="/images/model-w-car-1.png"
-          carImage2="/images/model-w-car-2.png"
-        />
+        <BuiltByDreamers backgroundImage="/images/built-by-dreamers-bg.jpg" />
         <Academy
-          leftImage="/images/academy-left.png"
-          middleImage="/images/academy-middle.png"
-          rightImage="/images/academy-right.png"
+          logoImage="/images/academy-logo.png"
+          workshopImage="/images/academy-workshop.png"
         />
         <ScheduleVisit
           leftImage="/images/schedule-visit-left.png"
@@ -30,15 +21,13 @@ export default function Home() {
         />
         <StorageHero backgroundImage="/images/storage-hero-bg.png" />
         <StorageForm
-          leftImage="/images/storage-form-left.png"
-          rightImage="/images/storage-form-right.png"
+          image1="/images/storage-form-left.png"
+          image2="/images/storage-form-right.png"
+          image3="/images/storage-form-left.png"
+          image4="/images/storage-form-right.png"
         />
         <YearsStatement />
         <WhoWhat />
-        <HeroUriel
-          carImage1="/images/uriel-car-1.png"
-          carImage2="/images/uriel-car-2.png"
-        />
       </main>
     </div>
   );
