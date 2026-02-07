@@ -60,7 +60,7 @@ export default function ScheduleVisit({
         {/* Top Right - Schedule CTA */}
         <div className="absolute right-6 top-20 sm:right-10 lg:right-12">
           <SectionContent delay={0.2}>
-            <button className="text-sm uppercase text-white">SCHEDULE →</button>
+            <button className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity" style={{ letterSpacing: "-0.1em", lineHeight: "0.9", fontSize: "clamp(0.75rem, 3vw, 3.5rem)" }}>SCHEDULE <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>→</span></button>
           </SectionContent>
         </div>
 

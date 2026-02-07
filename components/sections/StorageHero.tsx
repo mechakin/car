@@ -36,7 +36,7 @@ export default function StorageHero({
           <h2 className="mb-3 text-3xl font-bold uppercase leading-none sm:text-4xl lg:text-5xl">
             PREMIUM STORAGE CONCIERGE
           </h2>
-          <p className="text-sm uppercase text-white/80">
+          <p className="text-sm uppercase text-white">
             AT THE ICONIC{" "}
             <span className="text-[#0A56FF]">WEST COAST CUSTOMS</span>
           </p>
@@ -45,8 +45,8 @@ export default function StorageHero({
         {/* Top Right - CTA */}
         <div className="absolute right-6 top-20 sm:right-10 lg:right-12">
           <SectionContent delay={0.2}>
-            <button className="text-sm uppercase text-white">
-              GET STARTED →
+            <button className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity" style={{ letterSpacing: "-0.1em", lineHeight: "0.9", fontSize: "clamp(0.75rem, 3vw, 3.5rem)" }}>
+              GET STARTED <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>→</span>
             </button>
           </SectionContent>
         </div>
@@ -57,13 +57,13 @@ export default function StorageHero({
             <h3 className="mb-6 text-3xl font-bold uppercase leading-none sm:text-4xl lg:text-5xl">
               ULTIMATE CARE FOR YOUR EXOTICS & CLASSICS
             </h3>
-            <div className="flex flex-wrap items-center justify-center gap-4 text-xs uppercase text-white/80">
+            <div className="flex flex-wrap items-center justify-center gap-4 text-xs uppercase text-white">
               <span>24/7 SURVEILLANCE</span>
-              <span className="text-white/40">•</span>
+              <span className="text-white">•</span>
               <span>BATTERY MAINTENANCE</span>
-              <span className="text-white/40">•</span>
+              <span className="text-white">•</span>
               <span>DETAILING & TRANSPORT</span>
-              <span className="text-white/40">•</span>
+              <span className="text-white">•</span>
               <span>PRIVATE LOUNGE</span>
             </div>
             <div className="mt-4 h-0.5 w-full bg-[#0A56FF]" />

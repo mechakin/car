@@ -44,7 +44,7 @@ export default function ImageTile({
       </motion.div>
       {(title || subtitle) && (
         <div className="relative z-10 flex h-full flex-col justify-between p-4 uppercase text-white sm:p-5">
-          <div className="text-xs tracking-[0.3em] text-white/70">
+          <div className="text-xs tracking-[0.3em] text-white">
             {subtitle}
           </div>
           <div className="text-sm font-semibold tracking-[0.25em]">

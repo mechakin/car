@@ -35,7 +35,7 @@ export default function Academy({
           {/* Text below logo */}
           <SectionContent delay={0.2}>
             <div className="space-y-1 sm:space-y-2">
-              <p className="font-bold uppercase leading-none !text-white tracking-tighter" style={{ letterSpacing: "-0.1em", lineHeight: "0.9", fontSize: "clamp(1.5rem, 7vw, 8rem)" }}>
+              <p className="font-bold uppercase leading-none text-white tracking-tighter" style={{ letterSpacing: "-0.1em", lineHeight: "0.9", fontSize: "clamp(1.5rem, 7vw, 8rem)" }}>
                 WHERE THE LEADERS OF TOMORROW ARE BUILT
               </p>
               <p className="uppercase leading-none !text-[#0A56FF] tracking-tighter" style={{ letterSpacing: "-0.1em", lineHeight: "0.9", fontSize: "clamp(1rem, 4vw, 4.5rem)" }}>
@@ -62,7 +62,7 @@ export default function Academy({
           {/* Learn More Button - Top Right */}
           <div className="absolute top-6 right-6 sm:top-8 sm:right-8 lg:top-12 lg:right-12 z-10">
             <SectionContent delay={0.1}>
-              <button className="font-bold uppercase leading-none !text-white tracking-tighter hover:opacity-80 transition-opacity" style={{ letterSpacing: "-0.1em", lineHeight: "0.9", fontSize: "clamp(0.75rem, 3vw, 3.5rem)" }}>
+              <button className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity" style={{ letterSpacing: "-0.1em", lineHeight: "0.9", fontSize: "clamp(0.75rem, 3vw, 3.5rem)" }}>
                 LEARN MORE <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>→</span>
               </button>
             </SectionContent>

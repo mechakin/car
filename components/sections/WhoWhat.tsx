@@ -14,7 +14,7 @@ export default function WhoWhat() {
               <h2 className="mb-6 text-3xl font-bold uppercase leading-none sm:text-4xl lg:text-5xl text-white">
                 WHO WE ARE
               </h2>
-              <p className="text-sm leading-relaxed text-white/80 sm:text-base">
+              <p className="text-sm leading-relaxed text-white sm:text-base">
                 West Coast Customs is your one stop shop for all your car
                 customization needs. Located in Southern California, the shop
                 houses a veteran team of technicians, fabricators, designers,
@@ -31,7 +31,7 @@ export default function WhoWhat() {
               <h2 className="mb-6 text-3xl font-bold uppercase leading-none sm:text-4xl lg:text-5xl text-white">
                 WHAT WE DO
               </h2>
-              <p className="text-sm leading-relaxed text-white/90 sm:text-base">
+              <p className="text-sm leading-relaxed text-white sm:text-base">
                 You may have seen some of our one-of-a-kind, multi-million-dollar
                 custom car builds on our TV show or in the news, but we also
                 specialize in smaller customizations. From wraps to wheels and

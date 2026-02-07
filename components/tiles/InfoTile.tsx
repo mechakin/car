@@ -21,7 +21,7 @@ export default function InfoTile({ title, body, className = "" }: InfoTileProps)
       className={`flex h-full flex-col gap-4 border border-white/15 bg-black p-5 sm:p-6 ${className}`}
     >
       <div className="text-sm font-semibold tracking-[0.3em]">{title}</div>
-      <div className="text-xs uppercase leading-relaxed tracking-[0.15em] text-white/70">
+      <div className="text-xs uppercase leading-relaxed tracking-[0.15em] text-white">
         {body}
       </div>
     </motion.article>

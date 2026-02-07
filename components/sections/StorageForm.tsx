@@ -66,7 +66,7 @@ export default function StorageForm({
                 fill
                 className="object-cover"
                 priority
-                quality={95}
+                quality={100}
               />
             </div>
           )}
@@ -79,7 +79,7 @@ export default function StorageForm({
                 fill
                 className="object-cover"
                 priority
-                quality={95}
+                quality={100}
               />
             </div>
           )}
@@ -92,7 +92,7 @@ export default function StorageForm({
                 fill
                 className="object-cover"
                 priority
-                quality={95}
+                quality={100}
               />
             </div>
           )}
@@ -105,7 +105,7 @@ export default function StorageForm({
                 fill
                 className="object-cover"
                 priority
-                quality={95}
+                quality={100}
               />
             </div>
           )}

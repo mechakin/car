@@ -48,7 +48,7 @@ export default function YearsStatement({
             <div className="mb-6 text-5xl font-bold uppercase leading-none sm:text-6xl lg:text-7xl">
               YEARS
             </div>
-            <p className="text-sm leading-relaxed text-white/90 sm:text-base">
+            <p className="text-sm leading-relaxed text-white sm:text-base">
               OF PUSHING THE LIMITS OF AUTOMOTIVE CUSTOMIZATION AND
               EXPRESSION...
             </p>
