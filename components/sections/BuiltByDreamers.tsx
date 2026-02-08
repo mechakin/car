@@ -29,26 +29,24 @@ export default function BuiltByDreamers({
       </div>
 
       {/* Top Text - "BUILT BY DREAMERS" */}
-      <div className="absolute top-0 left-0 right-0 z-20 ">
+      <div className="absolute top-0 left-0 right-0 z-20 sm:pt-0 pt-6">
         <div className="flex items-start justify-center px-2 sm:px-4">
           <SectionContent delay={0.1}>
             <div className="relative inline-block">
               {/* First line: BUILT with BY positioned to the right */}
               <div className="relative flex items-baseline gap-2 sm:gap-3 md:gap-4">
                 <span 
-                  className="font-bold uppercase leading-none text-white"
+                  className="built-text font-bold uppercase leading-none text-white text-6xl sm:text-6xl md:text-8xl lg:text-[min(12vw,19.5vh)]"
                   style={{ 
                     letterSpacing: "-0.075em",
-                    fontSize: "min(12vw, 19.5vh)",
                     lineHeight: "0.9"
                   }}
                 >
                   BUILT
                 </span>
                 <span
-                  className="font-bold uppercase leading-none text-white"
+                  className="by-text font-bold uppercase leading-none text-white text-4xl sm:text-3xl md:text-4xl lg:text-[min(6vw,9.75vh)]"
                   style={{ 
-                    fontSize: "min(6vw, 9.75vh)",
                     transform: "translateY(-0.3em)",
                     letterSpacing: "-0.075em"
                   }}
@@ -58,25 +56,21 @@ export default function BuiltByDreamers({
               </div>
               {/* Second line: DREAMERS aligned below BY */}
               <div 
-                className="font-bold uppercase leading-none text-white"
-                style={{ 
-                  fontSize: "min(12vw, 19.5vh)",
-                  letterSpacing: "-0.075em",
-                  lineHeight: "0.9",
-                  marginLeft: "calc(min(6vw, 9.75vh) * 0.5 + clamp(20rem, 28vw, 28rem))",
-                  marginTop: "-0.25em"
-                }}
-              >
-                DREAMERS
-              </div>
+                className="dreamers-text font-bold uppercase leading-none text-white text-6xl sm:text-6xl md:text-8xl lg:text-[min(12vw,19.5vh)]"
+                  style={{ 
+                    letterSpacing: "-0.075em",
+                    lineHeight: "0.9",
+                    marginTop: "-0.25em"
+                  }}
+                >
+                  DREAMERS
+                </div>
               {/* Third line: SINCE 1993 */}
               <div 
-                className="font-normal uppercase mt-2 sm:mt-3 text-white/50"
+                className="since-text font-normal uppercase mt-2 sm:mt-3 text-white/50 text-base sm:text-sm md:text-base lg:text-[min(2vw,3vh)]"
                 style={{ 
-                  fontSize: "min(2vw, 3vh)",
                   letterSpacing: "0.5em",
                   lineHeight: "0.5",
-                  marginLeft: "calc(min(6vw, 9.75vh) * 0.5 + clamp(60rem, 75vw, 75rem))",
                   fontWeight: 300
                 }}
               >

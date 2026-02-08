@@ -6,22 +6,26 @@ import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
 
-type StorageFormProps = {
+type ScheduleFormProps = {
   image1?: string;
   image2?: string;
   image3?: string;
   image4?: string;
+  image5?: string;
+  image6?: string;
 };
 
-export default function StorageForm({
-  image1 = "/images/storage-form-1.png",
-  image2 = "/images/storage-form-2.png",
-  image3 = "/images/storage-form-3.png",
-  image4 = "/images/storage-form-4.png",
-}: StorageFormProps) {
+export default function ScheduleForm({
+  image1 = "/images/schedule-form-1.png",
+  image2 = "/images/schedule-form-2.png",
+  image3 = "/images/schedule-form-3.png",
+  image4 = "/images/schedule-form-4.png",
+  image5 = "/images/schedule-form-5.png",
+  image6 = "/images/schedule-form-6.png",
+}: ScheduleFormProps) {
   const [formData, setFormData] = useState({
     name: "",
-    vehicle: "",
+    passion: "",
     email: "",
     phone: "",
   });
@@ -51,19 +55,19 @@ export default function StorageForm({
       
       // Simulate email sending
       const emailContent = `
-        Premium Storage Concierge Inquiry
+        Schedule Visit Inquiry
         
         Name: ${formData.name}
-        Vehicle: ${formData.vehicle}
+        Vehicle: ${formData.passion}
         Email: ${formData.email}
         Phone: ${formData.phone}
       `;
       
-      console.log("Email would be sent to: storage@westcoastcustoms.com");
+      console.log("Email would be sent to: schedule@westcoastcustoms.com");
       console.log("Email content:", emailContent);
       
       setSubmitStatus("success");
-      setFormData({ name: "", vehicle: "", email: "", phone: "" });
+      setFormData({ name: "", passion: "", email: "", phone: "" });
       
       // Reset success message after 5 seconds
       setTimeout(() => {
@@ -78,7 +82,7 @@ export default function StorageForm({
   };
 
   return (
-    <Section id="storage-form" className="relative">
+    <Section id="schedule-form" className="relative">
       {/* Background */}
       <div className="absolute inset-0 h-screen bg-black" />
 
@@ -88,7 +92,7 @@ export default function StorageForm({
           <Link
             href="/"
             className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block sm:text-5xl text-3xl"
-            style={{ letterSpacing: "-0.075em", lineHeight: "0.9"}}
+            style={{ letterSpacing: "-0.075em", lineHeight: "0.9",  }}
           >
             <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>←</span> BACK
           </Link>
@@ -98,21 +102,20 @@ export default function StorageForm({
       {/* Content */}
       <div className="relative z-10 flex h-screen flex-col px-6 pt-24 pb-8 sm:px-10 xl:px-12 xl:pt-8">
         {/* Top Section */}
-        <div className="mx-auto text-center mb-8 sm:mb-12">
+        <div className="mx-auto text-center mb-8">
           <SectionContent delay={0.1}>
             <h2 className="mb-3 font-bold uppercase text-6xl xl:text-8xl" style={{ lineHeight: "0.9" }}>
-              PREMIUM STORAGE CONCIERGE
+              WEST COAST CUSTOMS ACADEMY
             </h2>
-            <p className="xl:pl-10 uppercase" style={{ letterSpacing: "2rem"}}>
-              AT THE ICONIC{" "}
-              <span className="text-[#0A56FF]">WEST COAST CUSTOMS</span>
+            <p className="  xl:pl-10 uppercase text-[#0A56FF]" style={{ letterSpacing: "1.5rem"}}>
+              WHERE THE LEADERS OF TOMORROW ARE BUILT
             </p>
           </SectionContent>
         </div>
 
         {/* Form - Center Left */}
         <div className="flex-1 flex items-start text-4xl xl:pt-24">
-          <form id="storage-form" ref={formRef} onSubmit={handleSubmit} className="space-y-3 sm:space-y-6 md:space-y-8 w-full max-w-2xl sm:max-w-3xl xl:max-w-4xl">
+          <form id="schedule-form" ref={formRef} onSubmit={handleSubmit} className="space-y-3 sm:space-y-6 md:space-y-8 w-full max-w-2xl sm:max-w-3xl xl:max-w-4xl">
           <SectionContent delay={0.2}>
             <div>
               <label htmlFor="name" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
@@ -132,14 +135,14 @@ export default function StorageForm({
           </SectionContent>
           <SectionContent delay={0.3}>
             <div>
-              <label htmlFor="vehicle" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
-                VEHICLE:
+              <label htmlFor="passion" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
+                PASSION:
               </label>
               <input
                 type="text"
-                id="vehicle"
-                name="vehicle"
-                value={formData.vehicle}
+                id="passion"
+                name="passion"
+                value={formData.passion}
                 onChange={handleChange}
                 required
                 className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
@@ -221,13 +224,13 @@ export default function StorageForm({
 
       {/* Bottom Image Strip - Absolute positioned at bottom */}
       <div className="absolute bottom-0 left-0 right-0 z-0 h-64 overflow-hidden sm:h-80">
-        <div className="grid h-full grid-cols-4">
+        <div className="grid h-full grid-cols-6">
           {/* Image 1 */}
           {image1 && (
             <div className="relative">
               <Image
                 src={image1}
-                alt="Storage"
+                alt="Schedule"
                 fill
                 className="object-cover"
                 priority
@@ -240,7 +243,7 @@ export default function StorageForm({
             <div className="relative">
               <Image
                 src={image2}
-                alt="Storage"
+                alt="Schedule"
                 fill
                 className="object-cover"
                 priority
@@ -253,7 +256,7 @@ export default function StorageForm({
             <div className="relative">
               <Image
                 src={image3}
-                alt="Storage"
+                alt="Schedule"
                 fill
                 className="object-cover"
                 priority
@@ -266,7 +269,33 @@ export default function StorageForm({
             <div className="relative">
               <Image
                 src={image4}
-                alt="Storage"
+                alt="Schedule"
+                fill
+                className="object-cover"
+                priority
+                quality={100}
+              />
+            </div>
+          )}
+          {/* Image 5 */}
+          {image5 && (
+            <div className="relative">
+              <Image
+                src={image5}
+                alt="Schedule"
+                fill
+                className="object-cover"
+                priority
+                quality={100}
+              />
+            </div>
+          )}
+          {/* Image 6 */}
+          {image6 && (
+            <div className="relative">
+              <Image
+                src={image6}
+                alt="Schedule"
                 fill
                 className="object-cover"
                 priority

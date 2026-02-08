@@ -22,33 +22,34 @@ export default function YearsStatement({
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
       </div>
 
-      {/* West Coast Logo - Positioned between blue and black sections */}
+      {/* West Coast Logo - Above blue section */}
       {logoImage && (
-        <div className="absolute bottom-[33%] right-6 z-20 sm:right-10 lg:right-12">
-          <Image
-            src={logoImage}
-            alt="West Coast Customs Logo"
-            width={120}
-            height={120}
-            className="h-auto w-24 object-contain sm:w-32 lg:w-40"
-            priority
-            unoptimized
-          />
+        <div className="absolute top-[30%] left-0 right-0 z-10 px-6 sm:px-10 lg:px-12">
+          <div className="relative w-full h-[50vw] ">
+            <Image
+              src={logoImage}
+              alt="West Coast Customs Logo"
+              fill
+              className="object-contain"
+              priority
+              sizes="100vw"
+            />
+          </div>
         </div>
       )}
 
       {/* Content */}
-      <div className="relative z-10 flex h-screen flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
+      <div className="relative z-10 flex h-screen flex-col justify-between px-6 pt-20 pb-4 sm:px-10 sm:pt-20 sm:pb-8 lg:px-12 lg:pt-4 lg:pb-12">
         {/* Top Section - 32 YEARS */}
         <SectionContent delay={0.1}>
-          <div className="max-w-2xl">
-            <div className="mb-4 text-8xl font-bold sm:text-9xl lg:text-[12rem]" style={{ lineHeight: "0.9" }}>
+          <div className="max-w-[50vw]">
+            <div className="mb-4 font-bold" style={{ lineHeight: "0.75", letterSpacing: "-0.10em", fontSize: "clamp(4rem, 30vw, 32rem)" }}>
               32
             </div>
-            <div className="mb-6 text-5xl font-bold uppercase sm:text-6xl lg:text-7xl" style={{ lineHeight: "0.9" }}>
+            <div className="mb-6 font-bold uppercase" style={{ lineHeight: "0.75", letterSpacing: "-0.10em", fontSize: "clamp(2.5rem, 16vw, 12.5rem)" }}>
               YEARS
             </div>
-            <p className="text-sm leading-relaxed text-white sm:text-base">
+            <p className="text-white pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-32" style={{ lineHeight: "0.9", letterSpacing: "-0.05em", fontSize: "clamp(1rem, 2.5vw, 10rem)" }}>
               OF PUSHING THE LIMITS OF AUTOMOTIVE CUSTOMIZATION AND
               EXPRESSION...
             </p>
@@ -57,12 +58,15 @@ export default function YearsStatement({
 
         {/* Bottom Section - Statement */}
         <SectionContent delay={0.3}>
-          <div className="max-w-3xl">
-            <h2 className="text-5xl font-bold uppercase sm:text-6xl lg:text-7xl" style={{ lineHeight: "0.9" }}>
-              WE AREN'T
-              <br />
-              GOING ANYWHERE
-            </h2>
+          <div className="text-center relative z-30 pb-24 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-0">
+            <div className="font-bold uppercase" style={{ lineHeight: "0.8", letterSpacing: "-.75em" }}>
+              <div className="text-[6rem] md:text-[10rem] lg:text-[12rem] xl:text-[16rem] 2xl:text-[18rem]">
+                WE AREN&apos;T
+              </div>
+              <div className="text-[3.33rem] md:text-[5.55rem] lg:text-[6.66rem] xl:text-[8.88rem] 2xl:text-[10rem]">
+                GOING ANYWHERE
+              </div>
+            </div>
           </div>
         </SectionContent>
       </div>

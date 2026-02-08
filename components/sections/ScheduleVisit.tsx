@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
 
@@ -58,9 +59,9 @@ export default function ScheduleVisit({
         </SectionContent>
 
         {/* Top Right - Schedule CTA */}
-        <div className="absolute right-6 top-20 sm:right-10 lg:right-12">
+        <div className="absolute right-6 top-20 xl:right-12 xl:top-20">
           <SectionContent delay={0.2}>
-            <button className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(0.75rem, 3vw, 3.5rem)" }}>SCHEDULE <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>→</span></button>
+            <Link href="/schedule" className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block text-xl sm:text-5xl" style={{ letterSpacing: "-0.075em", lineHeight: "0.9" }}>SCHEDULE <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>→</span></Link>
           </SectionContent>
         </div>
 
@@ -68,10 +69,10 @@ export default function ScheduleVisit({
         <div className="absolute bottom-0 left-1/2 right-0 flex justify-center pb-6 sm:pb-10 lg:pb-12">
           <SectionContent delay={0.3}>
             <div className="text-center">
-              <p className="text-lg  text-white/50 sm:text-xl lg:text-8xl" style={{  letterSpacing: "-0.1em" }}>
+              <p className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-white/50" style={{ letterSpacing: "-0.1em" }}>
                 OUR LOS ANGELES
               </p>
-              <p className="text-lg text-white/50 sm:text-xl lg:text-8xl" style={{  letterSpacing: "-0.1em" }}>
+              <p className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-white/50" style={{ letterSpacing: "-0.1em" }}>
                 SHOWROOM
               </p>
             </div>

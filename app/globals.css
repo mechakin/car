@@ -8,6 +8,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -17,6 +19,8 @@ body {
   text-rendering: optimizeLegibility;
   letter-spacing: -0.075em;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 h1,
@@ -31,4 +35,42 @@ h4 {
 
 p {
   color: rgba(255, 255, 255, 1);
+}
+
+/* Built By Dreamers alignment - align DREAMERS and SINCE with BY */
+/* Calculate position: width of BUILT + gap */
+#built-by-dreamers .dreamers-text {
+  margin-left: calc(4.5ch - 1.5rem);
+}
+
+#built-by-dreamers .since-text {
+  margin-left: calc(4.5ch + 0.5rem + 10rem);
+}
+
+@media (min-width: 640px) {
+  #built-by-dreamers .dreamers-text {
+    margin-left: calc(4.5ch - 0.75rem) !important;
+  }
+  #built-by-dreamers .since-text {
+    margin-left: calc(4.5ch + 0.75rem + 12rem) !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #built-by-dreamers .dreamers-text {
+    margin-left: calc(4.5ch - 3rem) !important;
+  }
+  #built-by-dreamers .since-text {
+    margin-left: calc(4.5ch + 26rem) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* On large screens, align with BY position */
+  #built-by-dreamers .dreamers-text {
+    margin-left: calc(min(6vw, 9.75vh) * 0.5 + clamp(20rem, 28vw, 28rem)) !important;
+  }
+  #built-by-dreamers .since-text {
+    margin-left: calc(min(6vw, 9.75vh) * 0.5 + 76rem) !important;
+  }
 }
