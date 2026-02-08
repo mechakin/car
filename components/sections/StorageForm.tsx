@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Section from "./Section";
@@ -27,6 +27,7 @@ export default function StorageForm({
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -82,12 +83,12 @@ export default function StorageForm({
       <div className="absolute inset-0 h-screen bg-black" />
 
       {/* Back Arrow - Top Left */}
-      <div className="absolute top-6 left-6 sm:top-8 sm:left-8 lg:top-12 lg:left-12 z-50">
+      <div className="absolute top-6 left-6 xl:top-12 xl:left-12 z-50">
         <SectionContent delay={0.1}>
           <Link
             href="/"
-            className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block"
-            style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(0.75rem, 3vw, 3.5rem)" }}
+            className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block sm:text-5xl text-3xl"
+            style={{ letterSpacing: "-0.075em", lineHeight: "0.9"}}
           >
             <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>←</span> BACK
           </Link>
@@ -95,25 +96,26 @@ export default function StorageForm({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-screen flex-col px-6 py-8 sm:px-10 lg:px-12">
+      <div className="relative z-10 flex h-screen flex-col px-6 pt-24 pb-8 sm:px-10 xl:px-12 xl:pt-8">
         {/* Top Section */}
-        <div className="mx-auto text-center">
+        <div className="mx-auto text-center mb-8 sm:mb-12">
           <SectionContent delay={0.1}>
-            <h2 className="mb-3 text-3xl font-bold uppercase sm:text-4xl lg:text-8xl" style={{ lineHeight: "0.9" }}>
+            <h2 className="mb-3 font-bold uppercase text-6xl xl:text-8xl" style={{ lineHeight: "0.9" }}>
               PREMIUM STORAGE CONCIERGE
             </h2>
-            <p className="lg:pl-10 uppercase"  style={{ letterSpacing: "2rem"}}>
+            <p className="xl:pl-10 uppercase" style={{ letterSpacing: "2rem"}}>
               AT THE ICONIC{" "}
               <span className="text-[#0A56FF]">WEST COAST CUSTOMS</span>
             </p>
           </SectionContent>
         </div>
 
-        {/* Form */}
-        <form onSubmit={handleSubmit} className="mx-auto max-w-md space-y-8">
+        {/* Form - Center Left */}
+        <div className="flex-1 flex items-start text-4xl pt-8 sm:pt-24">
+          <form id="storage-form" ref={formRef} onSubmit={handleSubmit} className="space-y-8 w-full max-w-2xl sm:max-w-3xl xl:max-w-4xl">
           <SectionContent delay={0.2}>
             <div>
-              <label htmlFor="name" className="mb-2 block text-sm uppercase">
+              <label htmlFor="name" className="mb-2 block  uppercase">
                 NAME:
               </label>
               <input
@@ -124,13 +126,13 @@ export default function StorageForm({
                 onChange={handleChange}
                 required
                 className="w-full border-b border-white/30 bg-transparent px-0 py-2 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
-                placeholder="Enter your name"
+              
               />
             </div>
           </SectionContent>
           <SectionContent delay={0.3}>
             <div>
-              <label htmlFor="vehicle" className="mb-2 block text-sm uppercase">
+              <label htmlFor="vehicle" className="mb-2 block uppercase">
                 VEHICLE:
               </label>
               <input
@@ -141,13 +143,13 @@ export default function StorageForm({
                 onChange={handleChange}
                 required
                 className="w-full border-b border-white/30 bg-transparent px-0 py-2 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
-                placeholder="Enter vehicle make/model"
+           
               />
             </div>
           </SectionContent>
           <SectionContent delay={0.4}>
             <div>
-              <label htmlFor="email" className="mb-2 block text-sm uppercase">
+              <label htmlFor="email" className="mb-2 block uppercase">
                 EMAIL:
               </label>
               <input
@@ -158,13 +160,13 @@ export default function StorageForm({
                 onChange={handleChange}
                 required
                 className="w-full border-b border-white/30 bg-transparent px-0 py-2 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
-                placeholder="Enter your email"
+            
               />
             </div>
           </SectionContent>
           <SectionContent delay={0.5}>
             <div>
-              <label htmlFor="phone" className="mb-2 block text-sm uppercase">
+              <label htmlFor="phone" className="mb-2 block uppercase">
                 PHONE NUMBER:
               </label>
               <input
@@ -175,30 +177,46 @@ export default function StorageForm({
                 onChange={handleChange}
                 required
                 className="w-full border-b border-white/30 bg-transparent px-0 py-2 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
-                placeholder="Enter your phone number"
+               
               />
             </div>
           </SectionContent>
           <SectionContent delay={0.6}>
+            <div className="mt-8">
+              {/* Spacer to maintain form spacing */}
+            </div>
+          </SectionContent>
+        </form>
+        
+        {/* Submit Button - Centered on page */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-75 sm:bottom-85 z-20 flex flex-col items-center">
+          <SectionContent delay={0.6}>
             <button
-              type="submit"
+              type="button"
               disabled={isSubmitting}
-              className="mt-8 w-full border border-white/30 bg-transparent px-6 py-3 text-sm uppercase text-white transition-colors hover:border-white/60 hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50"
+              onClick={() => {
+                if (formRef.current) {
+                  formRef.current.requestSubmit();
+                }
+              }}
+              className=" font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50"
+              style={{ letterSpacing: "-0.05em" }}
             >
               {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
             </button>
-            {submitStatus === "success" && (
-              <p className="mt-4 text-center text-sm text-[#0A56FF]">
-                Thank you! Your inquiry has been sent.
-              </p>
-            )}
-            {submitStatus === "error" && (
-              <p className="mt-4 text-center text-sm text-red-500">
-                There was an error. Please try again.
-              </p>
-            )}
           </SectionContent>
-        </form>
+          {submitStatus === "success" && (
+            <p className="mt-4 text-center text-[#0A56FF] whitespace-nowrap">
+              Thank you! Your inquiry has been sent.
+            </p>
+          )}
+          {submitStatus === "error" && (
+            <p className="mt-4 text-center text-red-500 whitespace-nowrap">
+              There was an error. Please try again.
+            </p>
+          )}
+        </div>
+        </div>
       </div>
 
       {/* Bottom Image Strip - Absolute positioned at bottom */}
