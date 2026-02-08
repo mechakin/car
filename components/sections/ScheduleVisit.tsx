@@ -69,10 +69,10 @@ export default function ScheduleVisit({
         <div className="absolute bottom-0 left-1/2 right-0 flex justify-center pb-6 sm:pb-10 lg:pb-12">
           <SectionContent delay={0.3}>
             <div className="text-center">
-              <p className="text-lg  text-white/50 sm:text-xl lg:text-8xl" style={{  letterSpacing: "-0.1em" }}>
+              <p className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-white/50" style={{ letterSpacing: "-0.1em" }}>
                 OUR LOS ANGELES
               </p>
-              <p className="text-lg text-white/50 sm:text-xl lg:text-8xl" style={{  letterSpacing: "-0.1em" }}>
+              <p className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-white/50" style={{ letterSpacing: "-0.1em" }}>
                 SHOWROOM
               </p>
             </div>

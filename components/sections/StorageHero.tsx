@@ -64,7 +64,7 @@ export default function StorageHero({
             <h3 className=" text-2xl sm:text-3xl font-bold uppercase lg:text-4xl xl:text-5xl">
               ULTIMATE CARE FOR YOUR EXOTICS & CLASSICS
             </h3>
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl uppercase text-[#0A56FF]" style={{ lineHeight: "0.75" }}>
+            <div className="flex flex-wrap items-center pt-2 justify-center gap-2 sm:gap-3 lg:gap-4 text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl uppercase text-[#0A56FF]" style={{ lineHeight: "0.75" }}>
               <span>24/7 SURVEILLANCE</span>
               <span>BATTERY MAINTENANCE</span>
               <span>DETAILING & TRANSPORT</span>
