@@ -1,7 +1,6 @@
 import Academy from "@/components/sections/Academy";
 import BuiltByDreamers from "@/components/sections/BuiltByDreamers";
 import ScheduleVisit from "@/components/sections/ScheduleVisit";
-import StorageForm from "@/components/sections/StorageForm";
 import StorageHero from "@/components/sections/StorageHero";
 import WhoWhat from "@/components/sections/WhoWhat";
 import YearsStatement from "@/components/sections/YearsStatement";
@@ -20,12 +19,6 @@ export default function Home() {
           rightImage="/images/schedule-visit-right.png"
         />
         <StorageHero backgroundImage="/images/storage-hero-bg.png" />
-        <StorageForm
-          image1="/images/storage-form-left.png"
-          image2="/images/storage-form-right.png"
-          image3="/images/storage-form-left.png"
-          image4="/images/storage-form-right.png"
-        />
         <YearsStatement />
         <WhoWhat />
       </main>
