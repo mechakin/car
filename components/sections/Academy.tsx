@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
 
@@ -62,9 +63,9 @@ export default function Academy({
           {/* Learn More Button - Top Right */}
           <div className="absolute top-6 right-6 sm:top-8 sm:right-8 lg:top-12 lg:right-12 z-10">
             <SectionContent delay={0.1}>
-              <button className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(0.75rem, 3vw, 3.5rem)" }}>
+              <Link href="/academy" className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(0.75rem, 3vw, 3.5rem)" }}>
                 LEARN MORE <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>→</span>
-              </button>
+              </Link>
             </SectionContent>
           </div>
         </div>

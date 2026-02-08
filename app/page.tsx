@@ -2,8 +2,6 @@ import Academy from "@/components/sections/Academy";
 import BuiltByDreamers from "@/components/sections/BuiltByDreamers";
 import ScheduleVisit from "@/components/sections/ScheduleVisit";
 import StorageHero from "@/components/sections/StorageHero";
-import WhoWhat from "@/components/sections/WhoWhat";
-import YearsStatement from "@/components/sections/YearsStatement";
 
 export default function Home() {
   return (
@@ -19,8 +17,6 @@ export default function Home() {
           rightImage="/images/schedule-visit-right.png"
         />
         <StorageHero backgroundImage="/images/storage-hero-bg.png" />
-        <YearsStatement />
-        <WhoWhat />
       </main>
     </div>
   );

@@ -1,3 +1,5 @@
+"use client";
+
 import StorageForm from "@/components/sections/StorageForm";
 
 export default function StoragePage() {
@@ -5,10 +7,10 @@ export default function StoragePage() {
     <div className="bg-black text-white">
       <main>
         <StorageForm
-          image1="/images/storage-form-left.png"
-          image2="/images/storage-form-right.png"
-          image3="/images/storage-form-left.png"
-          image4="/images/storage-form-right.png"
+          image1="/images/storage-form-1.png"
+          image2="/images/storage-form-2.png"
+          image3="/images/storage-form-3.png"
+          image4="/images/storage-form-4.png"
         />
       </main>
     </div>
