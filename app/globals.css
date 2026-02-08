@@ -8,6 +8,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  font-feature-settings: normal;
 }
 
 @font-face {
@@ -16,6 +17,7 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+  font-feature-settings: normal;
 }
 
 :root {
@@ -62,7 +64,7 @@ p {
 }
 
 #built-by-dreamers .since-text {
-  margin-left: calc(4.5ch + 0.5rem + 10rem);
+  margin-left: calc(4.5ch + 0.5rem + 7rem);
 }
 
 @media (min-width: 640px) {
@@ -79,7 +81,7 @@ p {
     margin-left: calc(4.5ch - 3rem) !important;
   }
   #built-by-dreamers .since-text {
-    margin-left: calc(4.5ch + 26rem) !important;
+    margin-left: calc(4.5ch + 20rem) !important;
   }
 }
 
