@@ -27,7 +27,20 @@ export default function StorageForm({
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isCarouselOpen, setIsCarouselOpen] = useState(true);
   const formRef = useRef<HTMLFormElement>(null);
+
+  // Carousel images
+  const carouselImages = [image1, image2, image3, image4].filter(Boolean);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -110,9 +123,11 @@ export default function StorageForm({
           </SectionContent>
         </div>
 
-        {/* Form - Center Left */}
-        <div className="flex-1 flex items-start text-4xl xl:pt-24">
-          <form id="storage-form" ref={formRef} onSubmit={handleSubmit} className="space-y-3 sm:space-y-6 md:space-y-8 w-full max-w-2xl sm:max-w-3xl xl:max-w-4xl">
+        {/* Main Content - Form Left, Carousel Right */}
+        <div className="flex-1 flex flex-col lg:flex-row gap-6 xl:gap-8">
+          {/* Form - Left Side */}
+          <div className="flex-1 flex flex-col items-start text-4xl xl:pt-24 min-w-0">
+          <form id="storage-form" ref={formRef} onSubmit={handleSubmit} className="flex-1 flex flex-col space-y-3 sm:space-y-6 md:space-y-8 w-full max-w-2xl sm:max-w-3xl xl:max-w-4xl">
           <SectionContent delay={0.2}>
             <div>
               <label htmlFor="name" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
@@ -181,15 +196,93 @@ export default function StorageForm({
               />
             </div>
           </SectionContent>
-          <SectionContent delay={0.6}>
-            <div className="mt-8">
-              {/* Spacer to maintain form spacing */}
-            </div>
-          </SectionContent>
+          {/* Submit Button - Inside form on small screens */}
+          <div className="lg:hidden mt-8 flex flex-col items-center">
+            <SectionContent delay={0.6}>
+              <button
+                type="button"
+                disabled={isSubmitting}
+                onClick={() => {
+                  if (formRef.current) {
+                    formRef.current.requestSubmit();
+                  }
+                }}
+                className="font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+                style={{ letterSpacing: "-0.05em" }}
+              >
+                {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
+              </button>
+            </SectionContent>
+            {submitStatus === "success" && (
+              <p className="mt-4 text-center text-[#0A56FF] whitespace-nowrap">
+                Thank you! Your inquiry has been sent.
+              </p>
+            )}
+            {submitStatus === "error" && (
+              <p className="mt-4 text-center text-red-500 whitespace-nowrap">
+                There was an error. Please try again.
+              </p>
+            )}
+          </div>
         </form>
+          </div>
+
+          {/* Carousel - Right Side */}
+          {isCarouselOpen && (
+            <div className="flex-1 flex flex-col items-center justify-start xl:justify-center relative min-w-0 w-full pb-6 pt-6 sm:pb-20 sm:pt-20 lg:pt-8 xl:pt-0 xl:-mt-60">
+              <div className="relative w-full max-w-6xl aspect-video border border-white/30 overflow-hidden">
+                {/* Close Button - Top Left */}
+                <button
+                  onClick={() => setIsCarouselOpen(false)}
+                  className="absolute top-3 left-3 z-30 text-white hover:opacity-70 transition-opacity text-3xl font-light leading-none w-8 h-8 flex items-center justify-center"
+                  aria-label="Close carousel"
+                >
+                  ×
+                </button>
+
+                {/* Main Carousel Image */}
+                {carouselImages[currentImageIndex] && (
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={carouselImages[currentImageIndex]!}
+                      alt={`Storage ${currentImageIndex + 1}`}
+                      fill
+                      className="object-cover"
+                      priority
+                      quality={100}
+                    />
+                  </div>
+                )}
+
+                {/* Left Arrow */}
+                <button
+                  onClick={prevImage}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-30 text-white hover:opacity-70 transition-opacity bg-black/20 hover:bg-black/40 p-2 rounded-full"
+                  aria-label="Previous image"
+                >
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </button>
+
+                {/* Right Arrow */}
+                <button
+                  onClick={nextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-30 text-white hover:opacity-70 transition-opacity bg-black/20 hover:bg-black/40 p-2 rounded-full"
+                  aria-label="Next image"
+                >
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+          )}
+        </div>
         
-        {/* Submit Button - Centered on page */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-8 sm:bottom-75 md:bottom-85 z-20 flex flex-col items-center">
+        {/* Submit Button - Centered on page (hidden on small screens, shown on lg+) */}
+        <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 bottom-20 xl:bottom-85 z-20 flex-col items-center">
           <SectionContent delay={0.6}>
             <button
               type="button"
@@ -199,7 +292,7 @@ export default function StorageForm({
                   formRef.current.requestSubmit();
                 }
               }}
-              className=" font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50"
+              className="font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
               style={{ letterSpacing: "-0.05em" }}
             >
               {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
@@ -216,11 +309,10 @@ export default function StorageForm({
             </p>
           )}
         </div>
-        </div>
       </div>
 
       {/* Bottom Image Strip - Absolute positioned at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 z-0 h-64 overflow-hidden sm:h-80">
+      <div className="hidden lg:block absolute bottom-0 left-0 right-0 z-0 h-64 overflow-hidden sm:h-80">
         <div className="grid h-full grid-cols-4">
           {/* Image 1 */}
           {image1 && (
