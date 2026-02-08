@@ -24,8 +24,8 @@ export default function YearsStatement({
 
       {/* West Coast Logo - Above blue section */}
       {logoImage && (
-        <div className="absolute top-100 left-0 right-0 z-10 px-6 sm:px-10 lg:px-12">
-          <div className="relative w-full h-[50vw]">
+        <div className="absolute top-[30%] left-0 right-0 z-10 px-6 sm:px-10 lg:px-12">
+          <div className="relative w-full h-[50vw] ">
             <Image
               src={logoImage}
               alt="West Coast Customs Logo"
@@ -58,12 +58,12 @@ export default function YearsStatement({
 
         {/* Bottom Section - Statement */}
         <SectionContent delay={0.3}>
-          <div className="text-center relative z-30">
+          <div className="text-center relative z-30 pb-36 sm:pb-30 md:pb-24 lg:pb-12 xl:pb-2 xl:pb-0">
             <div className="font-bold uppercase" style={{ lineHeight: "0.8", letterSpacing: "-.75em" }}>
-              <div style={{ fontSize: "clamp(3rem, 12vw, 18rem)" }}>
+              <div className="text-[7rem] md:text-[10rem] lg:text-[12rem] xl:text-[16rem] 2xl:text-[18rem]">
                 WE AREN&apos;T
               </div>
-              <div style={{ fontSize: "clamp(2rem, 8vw, 10rem)" }}>
+              <div className="text-[4rem] md:text-[5.55rem] lg:text-[6.66rem] xl:text-[8.88rem] 2xl:text-[10rem]">
                 GOING ANYWHERE
               </div>
             </div>
