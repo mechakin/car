@@ -49,7 +49,7 @@ export default function YearsStatement({
             <div className="mb-6 font-bold uppercase" style={{ lineHeight: "0.75", letterSpacing: "-0.10em", fontSize: "clamp(2.5rem, 16vw, 12.5rem)" }}>
               YEARS
             </div>
-            <p className="text-white" style={{ lineHeight: "0.9", letterSpacing: "-0.05em", fontSize: "clamp(1rem, 2.5vw, 10rem)" }}>
+            <p className="text-white pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-32" style={{ lineHeight: "0.9", letterSpacing: "-0.05em", fontSize: "clamp(1rem, 2.5vw, 10rem)" }}>
               OF PUSHING THE LIMITS OF AUTOMOTIVE CUSTOMIZATION AND
               EXPRESSION...
             </p>
@@ -58,12 +58,12 @@ export default function YearsStatement({
 
         {/* Bottom Section - Statement */}
         <SectionContent delay={0.3}>
-          <div className="text-center relative z-30 pb-36 sm:pb-30 md:pb-24 lg:pb-12 xl:pb-2 xl:pb-0">
+          <div className="text-center relative z-30 pb-24 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-0">
             <div className="font-bold uppercase" style={{ lineHeight: "0.8", letterSpacing: "-.75em" }}>
-              <div className="text-[7rem] md:text-[10rem] lg:text-[12rem] xl:text-[16rem] 2xl:text-[18rem]">
+              <div className="text-[6rem] md:text-[10rem] lg:text-[12rem] xl:text-[16rem] 2xl:text-[18rem]">
                 WE AREN&apos;T
               </div>
-              <div className="text-[4rem] md:text-[5.55rem] lg:text-[6.66rem] xl:text-[8.88rem] 2xl:text-[10rem]">
+              <div className="text-[3.33rem] md:text-[5.55rem] lg:text-[6.66rem] xl:text-[8.88rem] 2xl:text-[10rem]">
                 GOING ANYWHERE
               </div>
             </div>

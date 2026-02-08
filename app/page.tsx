@@ -5,8 +5,8 @@ import StorageHero from "@/components/sections/StorageHero";
 
 export default function Home() {
   return (
-    <div className="bg-black text-white">
-      <main>
+    <div className="bg-black text-white overflow-x-hidden w-full">
+      <main className="overflow-x-hidden w-full">
         <BuiltByDreamers backgroundImage="/images/built-by-dreamers-bg.jpg" />
         <Academy
           logoImage="/images/academy-logo.png"

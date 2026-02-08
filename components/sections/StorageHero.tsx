@@ -38,8 +38,8 @@ export default function StorageHero({
         <SectionContent delay={0.1}>
           <button 
             onClick={() => router.push("/storage")}
-            className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block" 
-            style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(0.75rem, 3vw, 3.5rem)" }}
+            className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block text-xl sm:text-5xl" 
+            style={{ letterSpacing: "-0.075em", lineHeight: "0.9" }}
           >
             GET STARTED <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>→</span>
           </button>
@@ -48,10 +48,10 @@ export default function StorageHero({
         {/* Top Right - Main Headline */}
         <div className="absolute right-6 top-20 sm:right-10 lg:right-12 max-w-[50vw]">
           <SectionContent delay={0.2}>
-            <h2 className="mb-3 font-bold uppercase text-right" style={{ lineHeight: "0.9", fontSize: "clamp(1.5rem, 8vw, 15rem)" }}>
+            <h2 className="mb-3 font-bold uppercase text-right text-[2.5rem] sm:text-[3rem] md:text-[5rem] lg:text-[8rem] xl:text-[12rem] 2xl:text-[13rem]" style={{ lineHeight: "0.9" }}>
               PREMIUM STORAGE CONCIERGE
             </h2>
-            <p className="text-2xl uppercase text-white text-right" style={{ letterSpacing: ".8em" }}>
+            <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl uppercase text-white text-right" style={{ letterSpacing: ".8em" }}>
               AT THE ICONIC{" "}
               <span className="text-[#0A56FF]">WEST COAST CUSTOMS</span>
             </p>
@@ -59,12 +59,12 @@ export default function StorageHero({
         </div>
 
         {/* Bottom Center - Tagline and Services */}
-        <div className="mx-auto text-center">
+        <div className="mx-auto text-center -mb-12">
           <SectionContent delay={0.3}>
-            <h3 className="mb-6 text-3xl font-bold uppercase sm:text-4xl lg:text-5xl" style={{ lineHeight: "0.1" }}>
+            <h3 className=" text-2xl sm:text-3xl font-bold uppercase lg:text-4xl xl:text-5xl">
               ULTIMATE CARE FOR YOUR EXOTICS & CLASSICS
             </h3>
-            <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 lg:gap-3 text-sm sm:text-base lg:text-2xl uppercase text-[#0A56FF]">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl uppercase text-[#0A56FF]" style={{ lineHeight: "0.75" }}>
               <span>24/7 SURVEILLANCE</span>
               <span>BATTERY MAINTENANCE</span>
               <span>DETAILING & TRANSPORT</span>

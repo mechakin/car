@@ -7,10 +7,12 @@ export default function SchedulePage() {
     <div className="bg-black text-white">
       <main>
         <ScheduleForm
-          image1="/images/storage-form-1.png"
-          image2="/images/storage-form-2.png"
-          image3="/images/storage-form-3.png"
-          image4="/images/storage-form-4.png"
+          image1="/images/schedule-form-1.png"
+          image2="/images/schedule-form-2.png"
+          image3="/images/schedule-form-3.png"
+          image4="/images/schedule-form-4.png"
+          image5="/images/schedule-form-5.png"
+          image6="/images/schedule-form-6.png"
         />
       </main>
     </div>

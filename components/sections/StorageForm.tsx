@@ -111,11 +111,11 @@ export default function StorageForm({
         </div>
 
         {/* Form - Center Left */}
-        <div className="flex-1 flex items-start text-4xl pt-8 sm:pt-24">
-          <form id="storage-form" ref={formRef} onSubmit={handleSubmit} className="space-y-8 w-full max-w-2xl sm:max-w-3xl xl:max-w-4xl">
+        <div className="flex-1 flex items-start text-4xl xl:pt-24">
+          <form id="storage-form" ref={formRef} onSubmit={handleSubmit} className="space-y-3 sm:space-y-6 md:space-y-8 w-full max-w-2xl sm:max-w-3xl xl:max-w-4xl">
           <SectionContent delay={0.2}>
             <div>
-              <label htmlFor="name" className="mb-2 block  uppercase">
+              <label htmlFor="name" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
                 NAME:
               </label>
               <input
@@ -125,14 +125,14 @@ export default function StorageForm({
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-white/30 bg-transparent px-0 py-2 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
+                className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
               
               />
             </div>
           </SectionContent>
           <SectionContent delay={0.3}>
             <div>
-              <label htmlFor="vehicle" className="mb-2 block uppercase">
+              <label htmlFor="vehicle" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
                 VEHICLE:
               </label>
               <input
@@ -142,14 +142,14 @@ export default function StorageForm({
                 value={formData.vehicle}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-white/30 bg-transparent px-0 py-2 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
+                className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
            
               />
             </div>
           </SectionContent>
           <SectionContent delay={0.4}>
             <div>
-              <label htmlFor="email" className="mb-2 block uppercase">
+              <label htmlFor="email" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
                 EMAIL:
               </label>
               <input
@@ -159,14 +159,14 @@ export default function StorageForm({
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-white/30 bg-transparent px-0 py-2 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
+                className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
             
               />
             </div>
           </SectionContent>
           <SectionContent delay={0.5}>
             <div>
-              <label htmlFor="phone" className="mb-2 block uppercase">
+              <label htmlFor="phone" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
                 PHONE NUMBER:
               </label>
               <input
@@ -176,7 +176,7 @@ export default function StorageForm({
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-white/30 bg-transparent px-0 py-2 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
+                className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
                
               />
             </div>
@@ -189,7 +189,7 @@ export default function StorageForm({
         </form>
         
         {/* Submit Button - Centered on page */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-75 sm:bottom-85 z-20 flex flex-col items-center">
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-8 sm:bottom-75 md:bottom-85 z-20 flex flex-col items-center">
           <SectionContent delay={0.6}>
             <button
               type="button"

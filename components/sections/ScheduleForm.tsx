@@ -11,13 +11,17 @@ type ScheduleFormProps = {
   image2?: string;
   image3?: string;
   image4?: string;
+  image5?: string;
+  image6?: string;
 };
 
 export default function ScheduleForm({
-  image1 = "/images/storage-form-1.png",
-  image2 = "/images/storage-form-2.png",
-  image3 = "/images/storage-form-3.png",
-  image4 = "/images/storage-form-4.png",
+  image1 = "/images/schedule-form-1.png",
+  image2 = "/images/schedule-form-2.png",
+  image3 = "/images/schedule-form-3.png",
+  image4 = "/images/schedule-form-4.png",
+  image5 = "/images/schedule-form-5.png",
+  image6 = "/images/schedule-form-6.png",
 }: ScheduleFormProps) {
   const [formData, setFormData] = useState({
     name: "",
@@ -110,11 +114,11 @@ export default function ScheduleForm({
         </div>
 
         {/* Form - Center Left */}
-        <div className="flex-1 flex items-start text-4xl pt-8 sm:pt-24">
-          <form id="schedule-form" ref={formRef} onSubmit={handleSubmit} className="space-y-8 w-full max-w-2xl sm:max-w-3xl xl:max-w-4xl">
+        <div className="flex-1 flex items-start text-4xl xl:pt-24">
+          <form id="schedule-form" ref={formRef} onSubmit={handleSubmit} className="space-y-3 sm:space-y-6 md:space-y-8 w-full max-w-2xl sm:max-w-3xl xl:max-w-4xl">
           <SectionContent delay={0.2}>
             <div>
-              <label htmlFor="name" className="mb-2 block  uppercase">
+              <label htmlFor="name" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
                 NAME:
               </label>
               <input
@@ -124,14 +128,14 @@ export default function ScheduleForm({
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-white/30 bg-transparent px-0 py-2 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
+                className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
               
               />
             </div>
           </SectionContent>
           <SectionContent delay={0.3}>
             <div>
-              <label htmlFor="passion" className="mb-2 block uppercase">
+              <label htmlFor="passion" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
                 PASSION:
               </label>
               <input
@@ -141,14 +145,14 @@ export default function ScheduleForm({
                 value={formData.passion}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-white/30 bg-transparent px-0 py-2 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
+                className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
            
               />
             </div>
           </SectionContent>
           <SectionContent delay={0.4}>
             <div>
-              <label htmlFor="email" className="mb-2 block uppercase">
+              <label htmlFor="email" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
                 EMAIL:
               </label>
               <input
@@ -158,14 +162,14 @@ export default function ScheduleForm({
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-white/30 bg-transparent px-0 py-2 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
+                className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
             
               />
             </div>
           </SectionContent>
           <SectionContent delay={0.5}>
             <div>
-              <label htmlFor="phone" className="mb-2 block uppercase">
+              <label htmlFor="phone" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
                 PHONE NUMBER:
               </label>
               <input
@@ -175,7 +179,7 @@ export default function ScheduleForm({
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-white/30 bg-transparent px-0 py-2 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
+                className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
                
               />
             </div>
@@ -188,7 +192,7 @@ export default function ScheduleForm({
         </form>
         
         {/* Submit Button - Centered on page */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-75 sm:bottom-85 z-20 flex flex-col items-center">
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-8 sm:bottom-75 md:bottom-85 z-20 flex flex-col items-center">
           <SectionContent delay={0.6}>
             <button
               type="button"
@@ -220,7 +224,7 @@ export default function ScheduleForm({
 
       {/* Bottom Image Strip - Absolute positioned at bottom */}
       <div className="absolute bottom-0 left-0 right-0 z-0 h-64 overflow-hidden sm:h-80">
-        <div className="grid h-full grid-cols-4">
+        <div className="grid h-full grid-cols-6">
           {/* Image 1 */}
           {image1 && (
             <div className="relative">
@@ -265,6 +269,32 @@ export default function ScheduleForm({
             <div className="relative">
               <Image
                 src={image4}
+                alt="Schedule"
+                fill
+                className="object-cover"
+                priority
+                quality={100}
+              />
+            </div>
+          )}
+          {/* Image 5 */}
+          {image5 && (
+            <div className="relative">
+              <Image
+                src={image5}
+                alt="Schedule"
+                fill
+                className="object-cover"
+                priority
+                quality={100}
+              />
+            </div>
+          )}
+          {/* Image 6 */}
+          {image6 && (
+            <div className="relative">
+              <Image
+                src={image6}
                 alt="Schedule"
                 fill
                 className="object-cover"
