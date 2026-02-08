@@ -51,7 +51,7 @@ export default function ScheduleVisit({
             <h2 className="mb-2 font-bold uppercase text-white whitespace-nowrap" style={{ lineHeight: "0.2", fontSize: "clamp(2.25rem, 9vw, 9rem)" }}>
               SCHEDULE A
             </h2>
-            <h2 className="font-bold uppercase text-[#0A56FF]" style={{ lineHeight: "0.9", fontSize: "clamp(3.5rem, 15vw, 36rem)" }}>
+            <h2 className="font-bold uppercase text-[#0A56FF]" style={{ lineHeight: "0.9", fontSize: "clamp(3.5rem, 15.25vw, 36rem)" }}>
               VISIT
             </h2>
           </div>
