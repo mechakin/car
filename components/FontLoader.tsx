@@ -4,10 +4,8 @@ import { useEffect } from "react";
 
 export default function FontLoader() {
   useEffect(() => {
-    // Check if font link already exists
-    if (document.querySelector('link[href*="Century+Gothic"]')) {
-      return;
-    }
+    // FontLoader disabled - using self-hosted Century Gothic via @font-face in globals.css
+    return;
 
     // Create and add preconnect links
     const preconnect1 = document.createElement("link");
@@ -21,12 +19,7 @@ export default function FontLoader() {
     preconnect2.crossOrigin = "anonymous";
     document.head.appendChild(preconnect2);
 
-    // Create and add font stylesheet
-    const fontLink = document.createElement("link");
-    fontLink.href =
-      "https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap";
-    fontLink.rel = "stylesheet";
-    document.head.appendChild(fontLink);
+    // FontLoader disabled - using self-hosted Century Gothic via @font-face in globals.css
   }, []);
 
   return null;
