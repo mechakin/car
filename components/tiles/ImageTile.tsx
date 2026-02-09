@@ -37,7 +37,7 @@ export default function ImageTile({
           src={src}
           alt={alt}
           fill
-          sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 100vw"
+          sizes="(min-width: 1024px) 25dvw, (min-width: 768px) 33dvw, 100dvw"
           className="object-cover"
           priority={false}
         />

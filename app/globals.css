@@ -40,7 +40,7 @@ body {
   letter-spacing: -0.075em;
   overflow-x: hidden;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100dvw;
 }
 
 h1,
@@ -59,19 +59,19 @@ p {
 
 /* ScheduleVisit VISIT text responsive sizing */
 #schedule-visit .visit-text {
-  font-size: 20.25vw;
+  font-size: 20.25dvw;
 }
 
 @media (min-width: 1024px) {
   #schedule-visit .visit-text {
-    font-size: 15.25vw !important;
+    font-size: 15.25dvw !important;
   }
 }
 
 /* ScheduleVisit SCHEDULE text responsive sizing */
 @media (min-width: 1024px) {
   #schedule-visit .schedule-text {
-    font-size: clamp(2.25rem, 10vw, 10.85rem) !important;
+    font-size: clamp(2.25rem, 10dvw, 10.85rem) !important;
   }
 }
 
@@ -106,9 +106,9 @@ p {
 @media (min-width: 1024px) {
   /* On large screens, align with BY position */
   #built-by-dreamers .dreamers-text {
-    margin-left: calc(min(6vw, 9.75vh) * 0.5 + clamp(20rem, 28vw, 28rem)) !important;
+    margin-left: calc(min(6dvw, 9.75dvh) * 0.5 + clamp(20rem, 28dvw, 28rem)) !important;
   }
   #built-by-dreamers .since-text {
-    margin-left: calc(min(6vw, 9.75vh) * 0.5 + 76rem) !important;
+    margin-left: calc(min(6dvw, 9.75dvh) * 0.5 + 76rem) !important;
   }
 }

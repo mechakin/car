@@ -14,7 +14,7 @@ export default function WhoWhat({
   return (
     <Section id="who-what" className="relative overflow-hidden">
       {/* Background Colors */}
-      <div className="relative z-0 flex h-screen">
+      <div className="relative z-0 flex h-[100dvh]">
         {/* Left - WHO WE ARE - All Black */}
         <div className="relative w-1/2 bg-black"></div>
 
@@ -32,7 +32,7 @@ export default function WhoWhat({
               fill
               className="object-contain"
               priority
-              sizes="100vw"
+              sizes="100dvw"
               style={{ transform: "rotate(90deg)" }}
             />
           </div>
@@ -40,7 +40,7 @@ export default function WhoWhat({
       )}
 
       {/* Text Content - Above logo */}
-      <div className="absolute inset-0 z-20 flex h-screen pointer-events-none">
+      <div className="absolute inset-0 z-20 flex h-[100dvh] pointer-events-none">
         {/* Left - WHO WE ARE */}
         <div className="relative w-1/2 px-6 py-20 sm:px-10 sm:py-20 lg:px-12 lg:py-32 flex justify-center">
           <SectionContent delay={0.1}>

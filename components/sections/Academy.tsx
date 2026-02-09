@@ -15,7 +15,7 @@ export default function Academy({
   workshopImage = "/images/academy-workshop.jpg",
 }: AcademyProps) {
   return (
-    <Section id="academy" className="!min-h-[50vh] h-[50vh] sm:!min-h-screen sm:h-screen">
+    <Section id="academy" className="!min-h-[50dvh] h-[50dvh] sm:!min-h-[100dvh] sm:h-[100dvh]">
       <div className="relative h-full flex">
         {/* Left Side - Black Background with Logo and Text */}
         <div className="relative w-1/2 bg-black text-white flex flex-col px-6 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12">
@@ -37,10 +37,10 @@ export default function Academy({
           {/* Text below logo */}
           <SectionContent delay={0.2}>
             <div className="space-y-1 sm:space-y-2">
-              <p className="font-bold uppercase leading-none text-white tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1.5rem, 7vw, 8rem)" }}>
+              <p className="font-bold uppercase leading-none text-white tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1.5rem, 7dvw, 8rem)" }}>
                 WHERE THE LEADERS OF TOMORROW ARE BUILT
               </p>
-              <p className="uppercase leading-none !text-[#0A56FF] tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4vw, 4.5rem)" }}>
+              <p className="uppercase leading-none !text-[#0A56FF] tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 4.5rem)" }}>
                 IN LOS ANGELES CALIFORNIA
               </p>
             </div>
@@ -57,7 +57,7 @@ export default function Academy({
               className="object-cover"
               priority
               quality={100}
-              sizes="50vw"
+              sizes="50dvw"
             />
           )}
           

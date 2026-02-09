@@ -17,7 +17,7 @@ export default function ScheduleVisit({
   return (
     <Section id="schedule-visit" className="relative">
       {/* Background - Split Layout */}
-      <div className="absolute inset-0 h-screen grid grid-cols-2">
+      <div className="absolute inset-0 h-[100dvh] grid grid-cols-2">
         {/* Left - Merchandise */}
         {leftImage && (
           <div className="relative">
@@ -28,7 +28,7 @@ export default function ScheduleVisit({
               className="object-cover"
               priority
               quality={100}
-              sizes="50vw"
+              sizes="50dvw"
             />
           </div>
         )}
@@ -42,21 +42,21 @@ export default function ScheduleVisit({
               className="object-cover"
               priority
               quality={100}
-              sizes="50vw"
+              sizes="50dvw"
             />
           </div>
         )}
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-screen flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
+      <div className="relative z-10 flex h-[100dvh] flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
         {/* Top Left - Schedule A Visit */}
         <SectionContent delay={0.1}>
           <div className="max-w-md">
-            <h2 className="schedule-text mb-2 font-bold uppercase text-white whitespace-nowrap" style={{ lineHeight: "0.2", fontSize: "clamp(2.25rem, 9vw, 9rem)" }}>
+            <h2 className="schedule-text mb-2 font-bold uppercase text-white whitespace-nowrap" style={{ lineHeight: "0.2", fontSize: "clamp(2.25rem, 9dvw, 9rem)" }}>
               SCHEDULE
             </h2>
-            <h2 className="visit-text font-bold uppercase text-[#0A56FF]" style={{ lineHeight: "0.95", fontSize: "20.25vw" }}>
+            <h2 className="visit-text font-bold uppercase text-[#0A56FF]" style={{ lineHeight: "0.95", fontSize: "20.25dvw" }}>
               VISIT
             </h2>
           </div>
