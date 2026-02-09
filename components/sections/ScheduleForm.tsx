@@ -204,7 +204,7 @@ export default function ScheduleForm({
                     formRef.current.requestSubmit();
                   }
                 }}
-                className="font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+                className="font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50 text-5xl"
                 style={{ letterSpacing: "-0.05em" }}
               >
                 {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
@@ -288,7 +288,7 @@ export default function ScheduleForm({
                   formRef.current.requestSubmit();
                 }
               }}
-              className=" font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50"
+              className="font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
               style={{ letterSpacing: "-0.05em" }}
             >
               {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
