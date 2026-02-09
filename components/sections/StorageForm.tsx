@@ -103,7 +103,7 @@ export default function StorageForm({
             className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block sm:text-5xl text-3xl"
             style={{ letterSpacing: "-0.075em", lineHeight: "0.9"}}
           >
-            <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>←</span> BACK
+            <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>←</span> BACK
           </Link>
         </SectionContent>
       </div>

@@ -29,6 +29,7 @@ export default function Academy({
                 className="object-contain"
                 priority
                 sizes="(max-width: 640px) 340px, (max-width: 1024px) 425px, (max-width: 1280px) 510px, (max-width: 1536px) 595px, 680px"
+                quality={100}
               />
             )}
           </div>
@@ -55,8 +56,8 @@ export default function Academy({
               fill
               className="object-cover"
               priority
+              quality={100}
               sizes="50vw"
-             
             />
           )}
           
@@ -64,7 +65,7 @@ export default function Academy({
           <div className="absolute top-6 right-6 xl:top-12 xl:right-12 z-10">
             <SectionContent delay={0.1}>
               <Link href="/academy" className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block text-xl sm:text-5xl" style={{ letterSpacing: "-0.075em", lineHeight: "0.9" }}>
-                LEARN MORE <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>→</span>
+                LEARN MORE <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>→</span>
               </Link>
             </SectionContent>
           </div>

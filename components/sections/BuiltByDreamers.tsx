@@ -86,13 +86,13 @@ export default function BuiltByDreamers({
         <div className="max-w-2xl space-y-4 lg:max-w-4xl xl:max-w-5xl">
           <SectionContent delay={0.3}>
             <p
-              className="text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl xl:text-5xl"
-              style={{ letterSpacing: "-0.075em", color: "#0A56FF", lineHeight: "0.9" }}
+              className="text-xl font-semibold leading-tight sm:text-3xl lg:text-4xl xl:text-5xl"
+              style={{ letterSpacing: "-0.075em", color: "#0A56FF", lineHeight: "0.5" }}
             >
               Built by Dreamers is more than a phrase
             </p>
             <p
-              className="mt-2 text-white text-lg sm:text-xl lg:text-2xl xl:text-3xl"
+              className="mt-2 text-white text-md sm:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 letterSpacing: "-0.075em",
                 textTransform: "none",
@@ -105,7 +105,7 @@ export default function BuiltByDreamers({
 
           <SectionContent delay={0.4}>
             <p
-              className="text-lg leading-tight text-white sm:text-xl lg:text-2xl xl:text-3xl"
+              className="text-md leading-tight text-white sm:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 letterSpacing: "-0.075em",
                 textTransform: "none",
@@ -119,7 +119,7 @@ export default function BuiltByDreamers({
 
           <SectionContent delay={0.5}>
             <p
-              className="text-lg leading-tight text-white sm:text-xl lg:text-2xl xl:text-3xl"
+              className="text-md leading-tight text-white sm:text-xl lg:text-2xl xl:text-3xl"
               style={{
                 letterSpacing: "-0.075em",
                 textTransform: "none",
