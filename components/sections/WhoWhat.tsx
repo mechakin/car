@@ -12,7 +12,7 @@ export default function WhoWhat({
   logoImage = "/images/wcc-logo.png",
 }: WhoWhatProps) {
   return (
-    <Section id="who-what" className="relative overflow-hidden">
+    <Section id="who-what" className="relative overflow-visible">
       {/* Background Colors */}
       <div className="relative z-0 flex h-screen">
         {/* Left - WHO WE ARE - All Black */}

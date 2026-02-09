@@ -33,7 +33,7 @@ export default function StatementTile({
         {eyebrow && (
           <div
             className={`text-xs tracking-[0.4em] ${
-              accent ? "text-white" : "text-white"
+              accent ? "text-white" : "text-white/70"
             }`}
           >
             {eyebrow}
@@ -46,7 +46,7 @@ export default function StatementTile({
           {subhead && (
             <div
               className={`text-xs tracking-[0.25em] ${
-                accent ? "text-white" : "text-white"
+                accent ? "text-white" : "text-white/60"
               }`}
             >
               {subhead}
