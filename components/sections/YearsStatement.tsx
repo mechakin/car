@@ -25,31 +25,31 @@ export default function YearsStatement({
       {/* West Coast Logo - Above blue section */}
       {logoImage && (
         <div className="absolute top-[30%] left-0 right-0 z-10 px-6 sm:px-10 lg:px-12">
-          <div className="relative w-full lg:h-[50vw] h-[78vh] ">
+          <div className="relative w-full lg:h-[50dvw] h-[78dvh] ">
             <Image
               src={logoImage}
               alt="West Coast Customs Logo"
               fill
               className="object-contain"
               priority
-              sizes="100vw"
+              sizes="100dvw"
             />
           </div>
         </div>
       )}
 
       {/* Content */}
-      <div className="relative z-10 flex h-screen flex-col justify-between px-6 pt-20 pb-4 sm:px-10 sm:pt-20 sm:pb-8 lg:px-12 lg:pt-4 lg:pb-12">
+      <div className="relative z-10 flex h-[100dvh] flex-col justify-between px-6 pt-20 pb-4 sm:px-10 sm:pt-20 sm:pb-8 lg:px-12 lg:pt-4 lg:pb-12">
         {/* Top Section - 32 YEARS */}
         <SectionContent delay={0.1}>
-          <div className="max-w-[50vw]">
-            <div className="mb-4 font-bold" style={{ lineHeight: "0.75", letterSpacing: "-0.10em", fontSize: "clamp(4rem, 30vw, 32rem)" }}>
+          <div className="max-w-[50dvw]">
+            <div className="mb-4 font-bold" style={{ lineHeight: "0.75", letterSpacing: "-0.10em", fontSize: "clamp(4rem, 30dvw, 32rem)" }}>
               32
             </div>
-            <div className="mb-6 font-bold uppercase" style={{ lineHeight: "0.75", letterSpacing: "-0.10em", fontSize: "clamp(2.5rem, 16vw, 12.5rem)" }}>
+            <div className="mb-6 font-bold uppercase" style={{ lineHeight: "0.75", letterSpacing: "-0.10em", fontSize: "clamp(2.5rem, 16dvw, 12.5rem)" }}>
               YEARS
             </div>
-            <p className="text-white pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-32" style={{ lineHeight: "0.9", letterSpacing: "-0.05em", fontSize: "clamp(1rem, 2.5vw, 10rem)" }}>
+            <p className="text-white pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 2xl:pb-32" style={{ lineHeight: "0.9", letterSpacing: "-0.05em", fontSize: "clamp(1rem, 2.5dvw, 10rem)" }}>
               OF PUSHING THE LIMITS OF AUTOMOTIVE CUSTOMIZATION AND
               EXPRESSION...
             </p>

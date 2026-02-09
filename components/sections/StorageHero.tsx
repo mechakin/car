@@ -17,7 +17,7 @@ export default function StorageHero({
   return (
     <Section id="storage-hero" className="relative">
       {/* Background Image - Car Storage Facility */}
-      <div className="absolute inset-0 h-screen bg-black overflow-hidden">
+      <div className="absolute inset-0 h-[100dvh] bg-black overflow-hidden">
         {backgroundImage && (
           <Image
             src={backgroundImage}
@@ -26,13 +26,13 @@ export default function StorageHero({
             className="object-cover"
             priority
             quality={100}
-            sizes="100vw"
+            sizes="100dvw"
           />
         )}
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-screen flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
+      <div className="relative z-10 flex h-[100dvh] flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
         {/* Top Left - CTA */}
         <SectionContent delay={0.1}>
           <button 
@@ -45,7 +45,7 @@ export default function StorageHero({
         </SectionContent>
 
         {/* Top Right - Main Headline */}
-        <div className="absolute right-6 top-20 sm:right-10 lg:right-12 max-w-[60vw]">
+        <div className="absolute right-6 top-20 sm:right-10 lg:right-12 max-w-[60dvw]">
           <SectionContent delay={0.2}>
             <h2 className="mb-3 font-bold uppercase text-right text-[2.5rem] sm:text-[3rem] md:text-[5rem] lg:text-[8rem] xl:text-[12rem] 2xl:text-[13rem]" style={{ lineHeight: "0.9" }}>
               PREMIUM STORAGE CONCIERGE
