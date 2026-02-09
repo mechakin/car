@@ -27,6 +27,8 @@ export default function ScheduleVisit({
               fill
               className="object-cover"
               priority
+              quality={100}
+              sizes="50vw"
             />
           </div>
         )}
@@ -39,6 +41,8 @@ export default function ScheduleVisit({
               fill
               className="object-cover"
               priority
+              quality={100}
+              sizes="50vw"
             />
           </div>
         )}
@@ -49,10 +53,10 @@ export default function ScheduleVisit({
         {/* Top Left - Schedule A Visit */}
         <SectionContent delay={0.1}>
           <div className="max-w-md">
-            <h2 className="mb-2 font-bold uppercase text-white whitespace-nowrap" style={{ lineHeight: "0.2", fontSize: "clamp(2.25rem, 9vw, 9rem)" }}>
-              SCHEDULE A
+            <h2 className="schedule-text mb-2 font-bold uppercase text-white whitespace-nowrap" style={{ lineHeight: "0.2", fontSize: "clamp(2.25rem, 9vw, 9rem)" }}>
+              SCHEDULE
             </h2>
-            <h2 className="font-bold uppercase text-[#0A56FF]" style={{ lineHeight: "0.9", fontSize: "clamp(3.5rem, 15.25vw, 36rem)" }}>
+            <h2 className="visit-text font-bold uppercase text-[#0A56FF]" style={{ lineHeight: "0.95", fontSize: "20.25vw" }}>
               VISIT
             </h2>
           </div>
@@ -61,7 +65,7 @@ export default function ScheduleVisit({
         {/* Top Right - Schedule CTA */}
         <div className="absolute right-6 top-20 xl:right-12 xl:top-20">
           <SectionContent delay={0.2}>
-            <Link href="/schedule" className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block text-xl sm:text-5xl" style={{ letterSpacing: "-0.075em", lineHeight: "0.9" }}>SCHEDULE <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>→</span></Link>
+            <Link href="/schedule" className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block text-xl sm:text-5xl" style={{ letterSpacing: "-0.075em", lineHeight: "0.9" }}>SCHEDULE <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>→</span></Link>
           </SectionContent>
         </div>
 

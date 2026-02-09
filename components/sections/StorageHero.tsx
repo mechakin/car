@@ -27,7 +27,6 @@ export default function StorageHero({
             priority
             quality={100}
             sizes="100vw"
-            unoptimized={false}
           />
         )}
       </div>
@@ -41,7 +40,7 @@ export default function StorageHero({
             className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block text-xl sm:text-5xl" 
             style={{ letterSpacing: "-0.075em", lineHeight: "0.9" }}
           >
-            GET STARTED <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white", textShadow: "1px 0 0 currentColor, -1px 0 0 currentColor, 0 1px 0 currentColor, 0 -1px 0 currentColor" }}>→</span>
+            GET STARTED <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>→</span>
           </button>
         </SectionContent>
 

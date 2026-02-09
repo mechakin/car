@@ -6,22 +6,26 @@ import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
 
-type StorageFormProps = {
+type AcademyFormProps = {
   image1?: string;
   image2?: string;
   image3?: string;
   image4?: string;
+  image5?: string;
+  image6?: string;
 };
 
-export default function StorageForm({
-  image1 = "/images/storage-form-1.png",
-  image2 = "/images/storage-form-2.png",
-  image3 = "/images/storage-form-3.png",
-  image4 = "/images/storage-form-4.png",
-}: StorageFormProps) {
+export default function AcademyForm({
+  image1 = "/images/academy-form-1.png",
+  image2 = "/images/academy-form-2.png",
+  image3 = "/images/academy-form-3.png",
+  image4 = "/images/academy-form-4.png",
+  image5 = "/images/academy-form-5.png",
+  image6 = "/images/academy-form-6.png",
+}: AcademyFormProps) {
   const [formData, setFormData] = useState({
     name: "",
-    vehicle: "",
+    passion: "",
     email: "",
     phone: "",
   });
@@ -32,7 +36,7 @@ export default function StorageForm({
   const formRef = useRef<HTMLFormElement>(null);
 
   // Carousel images
-  const carouselImages = [image1, image2, image3, image4].filter(Boolean);
+  const carouselImages = [image1, image2, image3, image4, image5, image6].filter(Boolean);
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
@@ -64,19 +68,19 @@ export default function StorageForm({
       
       // Simulate email sending
       const emailContent = `
-        Premium Storage Concierge Inquiry
+        West Coast Customs Academy Inquiry
         
         Name: ${formData.name}
-        Vehicle: ${formData.vehicle}
+        Passion: ${formData.passion}
         Email: ${formData.email}
         Phone: ${formData.phone}
       `;
       
-      console.log("Email would be sent to: storage@westcoastcustoms.com");
+      console.log("Email would be sent to: academy@westcoastcustoms.com");
       console.log("Email content:", emailContent);
       
       setSubmitStatus("success");
-      setFormData({ name: "", vehicle: "", email: "", phone: "" });
+      setFormData({ name: "", passion: "", email: "", phone: "" });
       
       // Reset success message after 5 seconds
       setTimeout(() => {
@@ -91,7 +95,7 @@ export default function StorageForm({
   };
 
   return (
-    <Section id="storage-form" className="relative">
+    <Section id="academy-form" className="relative">
       {/* Background */}
       <div className="absolute inset-0 h-screen bg-black" />
 
@@ -101,7 +105,7 @@ export default function StorageForm({
           <Link
             href="/"
             className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block sm:text-5xl text-3xl"
-            style={{ letterSpacing: "-0.075em", lineHeight: "0.9"}}
+            style={{ letterSpacing: "-0.075em", lineHeight: "0.9",  }}
           >
             <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>←</span> BACK
           </Link>
@@ -109,16 +113,15 @@ export default function StorageForm({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-screen flex-col px-6 pt-24 pb-8 sm:px-10 xl:px-12 xl:pt-8">
+      <div className="relative z-10 flex h-screen flex-col px-6 pt-24 pb-8 sm:px-10 sm:pb-12 lg:pb-8 xl:px-12 xl:pt-8">
         {/* Top Section */}
-        <div className="mx-auto text-center mb-8 sm:mb-12">
+        <div className="mx-auto text-center mb-8">
           <SectionContent delay={0.1}>
             <h2 className="mb-3 font-bold uppercase text-6xl xl:text-8xl" style={{ lineHeight: "0.9" }}>
-              PREMIUM STORAGE CONCIERGE
+              WEST COAST CUSTOMS ACADEMY
             </h2>
-            <p className="xl:pl-10 uppercase" style={{ letterSpacing: "2rem"}}>
-              AT THE ICONIC{" "}
-              <span className="text-[#0A56FF]">WEST COAST CUSTOMS</span>
+            <p className="xl:pl-10 uppercase text-[#0A56FF]" style={{ letterSpacing: "1.5rem", color: "#0A56FF" }}>
+              WHERE THE LEADERS OF TOMORROW ARE BUILT
             </p>
           </SectionContent>
         </div>
@@ -127,7 +130,7 @@ export default function StorageForm({
         <div className="flex-1 flex flex-col lg:flex-row gap-6 xl:gap-8">
           {/* Form - Left Side */}
           <div className="flex-1 flex flex-col items-start text-4xl xl:pt-24 min-w-0">
-          <form id="storage-form" ref={formRef} onSubmit={handleSubmit} className="flex-1 flex flex-col space-y-3 sm:space-y-6 md:space-y-8 w-full max-w-2xl sm:max-w-3xl xl:max-w-4xl">
+          <form id="academy-form" ref={formRef} onSubmit={handleSubmit} className="flex-1 flex flex-col space-y-3 sm:space-y-6 md:space-y-8 w-full max-w-2xl sm:max-w-3xl xl:max-w-4xl">
           <SectionContent delay={0.2}>
             <div>
               <label htmlFor="name" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
@@ -147,14 +150,14 @@ export default function StorageForm({
           </SectionContent>
           <SectionContent delay={0.3}>
             <div>
-              <label htmlFor="vehicle" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
-                VEHICLE:
+              <label htmlFor="passion" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
+                PASSION:
               </label>
               <input
                 type="text"
-                id="vehicle"
-                name="vehicle"
-                value={formData.vehicle}
+                id="passion"
+                name="passion"
+                value={formData.passion}
                 onChange={handleChange}
                 required
                 className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
@@ -245,7 +248,7 @@ export default function StorageForm({
                   <div className="relative w-full h-full">
                     <Image
                       src={carouselImages[currentImageIndex]!}
-                      alt={`Storage ${currentImageIndex + 1}`}
+                      alt={`Academy ${currentImageIndex + 1}`}
                       fill
                       className="object-cover"
                       priority
@@ -276,13 +279,12 @@ export default function StorageForm({
                   </svg>
                 </button>
               </div>
-
             </div>
           )}
         </div>
         
         {/* Submit Button - Centered on page (hidden on small screens, shown on lg+) */}
-        <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 bottom-20 xl:bottom-85 z-20 flex-col items-center">
+        <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 bottom-20 xl:bottom-85 z-20 flex flex-col items-center">
           <SectionContent delay={0.6}>
             <button
               type="button"
@@ -292,7 +294,7 @@ export default function StorageForm({
                   formRef.current.requestSubmit();
                 }
               }}
-              className="font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+              className=" font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50"
               style={{ letterSpacing: "-0.05em" }}
             >
               {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
@@ -313,13 +315,13 @@ export default function StorageForm({
 
       {/* Bottom Image Strip - Absolute positioned at bottom */}
       <div className="hidden lg:block absolute bottom-0 left-0 right-0 z-0 h-64 overflow-hidden sm:h-80">
-        <div className="grid h-full grid-cols-4">
+        <div className="grid h-full grid-cols-6">
           {/* Image 1 */}
           {image1 && (
             <div className="relative">
               <Image
                 src={image1}
-                alt="Storage"
+                alt="Academy"
                 fill
                 className="object-cover"
                 priority
@@ -332,7 +334,7 @@ export default function StorageForm({
             <div className="relative">
               <Image
                 src={image2}
-                alt="Storage"
+                alt="Academy"
                 fill
                 className="object-cover"
                 priority
@@ -345,7 +347,7 @@ export default function StorageForm({
             <div className="relative">
               <Image
                 src={image3}
-                alt="Storage"
+                alt="Academy"
                 fill
                 className="object-cover"
                 priority
@@ -358,7 +360,33 @@ export default function StorageForm({
             <div className="relative">
               <Image
                 src={image4}
-                alt="Storage"
+                alt="Academy"
+                fill
+                className="object-cover"
+                priority
+                quality={100}
+              />
+            </div>
+          )}
+          {/* Image 5 */}
+          {image5 && (
+            <div className="relative">
+              <Image
+                src={image5}
+                alt="Academy"
+                fill
+                className="object-cover"
+                priority
+                quality={100}
+              />
+            </div>
+          )}
+          {/* Image 6 */}
+          {image6 && (
+            <div className="relative">
+              <Image
+                src={image6}
+                alt="Academy"
                 fill
                 className="object-cover"
                 priority

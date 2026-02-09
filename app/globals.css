@@ -57,6 +57,24 @@ p {
   color: rgba(255, 255, 255, 1);
 }
 
+/* ScheduleVisit VISIT text responsive sizing */
+#schedule-visit .visit-text {
+  font-size: 20.25vw;
+}
+
+@media (min-width: 1024px) {
+  #schedule-visit .visit-text {
+    font-size: 15.25vw !important;
+  }
+}
+
+/* ScheduleVisit SCHEDULE text responsive sizing */
+@media (min-width: 1024px) {
+  #schedule-visit .schedule-text {
+    font-size: clamp(2.25rem, 10vw, 10.85rem) !important;
+  }
+}
+
 /* Built By Dreamers alignment - align DREAMERS and SINCE with BY */
 /* Calculate position: width of BUILT + gap */
 #built-by-dreamers .dreamers-text {
