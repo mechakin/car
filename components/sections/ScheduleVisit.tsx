@@ -11,8 +11,8 @@ type ScheduleVisitProps = {
 };
 
 export default function ScheduleVisit({
-  leftImage = "/images/schedule-visit-left.png",
-  rightImage = "/images/schedule-visit-right.png",
+  leftImage = "/images/schedule-visit-left.jpg",
+  rightImage = "/images/schedule-visit-right.jpg",
 }: ScheduleVisitProps) {
   return (
     <Section id="schedule-visit" className="relative">

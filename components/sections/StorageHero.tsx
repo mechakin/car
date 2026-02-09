@@ -10,7 +10,7 @@ type StorageHeroProps = {
 };
 
 export default function StorageHero({
-  backgroundImage = "/images/storage-hero-bg.png",
+  backgroundImage = "/images/storage-hero-bg.jpg",
 }: StorageHeroProps) {
   const router = useRouter();
 
@@ -45,7 +45,7 @@ export default function StorageHero({
         </SectionContent>
 
         {/* Top Right - Main Headline */}
-        <div className="absolute right-6 top-20 sm:right-10 lg:right-12 max-w-[50vw]">
+        <div className="absolute right-6 top-20 sm:right-10 lg:right-12 max-w-[60vw]">
           <SectionContent delay={0.2}>
             <h2 className="mb-3 font-bold uppercase text-right text-[2.5rem] sm:text-[3rem] md:text-[5rem] lg:text-[8rem] xl:text-[12rem] 2xl:text-[13rem]" style={{ lineHeight: "0.9" }}>
               PREMIUM STORAGE CONCIERGE

@@ -14,10 +14,10 @@ type StorageFormProps = {
 };
 
 export default function StorageForm({
-  image1 = "/images/storage-form-1.png",
-  image2 = "/images/storage-form-2.png",
-  image3 = "/images/storage-form-3.png",
-  image4 = "/images/storage-form-4.png",
+  image1 = "/images/storage-form-1.jpg",
+  image2 = "/images/storage-form-2.jpg",
+  image3 = "/images/storage-form-3.jpg",
+  image4 = "/images/storage-form-4.jpg",
 }: StorageFormProps) {
   const [formData, setFormData] = useState({
     name: "",

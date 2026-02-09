@@ -15,15 +15,14 @@ type ScheduleFormProps = {
 };
 
 export default function ScheduleForm({
-  image1 = "/images/schedule-form-1.png",
-  image2 = "/images/schedule-form-2.png",
-  image3 = "/images/schedule-form-3.png",
-  image4 = "/images/schedule-form-4.png",
-  image5 = "/images/schedule-form-5.png",
+  image1 = "/images/schedule-form-1.jpg",
+  image2 = "/images/schedule-form-2.jpg",
+  image3 = "/images/schedule-form-3.jpg",
+  image4 = "/images/schedule-form-4.jpg",
+  image5 = "/images/schedule-form-5.jpg",
 }: ScheduleFormProps) {
   const [formData, setFormData] = useState({
     name: "",
-    passion: "",
     email: "",
     phone: "",
   });
@@ -69,7 +68,6 @@ export default function ScheduleForm({
         Schedule Visit Inquiry
         
         Name: ${formData.name}
-        Passion: ${formData.passion}
         Email: ${formData.email}
         Phone: ${formData.phone}
       `;
@@ -78,7 +76,7 @@ export default function ScheduleForm({
       console.log("Email content:", emailContent);
       
       setSubmitStatus("success");
-      setFormData({ name: "", passion: "", email: "", phone: "" });
+      setFormData({ name: "", email: "", phone: "" });
       
       // Reset success message after 5 seconds
       setTimeout(() => {
@@ -147,22 +145,6 @@ export default function ScheduleForm({
           </SectionContent>
           <SectionContent delay={0.3}>
             <div>
-              <label htmlFor="passion" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
-                PASSION:
-              </label>
-              <input
-                type="text"
-                id="passion"
-                name="passion"
-                value={formData.passion}
-                onChange={handleChange}
-                required
-                className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
-              />
-            </div>
-          </SectionContent>
-          <SectionContent delay={0.4}>
-            <div>
               <label htmlFor="email" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
                 EMAIL:
               </label>
@@ -177,7 +159,7 @@ export default function ScheduleForm({
               />
             </div>
           </SectionContent>
-          <SectionContent delay={0.5}>
+          <SectionContent delay={0.4}>
             <div>
               <label htmlFor="phone" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
                 PHONE NUMBER:
