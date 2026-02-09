@@ -116,9 +116,8 @@ export default function StorageForm({
             <h2 className="mb-3 font-bold uppercase text-6xl xl:text-8xl" style={{ lineHeight: "0.9" }}>
               PREMIUM STORAGE CONCIERGE
             </h2>
-            <p className="xl:pl-10 uppercase" style={{ letterSpacing: "2rem"}}>
-              AT THE ICONIC{" "}
-              <span className="text-[#0A56FF]">WEST COAST CUSTOMS</span>
+            <p className="xl:pl-10 uppercase !text-[#0A56FF]" style={{ letterSpacing: "2rem"}}>
+              AT THE ICONIC WEST COAST CUSTOMS          
             </p>
           </SectionContent>
         </div>
@@ -207,7 +206,7 @@ export default function StorageForm({
                     formRef.current.requestSubmit();
                   }
                 }}
-                className="font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+                className="font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50 text-5xl"
                 style={{ letterSpacing: "-0.05em" }}
               >
                 {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
