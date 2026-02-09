@@ -15,7 +15,7 @@ export default function Academy({
   workshopImage = "/images/academy-workshop.png",
 }: AcademyProps) {
   return (
-    <Section id="academy" className="relative h-screen">
+    <Section id="academy" className="!min-h-[50vh] h-[50vh] sm:!min-h-screen sm:h-screen">
       <div className="relative h-full flex">
         {/* Left Side - Black Background with Logo and Text */}
         <div className="relative w-1/2 bg-black text-white flex flex-col px-6 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12">
