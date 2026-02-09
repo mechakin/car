@@ -11,8 +11,8 @@ type AcademyProps = {
 };
 
 export default function Academy({
-  logoImage = "/images/academy-logo.png",
-  workshopImage = "/images/academy-workshop.png",
+  logoImage = "/images/academy-logo.jpg",
+  workshopImage = "/images/academy-workshop.jpg",
 }: AcademyProps) {
   return (
     <Section id="academy" className="!min-h-[50vh] h-[50vh] sm:!min-h-screen sm:h-screen">
