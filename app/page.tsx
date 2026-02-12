@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="bg-black text-white overflow-x-hidden w-full">
       <Header />
-      <main className="overflow-x-hidden w-full">
+      <main className="overflow-x-hidden w-full pt-20 sm:pt-24">
         <BuiltByDreamers backgroundImage="/images/built-by-dreamers-bg.jpg" />
         <YearsStatement />
         <WhoWhat />
