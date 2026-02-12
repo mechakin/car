@@ -8,7 +8,6 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollVisible, setScrollVisible] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [hasScrolled, setHasScrolled] = useState(false);
 
   // Derive visibility: always visible when menu is open, otherwise use scroll state
   const isVisible = isMenuOpen || scrollVisible;
@@ -17,29 +16,24 @@ export default function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      // Mark that user has scrolled
-      if (!hasScrolled && currentScrollY > 0) {
-        setHasScrolled(true);
-      }
-      
-      // Show header when scrolling up, hide when scrolling down
-      if (currentScrollY < lastScrollY) {
-        // Scrolling up - show header
+      // Show header when at top, when scrolling up, or when scrolled back to top
+      if (currentScrollY < 10) {
         setScrollVisible(true);
-      } else if (currentScrollY > lastScrollY && currentScrollY > 10) {
-        // Scrolling down - hide header
+      } else if (currentScrollY < lastScrollY) {
+        setScrollVisible(true);
+      } else if (currentScrollY > lastScrollY) {
         setScrollVisible(false);
-      } else if (currentScrollY < 10 && hasScrolled) {
-        // At top after scrolling - show header
-        setScrollVisible(true);
       }
       
       setLastScrollY(currentScrollY);
     };
 
+    // Set initial visibility based on scroll position on mount
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY, hasScrolled]);
+  }, [lastScrollY]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -56,17 +50,17 @@ export default function Header() {
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-      <div className="px-6 py-4 sm:px-10 lg:px-12">
+      <div className="px-6 py-3 sm:px-10 lg:px-12">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0" onClick={closeMenu}>
-            <div className="relative w-24 h-24 sm:w-32 sm:h-32">
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20">
               <Image
                 src="/images/wcc-logo.png"
                 alt="West Coast Customs Logo"
                 fill
                 className="object-contain brightness-0 invert"
-                sizes="(max-width: 640px) 96px, 128px"
+                sizes="(max-width: 640px) 64px, 80px"
                 priority
               />
             </div>
@@ -109,7 +103,7 @@ export default function Header() {
         {/* Close Button (X) */}
         <button
           onClick={closeMenu}
-          className="absolute top-11 right-6 sm:top-15 sm:right-12 w-10 h-10 flex items-center justify-center focus:outline-none z-[70] text-white hover:text-[#0A56FF] transition-colors"
+          className="absolute top-4 right-6 sm:top-4 sm:right-10 lg:right-12 w-10 h-10 flex items-center justify-center focus:outline-none z-[70] text-white hover:text-[#0A56FF] transition-colors"
           aria-label="Close menu"
         >
           <svg
