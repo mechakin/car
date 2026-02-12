@@ -6,45 +6,26 @@ import Section from "./Section";
 import SectionContent from "./SectionContent";
 
 type ScheduleVisitProps = {
-  leftImage?: string;
-  rightImage?: string;
+  image?: string;
 };
 
 export default function ScheduleVisit({
-  leftImage = "/images/schedule-visit-left.jpg",
-  rightImage = "/images/schedule-visit-right.jpg",
+  image = "/images/schedule-visit-left.jpg",
 }: ScheduleVisitProps) {
   return (
     <Section id="schedule-visit" className="relative">
-      {/* Background - Split Layout */}
-      <div className="absolute inset-0 h-[100dvh] grid grid-cols-2">
-        {/* Left - Merchandise */}
-        {leftImage && (
-          <div className="relative">
-            <Image
-              src={leftImage}
-              alt="Merchandise"
-              fill
-              className="object-cover"
-              priority
-              quality={100}
-              sizes="50dvw"
-            />
-          </div>
-        )}
-        {/* Right - Showroom */}
-        {rightImage && (
-          <div className="relative">
-            <Image
-              src={rightImage}
-              alt="Showroom"
-              fill
-              className="object-cover"
-              priority
-              quality={100}
-              sizes="50dvw"
-            />
-          </div>
+      {/* Background - Single Image */}
+      <div className="absolute inset-0 h-[100dvh]">
+        {image && (
+          <Image
+            src={image}
+            alt="Schedule a visit"
+            fill
+            className="object-cover"
+            priority
+            quality={100}
+            sizes="100dvw"
+          />
         )}
       </div>
 
@@ -69,7 +50,7 @@ export default function ScheduleVisit({
           </SectionContent>
         </div>
 
-        {/* Bottom Center - Showroom Tagline (centered on right image) */}
+        {/* Bottom Center - Showroom Tagline */}
         <div className="absolute bottom-0 left-1/2 right-0 flex justify-center pb-6 sm:pb-10 lg:pb-12">
           <SectionContent delay={0.3}>
             <div className="text-center">

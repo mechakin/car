@@ -19,10 +19,7 @@ export default function Home() {
           logoImage="/images/academy-logo.jpg"
           workshopImage="/images/academy-workshop.jpg"
         />
-        <ScheduleVisit
-          leftImage="/images/schedule-visit-left.jpg"
-          rightImage="/images/schedule-visit-right.jpg"
-        />
+        <ScheduleVisit image="/images/schedule-visit-left.jpg" />
         <StorageHero backgroundImage="/images/storage-hero-bg.jpg" />
       </main>
       <Footer />
