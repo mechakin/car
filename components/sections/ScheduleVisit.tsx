@@ -58,7 +58,7 @@ export default function ScheduleVisit({
                 OUR LOS ANGELES
               </p>
               <p className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-white/50" style={{ letterSpacing: "-0.1em" }}>
-                SHOWROOM
+                HEADQUARTERS
               </p>
             </div>
           </SectionContent>
