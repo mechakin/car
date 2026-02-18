@@ -41,7 +41,7 @@ export default function CustomBuildForm() {
     performance: "",
     moreInfo: "",
   });
-  const [files, setFiles] = useState<FileList | null>(null);
+  const [files, setFiles] = useState<File[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const formRef = useRef<HTMLFormElement>(null);
@@ -55,7 +55,13 @@ export default function CustomBuildForm() {
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFiles(e.target.files);
+    const newFiles = e.target.files ? Array.from(e.target.files) : [];
+    setFiles((prev) => [...prev, ...newFiles]);
+    e.target.value = ""; // Reset so same file can be selected again
+  };
+
+  const removeFile = (index: number) => {
+    setFiles((prev) => prev.filter((_, i) => i !== index));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -88,7 +94,7 @@ export default function CustomBuildForm() {
         performance: "",
         moreInfo: "",
       });
-      setFiles(null);
+      setFiles([]);
       if (fileInputRef.current) fileInputRef.current.value = "";
       setTimeout(() => setSubmitStatus("idle"), 5000);
     } catch (error) {
@@ -337,10 +343,10 @@ export default function CustomBuildForm() {
               </div>
             </SectionContent>
 
-            {/* Add Photos */}
+            {/* Add Photos - multiple images */}
             <SectionContent delay={0.3}>
-              <label className={labelClass}>Add Photos</label>
-              <div className="mt-2">
+              <label className={labelClass}>Add Photos (select multiple)</label>
+              <div className="mt-2 space-y-3">
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -351,6 +357,31 @@ export default function CustomBuildForm() {
                   accept="image/*"
                   className="block w-full text-sm text-white/70 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-[#0A56FF] file:text-white file:font-bold file:uppercase file:cursor-pointer hover:file:bg-[#0A56FF]/90"
                 />
+                {files.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {files.map((file, i) => (
+                      <div
+                        key={`${file.name}-${i}-${file.lastModified}`}
+                        className="flex items-center gap-2 rounded border border-white/30 bg-white/5 pl-3 pr-1 py-2 text-sm text-white/90"
+                      >
+                        <span className="truncate max-w-[8rem] sm:max-w-[12rem]" title={file.name}>
+                          {file.name}
+                        </span>
+                        <span className="text-white/50 text-xs shrink-0">({(file.size / 1024).toFixed(1)} KB)</span>
+                        <button
+                          type="button"
+                          onClick={() => removeFile(i)}
+                          className="ml-1 p-1 rounded hover:bg-white/20 text-white/70 hover:text-white transition-colors"
+                          aria-label={`Remove ${file.name}`}
+                        >
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M18 6L6 18M6 6l12 12" />
+                          </svg>
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </SectionContent>
 
