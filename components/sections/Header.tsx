@@ -14,6 +14,12 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
+      // Keep header always visible on mobile to prevent content shift
+      if (typeof window !== "undefined" && window.innerWidth < 768) {
+        setScrollVisible(true);
+        return;
+      }
+
       const currentScrollY = window.scrollY;
       
       // Show header when at top, when scrolling up, or when scrolled back to top
@@ -32,7 +38,11 @@ export default function Header() {
     handleScroll();
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, [lastScrollY]);
 
   const toggleMenu = () => {
@@ -48,7 +58,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 bg-transparent border-white/15 transition-transform duration-300 ${
           isVisible ? "translate-y-0" : "-translate-y-full"
-        }`}
+        } ${isMenuOpen ? "z-[70]" : ""}`}
       >
       <div className="px-6 py-3 sm:px-10 lg:px-12">
         <div className="flex items-center justify-between">
@@ -100,27 +110,6 @@ export default function Header() {
         }`}
         onClick={closeMenu}
       >
-        {/* Close Button (X) */}
-        <button
-          onClick={closeMenu}
-          className="absolute top-4 right-6 sm:top-4 sm:right-10 lg:right-12 w-10 h-10 flex items-center justify-center focus:outline-none z-[70] text-white hover:text-[#0A56FF] transition-colors"
-          aria-label="Close menu"
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-
         <nav
           className="flex flex-col items-center justify-center h-full space-y-8 text-white"
           onClick={(e) => e.stopPropagation()}
