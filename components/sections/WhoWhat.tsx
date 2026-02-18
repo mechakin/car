@@ -14,7 +14,7 @@ export default function WhoWhat({
   return (
     <Section id="who-what" className="relative overflow-hidden">
       {/* Background Colors */}
-      <div className="relative z-0 flex h-[100dvh]">
+      <div className="relative z-0 flex h-[100svh]">
         {/* Left - WHO WE ARE - All Black */}
         <div className="relative w-1/2 bg-black"></div>
 
@@ -40,15 +40,15 @@ export default function WhoWhat({
       )}
 
       {/* Text Content - Above logo */}
-      <div className="absolute inset-0 z-20 flex h-[100dvh] pointer-events-none">
+      <div className="absolute inset-0 z-20 flex h-[100svh] pointer-events-none">
         {/* Left - WHO WE ARE */}
-        <div className="relative w-1/2 px-6 py-20 sm:px-10 sm:py-20 lg:px-12 lg:py-32 flex justify-center">
+        <div className="relative w-1/2 px-6 py-12 sm:px-10 sm:py-20 lg:px-12 lg:py-32 flex flex-col justify-start">
           <SectionContent delay={0.1}>
             <div className="text-center pointer-events-auto">
-              <h2 className="mb-6 font-bold uppercase text-white text-[3rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem]" style={{ lineHeight: "0.9" }}>
+              <h2 className="mb-4 font-bold uppercase text-white whitespace-nowrap" style={{ fontSize: "clamp(1.25rem, 6dvw, 8rem)" }}>
                 WHO WE ARE
               </h2>
-               <p className="leading-relaxed text-white max-w-3xl text-[1rem] sm:text-[1.5rem] lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[3rem]" style={{ lineHeight: "2" }}>
+               <p className="leading-relaxed text-white max-w-3xl mx-auto text-balance" style={{ lineHeight: "2", fontSize: "clamp(1.125rem, 3.5dvw, 2.75rem)" }}>
                 West Coast Customs is your one stop shop for all your car
                 customization needs. Located in Southern California, the shop
                 houses a veteran team of technicians, fabricators, designers,
@@ -59,13 +59,13 @@ export default function WhoWhat({
         </div>
 
         {/* Right - WHAT WE DO */}
-        <div className="relative w-1/2 px-6 py-20 sm:px-10 sm:py-20 lg:px-12 lg:py-32 flex justify-center">
+        <div className="relative w-1/2 px-6 py-12 sm:px-10 sm:py-20 lg:px-12 lg:py-32 flex flex-col justify-start">
           <SectionContent delay={0.2}>
             <div className="text-center pointer-events-auto">
-              <h2 className="mb-6 font-bold uppercase text-white text-[3rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem]" style={{ lineHeight: "0.9" }}>
+              <h2 className="mb-4 font-bold uppercase text-white whitespace-nowrap" style={{ fontSize: "clamp(1.25rem, 6dvw, 8rem)" }}>
                 WHAT WE DO
               </h2>
-              <p className="leading-relaxed text-white max-w-2xl text-[1rem] sm:text-[1.5rem] lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[3rem]" style={{ lineHeight: "2" }}>
+              <p className="leading-relaxed text-white max-w-2xl mx-auto text-balance" style={{ lineHeight: "2", fontSize: "clamp(1.125rem, 3.5dvw, 2.75rem)" }}>
                 You may have seen some of our one-of-a-kind, multi-million-dollar
                 custom car builds on our TV show or in the news, but we also
                 specialize in smaller customizations. From wraps to wheels and
