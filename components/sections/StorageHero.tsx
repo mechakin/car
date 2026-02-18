@@ -45,16 +45,16 @@ export default function StorageHero({
         </SectionContent>
 
         {/* Top Right - Main Headline */}
-        <div className="absolute right-0 top-20" style={{ paddingRight: "max(.75rem, 3dvw)" }}>
+        <div className="absolute right-0 top-20 " style={{ paddingRight: "max(1.5rem, 3dvw)" }}>
           <SectionContent delay={0.2}>
             <h2 className="mb-3 font-bold uppercase text-right min-w-max" style={{ lineHeight: "0.9", fontSize: "clamp(1.5rem, 12dvw, 13rem)" }}>
               <span className="block">PREMIUM</span>
               <span className="block">STORAGE</span>
               <span className="block">CONCIERGE</span>
             </h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl uppercase text-white text-right tracking-[0.2em] sm:tracking-[0.35em] md:tracking-[0.5em] lg:tracking-[0.5em] xl:tracking-[0.8em]">
-              <span className="block lg:inline">AT THE ICONIC</span>{" "}
-              <span className="block lg:inline text-[#0A56FF]">WEST COAST CUSTOMS</span>
+            <p className="max-w-[60dvw] text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl uppercase text-white text-right ml-auto" style={{ letterSpacing: ".8em", transform: "translateX(clamp(0.5rem, 3dvw, 2rem))" }}>
+              AT THE ICONIC{" "}
+              <span className="text-[#0A56FF]">WEST COAST CUSTOMS</span>
             </p>
           </SectionContent>
         </div>

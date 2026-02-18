@@ -1,15 +1,15 @@
 "use client";
 
-import CustomBuildForm from "@/components/sections/CustomBuildForm";
+import EventsInfo from "@/components/sections/EventsInfo";
 import Footer from "@/components/sections/Footer";
 import Header from "@/components/sections/Header";
 
-export default function CustomPage() {
+export default function EventsPage() {
   return (
     <div className="bg-black text-white">
       <Header />
       <main className="pt-[5.5rem] sm:pt-[6.5rem]">
-        <CustomBuildForm />
+        <EventsInfo />
       </main>
       <Footer />
     </div>

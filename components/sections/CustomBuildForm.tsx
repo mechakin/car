@@ -103,8 +103,8 @@ export default function CustomBuildForm() {
     <Section id="custom-build-form" className="relative">
       <div className="absolute inset-0 min-h-screen bg-black" />
 
-      {/* Back Link */}
-      <div className="absolute top-6 left-6 xl:top-12 xl:left-12 z-50">
+      {/* Back Link - matches EventForm layout */}
+      <div className="absolute top-6 left-6 sm:left-10 lg:left-12 z-50">
         <SectionContent delay={0.1}>
           <Link
             href="/"
@@ -116,15 +116,16 @@ export default function CustomBuildForm() {
         </SectionContent>
       </div>
 
-      {/* Form Content */}
-      <div className="relative z-10 px-6 pt-24 pb-16 sm:px-10 lg:px-12">
+      {/* Form Content - matches EventForm layout */}
+      <div className="relative z-10 px-6 pb-16 sm:px-10 lg:px-12" style={{ paddingTop: "clamp(4.5rem, 8dvw, 5.5rem)" }}>
         <div className="max-w-2xl mx-auto">
+          
           <form ref={formRef} onSubmit={handleSubmit} className="space-y-8">
             {/* Tell us about you */}
-            <SectionContent delay={0.1}>
-              <h2 className="mb-6 font-bold uppercase text-2xl sm:text-3xl md:text-4xl">
+            <SectionContent delay={0.2} className="mb-20">
+              <h3 className="mb-6 font-bold uppercase text-2xl sm:text-3xl md:text-4xl">
                 Tell us about you
-              </h2>
+              </h3>
               <div className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -329,7 +330,7 @@ export default function CustomBuildForm() {
                     value={formData.moreInfo}
                     onChange={handleChange}
                     rows={4}
-                    className={`${inputClass} resize-none border-t border-white/30 pt-2`}
+                    className={`${inputClass} resize-none pt-2`}
                     placeholder="Tell us more about your project..."
                   />
                 </div>

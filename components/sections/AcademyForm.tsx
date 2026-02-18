@@ -99,8 +99,8 @@ export default function AcademyForm({
       {/* Background */}
       <div className="absolute inset-0 h-screen bg-black" />
 
-      {/* Back Arrow - Top Left */}
-      <div className="absolute top-6 left-6 xl:top-12 xl:left-12 z-50">
+      {/* Back Arrow - Top Left (matches main page CTA positioning) */}
+      <div className="absolute top-20 left-6 sm:left-10 lg:left-12 z-50">
         <SectionContent delay={0.1}>
           <Link
             href="/"
@@ -112,28 +112,28 @@ export default function AcademyForm({
         </SectionContent>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 flex h-screen flex-col px-6 pt-24 pb-8 sm:px-10 sm:pb-12 lg:pb-8 xl:px-12 xl:pt-8">
+      {/* Content - fixed structure to prevent layout shift */}
+      <div className="relative z-10 flex min-h-screen flex-col px-6 pb-8 sm:px-10 sm:pb-12 lg:pb-0 xl:px-12 pt-28 sm:pt-32 lg:pt-32">
         {/* Top Section */}
-        <div className="mx-auto text-center mb-8">
+        <div className="flex-shrink-0 mx-auto text-center mb-4 sm:mb-6">
           <SectionContent delay={0.1}>
-            <h2 className="mb-3 font-bold uppercase text-6xl xl:text-8xl" style={{ lineHeight: "0.9" }}>
+            <h2 className="mb-3 font-bold uppercase" style={{ lineHeight: "0.9", fontSize: "clamp(2rem, 8dvw, 6rem)" }}>
               WEST COAST CUSTOMS ACADEMY
             </h2>
-            <p className="xl:pl-10 uppercase text-[#0A56FF]" style={{ letterSpacing: "1.5rem", color: "#0A56FF" }}>
+            <p className="xl:pl-10 uppercase !text-[#0A56FF]" style={{ letterSpacing: "clamp(0.5rem, 2dvw, 1.5rem)", fontSize: "clamp(0.75rem, 2dvw, 1rem)" }}>
               WHERE THE LEADERS OF TOMORROW ARE BUILT
             </p>
           </SectionContent>
         </div>
 
         {/* Main Content - Form Left, Carousel Right */}
-        <div className="flex-1 flex flex-col lg:flex-row gap-6 xl:gap-8">
+        <div className="flex-1 min-h-0 flex flex-col lg:flex-row gap-3 lg:gap-4 xl:gap-6 overflow-hidden">
           {/* Form - Left Side */}
-          <div className="flex-1 flex flex-col items-start text-4xl xl:pt-24 min-w-0">
-          <form id="academy-form" ref={formRef} onSubmit={handleSubmit} className="flex-1 flex flex-col space-y-3 sm:space-y-6 md:space-y-8 w-full max-w-2xl sm:max-w-3xl xl:max-w-4xl">
+          <div className="flex-1 flex flex-col items-start justify-center min-w-0 py-4 lg:py-6">
+          <form id="academy-form" ref={formRef} onSubmit={handleSubmit} className="flex-1 flex flex-col w-full max-w-[min(90dvw,56rem)]" style={{ gap: "clamp(0.375rem, 1dvw, 1.75rem)" }}>
           <SectionContent delay={0.2}>
             <div>
-              <label htmlFor="name" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
+              <label htmlFor="name" className="block uppercase" style={{ marginBottom: "clamp(0.2rem, 0.4dvw, 0.5rem)", fontSize: "clamp(0.7rem, 1.5dvw, 2.25rem)" }}>
                 NAME:
               </label>
               <input
@@ -143,14 +143,14 @@ export default function AcademyForm({
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
-              
+                className="w-full border-b border-white/30 bg-transparent px-0 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
+                style={{ paddingTop: "clamp(0.2rem, 0.4dvw, 0.5rem)", paddingBottom: "clamp(0.2rem, 0.4dvw, 0.5rem)", fontSize: "clamp(0.7rem, 1.5dvw, 2.25rem)" }}
               />
             </div>
           </SectionContent>
           <SectionContent delay={0.3}>
             <div>
-              <label htmlFor="passion" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
+              <label htmlFor="passion" className="block uppercase" style={{ marginBottom: "clamp(0.2rem, 0.4dvw, 0.5rem)", fontSize: "clamp(0.7rem, 1.5dvw, 2.25rem)" }}>
                 PASSION:
               </label>
               <input
@@ -160,14 +160,14 @@ export default function AcademyForm({
                 value={formData.passion}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
-           
+                className="w-full border-b border-white/30 bg-transparent px-0 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
+                style={{ paddingTop: "clamp(0.2rem, 0.4dvw, 0.5rem)", paddingBottom: "clamp(0.2rem, 0.4dvw, 0.5rem)", fontSize: "clamp(0.7rem, 1.5dvw, 2.25rem)" }}
               />
             </div>
           </SectionContent>
           <SectionContent delay={0.4}>
             <div>
-              <label htmlFor="email" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
+              <label htmlFor="email" className="block uppercase" style={{ marginBottom: "clamp(0.2rem, 0.4dvw, 0.5rem)", fontSize: "clamp(0.7rem, 1.5dvw, 2.25rem)" }}>
                 EMAIL:
               </label>
               <input
@@ -177,14 +177,14 @@ export default function AcademyForm({
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
-            
+                className="w-full border-b border-white/30 bg-transparent px-0 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
+                style={{ paddingTop: "clamp(0.2rem, 0.4dvw, 0.5rem)", paddingBottom: "clamp(0.2rem, 0.4dvw, 0.5rem)", fontSize: "clamp(0.7rem, 1.5dvw, 2.25rem)" }}
               />
             </div>
           </SectionContent>
           <SectionContent delay={0.5}>
             <div>
-              <label htmlFor="phone" className="mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl uppercase">
+              <label htmlFor="phone" className="block uppercase" style={{ marginBottom: "clamp(0.2rem, 0.4dvw, 0.5rem)", fontSize: "clamp(0.7rem, 1.5dvw, 2.25rem)" }}>
                 PHONE NUMBER:
               </label>
               <input
@@ -194,8 +194,8 @@ export default function AcademyForm({
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
-               
+                className="w-full border-b border-white/30 bg-transparent px-0 text-white placeholder-white/50 focus:border-white/60 focus:outline-none"
+                style={{ paddingTop: "clamp(0.2rem, 0.4dvw, 0.5rem)", paddingBottom: "clamp(0.2rem, 0.4dvw, 0.5rem)", fontSize: "clamp(0.7rem, 1.5dvw, 2.25rem)" }}
               />
             </div>
           </SectionContent>
@@ -210,8 +210,8 @@ export default function AcademyForm({
                     formRef.current.requestSubmit();
                   }
                 }}
-                className="font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50 text-4xl"
-                style={{ letterSpacing: "-0.05em" }}
+                className="font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50"
+                style={{ fontSize: "clamp(2.25rem, 8dvw, 3rem)", letterSpacing: "-0.05em" }}
               >
                 {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
               </button>
@@ -232,8 +232,8 @@ export default function AcademyForm({
 
           {/* Carousel - Right Side */}
           {isCarouselOpen && (
-            <div className="flex-1 flex flex-col items-center justify-start xl:justify-center relative min-w-0 w-full pb-6 pt-6 sm:pb-20 sm:pt-20 lg:pt-8 xl:pt-0 xl:-mt-60">
-              <div className="relative w-full max-w-6xl aspect-video border border-white/30 overflow-hidden">
+            <div className="flex-1 flex flex-col items-center justify-center relative min-w-0 w-full py-4 lg:py-6">
+              <div className="relative w-full max-w-5xl aspect-video border border-white/30 overflow-hidden">
                 {/* Close Button - Top Left */}
                 <button
                   onClick={() => setIsCarouselOpen(false)}
@@ -283,8 +283,8 @@ export default function AcademyForm({
           )}
         </div>
         
-        {/* Submit Button - Centered on page (hidden on small screens, shown on lg+) */}
-        <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 bottom-20 xl:bottom-85 z-20 flex flex-col items-center">
+        {/* Submit Button - Fixed slot (hidden on small screens, shown on lg+) */}
+        <div className="hidden lg:flex flex-shrink-0 h-[3.5rem] items-center justify-center z-20">
           <SectionContent delay={0.6}>
             <button
               type="button"
@@ -294,8 +294,8 @@ export default function AcademyForm({
                   formRef.current.requestSubmit();
                 }
               }}
-              className="font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
-              style={{ letterSpacing: "-0.05em" }}
+              className="font-bold px-6 py-3 uppercase text-[#0A56FF] transition-colors hover:bg-[#0A56FF]/10 disabled:cursor-not-allowed disabled:opacity-50"
+              style={{ fontSize: "clamp(1rem, 2dvw, 2.25rem)", letterSpacing: "-0.05em", transform: "translateY(-2rem)" }}
             >
               {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
             </button>
@@ -311,10 +311,9 @@ export default function AcademyForm({
             </p>
           )}
         </div>
-      </div>
 
-      {/* Bottom Image Strip - Absolute positioned at bottom */}
-      <div className="hidden lg:block absolute bottom-0 left-0 right-0 z-0 h-64 overflow-hidden sm:h-80">
+        {/* Bottom Image Strip - Fixed height, in flow */}
+        <div className="hidden lg:block flex-shrink-0 z-0 h-56 sm:h-64 xl:h-72 overflow-hidden -mx-6 sm:-mx-10 xl:-mx-12">
         <div className="grid h-full grid-cols-6">
           {/* Image 1 */}
           {image1 && (
@@ -394,6 +393,7 @@ export default function AcademyForm({
               />
             </div>
           )}
+        </div>
         </div>
       </div>
     </Section>

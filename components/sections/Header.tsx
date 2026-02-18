@@ -134,6 +134,24 @@ export default function Header() {
             HOME
           </Link>
           <Link
+            href="https://westcoastcustomsshop.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl sm:text-4xl font-bold uppercase tracking-tighter hover:text-[#0A56FF] transition-colors"
+            onClick={closeMenu}
+            style={{ letterSpacing: "-0.075em" }}
+          >
+            APPAREL
+          </Link>
+          <Link
+            href="/events"
+            className="text-3xl sm:text-4xl font-bold uppercase tracking-tighter hover:text-[#0A56FF] transition-colors"
+            onClick={closeMenu}
+            style={{ letterSpacing: "-0.075em" }}
+          >
+            EVENTS
+          </Link>
+          <Link
             href="/academy"
             className="text-3xl sm:text-4xl font-bold uppercase tracking-tighter hover:text-[#0A56FF] transition-colors"
             onClick={closeMenu}
@@ -150,13 +168,21 @@ export default function Header() {
             SCHEDULE
           </Link>
           <Link
+            href="/custom"
+            className="text-3xl sm:text-4xl font-bold uppercase tracking-tighter hover:text-[#0A56FF] transition-colors"
+            onClick={closeMenu}
+            style={{ letterSpacing: "-0.075em" }}
+          >
+            CUSTOM BUILD
+          </Link>
+          <Link
             href="/storage"
             className="text-3xl sm:text-4xl font-bold uppercase tracking-tighter hover:text-[#0A56FF] transition-colors"
             onClick={closeMenu}
             style={{ letterSpacing: "-0.075em" }}
           >
             CONCIERGE
-          </Link>  
+          </Link>
         </nav>
       </div>
     </>
