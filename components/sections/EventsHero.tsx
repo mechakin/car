@@ -10,7 +10,7 @@ type EventsHeroProps = {
 };
 
 export default function EventsHero({
-  backgroundImage = "/images/events.jpg",
+  backgroundImage = "/images/events.png",
 }: EventsHeroProps) {
   return (
     <Section id="events-hero" className="relative">

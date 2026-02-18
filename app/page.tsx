@@ -19,7 +19,7 @@ export default function Home() {
         <YearsStatement />
         <WhoWhat />
         <ApparelHero backgroundImage="/images/apparel.jpg" />
-        <EventsHero backgroundImage="/images/events.jpg" />
+        <EventsHero backgroundImage="/images/events.png" />
         <Academy
           logoImage="/images/academy-logo.jpg"
           workshopImage="/images/academy-workshop.jpg"
