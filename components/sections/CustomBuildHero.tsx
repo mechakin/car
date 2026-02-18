@@ -45,9 +45,9 @@ export default function CustomBuildHero({
         </div>
 
         {/* Bottom Center - Heading */}
-        <div className="mx-auto text-center pb-12 sm:pb-16 lg:pb-20">
+        <div className="mx-auto text-center pb-12 sm:pb-16">
           <SectionContent delay={0.2}>
-            <h2 className="font-bold uppercase text-white" style={{ lineHeight: "0.8", fontSize: "clamp(4.5rem, 8dvw, 9rem)" }}>
+            <h2 className="font-bold uppercase text-white" style={{ lineHeight: "0.8", fontSize: "clamp(4.5rem, 10dvw, 14rem)" }}>
               <span className="block">CUSTOM</span>
               <span className="block">BUILD</span>
               <span className="block text-[#0A56FF]">INQUIRY</span>
@@ -58,7 +58,7 @@ export default function CustomBuildHero({
       {/* Caption - smaller, positioned lower */}
       <div className="absolute bottom-0 left-0 right-0 z-10 px-6 pb-4 sm:pb-6 lg:pb-8">
         <SectionContent delay={0.3}>
-          <p className="text-center text-white uppercase" style={{ letterSpacing: "clamp(0.2em, 2dvw, 0.8em)", fontSize: "clamp(0.5rem, 2.25dvw, 2rem)", lineHeight: "0.9" }}>
+          <p className="text-center text-white uppercase" style={{ letterSpacing: "clamp(0.2em, 2dvw, 0.8em)", fontSize: "clamp(0.5rem, 1.5dvw, 1.25rem)", lineHeight: "0.9" }}>
             BLOOD SWEAT TEARS SINCE 1993
           </p>
         </SectionContent>
