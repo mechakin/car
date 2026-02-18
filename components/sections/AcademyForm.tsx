@@ -104,8 +104,8 @@ export default function AcademyForm({
         <SectionContent delay={0.1}>
           <Link
             href="/"
-            className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block sm:text-5xl text-3xl"
-            style={{ letterSpacing: "-0.075em", lineHeight: "0.9",  }}
+            className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block"
+            style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 3rem)" }}
           >
             <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>←</span> BACK
           </Link>

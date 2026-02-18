@@ -17,7 +17,7 @@ export default function StorageHero({
   return (
     <Section id="storage-hero" className="relative">
       {/* Background Image - Car Storage Facility */}
-      <div className="absolute inset-0 h-[100dvh] bg-black overflow-hidden">
+      <div className="absolute inset-0 h-[100svh] bg-black overflow-hidden">
         {backgroundImage && (
           <Image
             src={backgroundImage}
@@ -32,27 +32,29 @@ export default function StorageHero({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-[100dvh] flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
+      <div className="relative z-10 flex h-[100svh] flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
         {/* Top Left - CTA */}
         <SectionContent delay={0.1}>
           <button 
             onClick={() => router.push("/storage")}
-            className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block text-xl sm:text-5xl" 
-            style={{ letterSpacing: "-0.075em", lineHeight: "0.9" }}
+            className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block" 
+            style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 3rem)" }}
           >
             GET STARTED <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>→</span>
           </button>
         </SectionContent>
 
         {/* Top Right - Main Headline */}
-        <div className="absolute right-6 top-20 sm:right-10 lg:right-12 max-w-[60dvw]">
+        <div className="absolute right-0 top-20" style={{ paddingRight: "max(.75rem, 3dvw)" }}>
           <SectionContent delay={0.2}>
-            <h2 className="mb-3 font-bold uppercase text-right text-[2.5rem] sm:text-[3rem] md:text-[5rem] lg:text-[8rem] xl:text-[12rem] 2xl:text-[13rem]" style={{ lineHeight: "0.9" }}>
-              PREMIUM STORAGE CONCIERGE
+            <h2 className="mb-3 font-bold uppercase text-right min-w-max" style={{ lineHeight: "0.9", fontSize: "clamp(1.5rem, 12dvw, 13rem)" }}>
+              <span className="block">PREMIUM</span>
+              <span className="block">STORAGE</span>
+              <span className="block">CONCIERGE</span>
             </h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl uppercase text-white text-right" style={{ letterSpacing: ".8em" }}>
-              AT THE ICONIC{" "}
-              <span className="text-[#0A56FF]">WEST COAST CUSTOMS</span>
+            <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl uppercase text-white text-right tracking-[0.2em] sm:tracking-[0.35em] md:tracking-[0.5em] lg:tracking-[0.5em] xl:tracking-[0.8em]">
+              <span className="block lg:inline">AT THE ICONIC</span>{" "}
+              <span className="block lg:inline text-[#0A56FF]">WEST COAST CUSTOMS</span>
             </p>
           </SectionContent>
         </div>

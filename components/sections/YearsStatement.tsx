@@ -25,7 +25,7 @@ export default function YearsStatement({
       {/* West Coast Logo - Above blue section */}
       {logoImage && (
         <div className="absolute top-[30%] left-0 right-0 z-10 px-6 sm:px-10 lg:px-12">
-          <div className="relative w-full lg:h-[50dvw] h-[78dvh] ">
+          <div className="relative w-full lg:h-[50dvw] h-[78svh] ">
             <Image
               src={logoImage}
               alt="West Coast Customs Logo"
@@ -39,7 +39,7 @@ export default function YearsStatement({
       )}
 
       {/* Content */}
-      <div className="relative z-10 flex h-[100dvh] flex-col justify-between px-6 pt-20 pb-4 sm:px-10 sm:pt-20 sm:pb-8 lg:px-12 lg:pt-4 lg:pb-12">
+      <div className="relative z-10 flex h-[100svh] flex-col justify-between px-6 pt-20 pb-4 sm:px-10 sm:pt-20 sm:pb-8 lg:px-12 lg:pt-4 lg:pb-12">
         {/* Top Section - 32 YEARS */}
         <SectionContent delay={0.1}>
           <div className="max-w-[50dvw]">

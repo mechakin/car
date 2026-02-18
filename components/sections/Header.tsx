@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollVisible, setScrollVisible] = useState(false);
+  const [scrollVisible, setScrollVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   // Derive visibility: always visible when menu is open, otherwise use scroll state

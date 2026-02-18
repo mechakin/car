@@ -14,7 +14,7 @@ export default function BuiltByDreamers({
   return (
     <Section id="built-by-dreamers" className="relative">
       {/* Background Image */}
-      <div className="absolute inset-0 h-[100dvh]">
+      <div className="absolute inset-0 h-[100svh]">
         {backgroundImage && (
           <Image
             src={backgroundImage}

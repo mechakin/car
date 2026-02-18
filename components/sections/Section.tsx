@@ -19,7 +19,7 @@ export default function Section({ children, className = "", id }: SectionProps) 
       whileInView={reduceMotion ? undefined : { opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className={`relative min-h-[100dvh] w-full ${className}`}
+      className={`relative min-h-[100svh] w-full ${className}`}
     >
       {children}
     </motion.section>
