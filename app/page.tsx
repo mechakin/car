@@ -1,5 +1,8 @@
 import Academy from "@/components/sections/Academy";
+import ApparelHero from "@/components/sections/ApparelHero";
 import BuiltByDreamers from "@/components/sections/BuiltByDreamers";
+import EventsHero from "@/components/sections/EventsHero";
+import CustomBuildHero from "@/components/sections/CustomBuildHero";
 import Footer from "@/components/sections/Footer";
 import Header from "@/components/sections/Header";
 import ScheduleVisit from "@/components/sections/ScheduleVisit";
@@ -11,15 +14,18 @@ export default function Home() {
   return (
     <div className="bg-black text-white overflow-x-hidden w-full">
       <Header />
-      <main className="overflow-x-hidden w-full pt-20 sm:pt-24">
+      <main className="overflow-x-hidden w-full pt-[5.5rem] sm:pt-[6.5rem]">
         <BuiltByDreamers backgroundImage="/images/built-by-dreamers-bg.jpg" />
         <YearsStatement />
         <WhoWhat />
+        <ApparelHero backgroundImage="/images/apparel.jpg" />
+        <EventsHero backgroundImage="/images/events.png" />
         <Academy
           logoImage="/images/academy-logo.jpg"
           workshopImage="/images/academy-workshop.jpg"
         />
         <ScheduleVisit image="/images/schedule-visit-left.jpg" />
+        <CustomBuildHero backgroundImage="/images/custom-build.jpg" />
         <StorageHero backgroundImage="/images/storage-hero-bg.jpg" />
       </main>
       <Footer />

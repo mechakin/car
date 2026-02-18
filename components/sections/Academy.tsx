@@ -15,7 +15,7 @@ export default function Academy({
   workshopImage = "/images/academy-workshop.jpg",
 }: AcademyProps) {
   return (
-    <Section id="academy" className="!min-h-[50dvh] h-[50dvh] sm:!min-h-[100dvh] sm:h-[100dvh]">
+    <Section id="academy" className="!min-h-[50svh] h-[50svh] sm:!min-h-[100svh] sm:h-[100svh]">
       <div className="relative h-full flex">
         {/* Left Side - Black Background with Logo and Text */}
         <div className="relative w-1/2 bg-black text-white flex flex-col px-6 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12">
@@ -62,9 +62,9 @@ export default function Academy({
           )}
           
           {/* Learn More Button - Top Right */}
-          <div className="absolute top-6 right-6 xl:top-12 xl:right-12 z-10">
+          <div className="absolute left-0 right-0 z-10 flex justify-end" style={{ top: "clamp(1.5rem, 3dvw, 3rem)", paddingRight: "clamp(1.5rem, 3dvw, 3rem)" }}>
             <SectionContent delay={0.1}>
-              <Link href="/academy" className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block text-xl sm:text-5xl" style={{ letterSpacing: "-0.075em", lineHeight: "0.9" }}>
+              <Link href="/academy" className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 3rem)" }}>
                 LEARN MORE <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>→</span>
               </Link>
             </SectionContent>
