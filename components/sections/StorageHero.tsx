@@ -17,7 +17,7 @@ export default function StorageHero({
   return (
     <Section id="storage-hero" className="relative">
       {/* Background Image - Car Storage Facility */}
-      <div className="absolute inset-0 h-[100svh] bg-black overflow-hidden">
+      <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h bg-black overflow-hidden">
         {backgroundImage && (
           <Image
             src={backgroundImage}
@@ -32,7 +32,7 @@ export default function StorageHero({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-[100svh] flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
+      <div className="relative z-10 flex h-[100svh] mobile-stable-viewport-h flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
         {/* Top Left - CTA */}
         <SectionContent delay={0.1}>
           <button 

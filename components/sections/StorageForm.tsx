@@ -95,8 +95,8 @@ export default function StorageForm({
       {/* Background */}
       <div className="absolute inset-0 h-screen bg-black" />
 
-      {/* Back Arrow - Top Left (matches main page CTA positioning) */}
-      <div className="absolute top-20 left-6 sm:left-10 lg:left-12 z-50">
+      {/* Back Arrow - Top Left (sits just below header) */}
+      <div className="absolute top-6 left-6 sm:left-10 lg:left-12 z-50">
         <SectionContent delay={0.1}>
           <Link
             href="/"
@@ -109,7 +109,7 @@ export default function StorageForm({
       </div>
 
       {/* Content - fixed structure to prevent layout shift */}
-      <div className="relative z-10 flex min-h-screen flex-col px-6 pb-8 sm:px-10 lg:pb-0 xl:px-12 pt-28 sm:pt-32 lg:pt-32">
+      <div className="relative z-10 flex min-h-screen flex-col px-6 pb-8 sm:px-10 lg:pb-0 xl:px-12 pt-16 sm:pt-20 lg:pt-20">
         {/* Top Section */}
         <div className="flex-shrink-0 mx-auto text-center mb-4 sm:mb-6">
           <SectionContent delay={0.1}>

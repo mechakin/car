@@ -15,7 +15,7 @@ export default function ScheduleVisit({
   return (
     <Section id="schedule-visit" className="relative">
       {/* Background - Single Image */}
-      <div className="absolute inset-0 h-[100svh]">
+      <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h">
         {image && (
           <Image
             src={image}
@@ -30,7 +30,7 @@ export default function ScheduleVisit({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-[100svh] flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
+      <div className="relative z-10 flex h-[100svh] mobile-stable-viewport-h flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
         {/* Top Left - Schedule A Visit */}
         <SectionContent delay={0.1}>
           <div className="max-w-md">

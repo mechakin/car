@@ -14,12 +14,6 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Keep header always visible on mobile to prevent content shift
-      if (typeof window !== "undefined" && window.innerWidth < 768) {
-        setScrollVisible(true);
-        return;
-      }
-
       const currentScrollY = window.scrollY;
       
       // Show header when at top, when scrolling up, or when scrolled back to top
