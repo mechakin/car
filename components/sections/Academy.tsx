@@ -37,10 +37,10 @@ export default function Academy({
           {/* Text below logo */}
           <SectionContent delay={0.2}>
             <div className="space-y-1 sm:space-y-2">
-              <p className="font-bold uppercase leading-none text-white tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1.5rem, 7dvw, 8rem)" }}>
+              <p className="font-bold uppercase leading-none text-white tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1.5rem, 7dvw, 5.5rem)" }}>
                 WHERE THE LEADERS OF TOMORROW ARE BUILT
               </p>
-              <p className="uppercase leading-none !text-[#0A56FF] tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 4.5rem)" }}>
+              <p className="uppercase leading-none !text-[#0A56FF] tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 4rem)" }}>
                 IN LOS ANGELES CALIFORNIA
               </p>
             </div>
