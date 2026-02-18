@@ -28,27 +28,29 @@ export default function BuiltByDreamers({
         )}
       </div>
 
-      {/* Top Text - "BUILT BY DREAMERS" */}
-      <div className="absolute top-0 left-0 right-0 z-20 sm:pt-0 pt-6">
-        <div className="flex items-start justify-center px-2 sm:px-4">
+      {/* Top Text - "BUILT BY DREAMERS" - fluid scale so it shrinks with viewport */}
+      <div className="absolute top-0 left-0 right-0 z-20 sm:pt-0 pt-6 overflow-hidden">
+        <div className="flex items-start justify-center px-2 sm:px-4 min-w-0">
           <SectionContent delay={0.1}>
-            <div className="relative inline-block">
+            <div className="relative inline-block max-w-full min-w-0">
               {/* First line: BUILT with BY positioned to the right */}
               <div className="relative flex items-baseline gap-2 sm:gap-3 md:gap-4">
                 <span 
-                  className="built-text font-bold uppercase leading-none text-white text-5xl sm:text-6xl md:text-8xl lg:text-[min(12dvw,19.5dvh)]"
+                  className="built-text font-bold uppercase leading-none text-white shrink-0"
                   style={{ 
                     letterSpacing: "-0.075em",
-                    lineHeight: "0.9"
+                    lineHeight: "0.9",
+                    fontSize: "clamp(2rem, 10dvw, min(12dvw, 19.5dvh))"
                   }}
                 >
                   BUILT
                 </span>
                 <span
-                  className="by-text font-bold uppercase leading-none text-white text-3xl sm:text-3xl md:text-5xl lg:text-[min(6dvw,9.75dvh)]"
+                  className="by-text font-bold uppercase leading-none text-white shrink-0"
                   style={{ 
                     transform: "translateY(-0.3em)",
-                    letterSpacing: "-0.075em"
+                    letterSpacing: "-0.075em",
+                    fontSize: "clamp(1.25rem, 5dvw, min(6dvw, 9.75dvh))"
                   }}
                 >
                   BY
@@ -56,22 +58,24 @@ export default function BuiltByDreamers({
               </div>
               {/* Second line: DREAMERS aligned below BY */}
               <div 
-                className="dreamers-text font-bold uppercase leading-none text-white text-5xl sm:text-6xl md:text-8xl lg:text-[min(12dvw,19.5dvh)]"
+                className="dreamers-text font-bold uppercase leading-none text-white"
                   style={{ 
                     letterSpacing: "-0.075em",
                     lineHeight: "0.9",
-                    marginTop: "-0.25em"
+                    marginTop: "-0.25em",
+                    fontSize: "clamp(2rem, 10dvw, min(12dvw, 19.5dvh))"
                   }}
                 >
                   DREAMERS
                 </div>
               {/* Third line: SINCE 1993 */}
               <div 
-                className="since-text font-normal uppercase mt-2 sm:mt-3 text-white/50 text-base sm:text-sm md:text-2xl lg:text-[min(2dvw,3dvh)]"
+                className="since-text font-normal uppercase mt-2 sm:mt-3 text-white/50"
                 style={{ 
                   letterSpacing: "0.5em",
                   lineHeight: "0.5",
-                  fontWeight: 300
+                  fontWeight: 300,
+                  fontSize: "clamp(0.625rem, 1.5dvw, min(2dvw, 3dvh))"
                 }}
               >
                 SINCE 1993
