@@ -14,7 +14,7 @@ export default function WhoWhat({
   return (
     <Section id="who-what" className="relative overflow-hidden">
       {/* Background Colors */}
-      <div className="relative z-0 flex h-[100svh]">
+      <div className="relative z-0 flex h-[100svh] mobile-stable-viewport-h">
         {/* Left - WHO WE ARE - All Black */}
         <div className="relative w-1/2 bg-black"></div>
 
@@ -40,7 +40,7 @@ export default function WhoWhat({
       )}
 
       {/* Text Content - Above logo */}
-      <div className="absolute inset-0 z-20 flex h-[100svh] pointer-events-none">
+      <div className="absolute inset-0 z-20 flex h-[100svh] mobile-stable-viewport-h pointer-events-none">
         {/* Left - WHO WE ARE */}
         <div className="relative w-1/2 px-6 py-12 sm:px-10 sm:py-20 lg:px-12 lg:py-32 flex flex-col justify-start">
           <SectionContent delay={0.1}>
@@ -48,7 +48,7 @@ export default function WhoWhat({
               <h2 className="mb-4 font-bold uppercase text-white whitespace-nowrap" style={{ fontSize: "clamp(1.25rem, 6dvw, 8rem)" }}>
                 WHO WE ARE
               </h2>
-               <p className="leading-relaxed text-white max-w-3xl mx-auto text-balance" style={{ lineHeight: "2", fontSize: "clamp(1.125rem, 3.5dvw, 2.75rem)" }}>
+               <p className="leading-relaxed text-white max-w-3xl mx-auto text-balance" style={{ lineHeight: "2", fontSize: "clamp(1rem, 3dvw, 2.75rem)" }}>
                 West Coast Customs is your one stop shop for all your car
                 customization needs. Located in Southern California, the shop
                 houses a veteran team of technicians, fabricators, designers,
@@ -65,7 +65,7 @@ export default function WhoWhat({
               <h2 className="mb-4 font-bold uppercase text-white whitespace-nowrap" style={{ fontSize: "clamp(1.25rem, 6dvw, 8rem)" }}>
                 WHAT WE DO
               </h2>
-              <p className="leading-relaxed text-white max-w-2xl mx-auto text-balance" style={{ lineHeight: "2", fontSize: "clamp(1.125rem, 3.5dvw, 2.75rem)" }}>
+              <p className="leading-relaxed text-white max-w-2xl mx-auto text-balance" style={{ lineHeight: "2", fontSize: "clamp(1rem, 3dvw, 2.75rem)" }}>
                 You may have seen some of our one-of-a-kind, multi-million-dollar
                 custom car builds on our TV show or in the news, but we also
                 specialize in smaller customizations. From wraps to wheels and

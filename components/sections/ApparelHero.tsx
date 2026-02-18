@@ -14,7 +14,7 @@ export default function ApparelHero({
   return (
     <Section id="apparel-hero" className="relative">
       {/* Background Image */}
-      <div className="absolute inset-0 h-[100svh] bg-black overflow-hidden">
+      <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h bg-black overflow-hidden">
         {backgroundImage && (
           <Image
             src={backgroundImage}
@@ -47,7 +47,7 @@ export default function ApparelHero({
       <div className="absolute bottom-0 left-0 right-0 z-10 px-6 pb-6 sm:pb-10 lg:pb-12">
         <SectionContent delay={0.2}>
           <div className="mx-auto text-center">
-            <h2 className="font-bold uppercase text-white mb-2 sm:mb-3" style={{ lineHeight: "0.8", fontSize: "clamp(6rem, 18dvw, 18rem)" }}>
+            <h2 className="font-bold uppercase text-white mb-2 sm:mb-3" style={{ lineHeight: "0.8", fontSize: "clamp(5rem, 15dvw, 15rem)" }}>
               APPAREL
             </h2>
             <p className="uppercase" style={{ color: "#0A56FF", letterSpacing: "clamp(0.2em, 2dvw, 0.8em)", fontSize: "clamp(1rem, 3dvw, 2rem)", lineHeight: "0.8" }}>

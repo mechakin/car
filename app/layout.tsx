@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import FontLoader from "@/components/FontLoader";
+import ViewportHeight from "@/components/ViewportHeight";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en" className="overflow-x-hidden">
       <body className="antialiased overflow-x-hidden">
         <FontLoader />
+        <ViewportHeight />
         {children}
       </body>
     </html>

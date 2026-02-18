@@ -14,7 +14,7 @@ export default function BuiltByDreamers({
   return (
     <Section id="built-by-dreamers" className="relative">
       {/* Background Image */}
-      <div className="absolute inset-0 h-[100svh]">
+      <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h">
         {backgroundImage && (
           <Image
             src={backgroundImage}
@@ -82,7 +82,7 @@ export default function BuiltByDreamers({
       </div>
 
       {/* Content Overlay - Bottom Left Text */}
-      <div className="relative z-10 flex h-[100dvh] flex-col justify-end px-6 pb-20 sm:px-10 lg:px-12">
+      <div className="relative z-10 flex h-[100dvh] mobile-stable-viewport-h flex-col justify-end px-6 pb-8 sm:pb-20 sm:px-10 lg:px-12">
         <div className="max-w-2xl space-y-4 lg:max-w-4xl xl:max-w-5xl">
           <SectionContent delay={0.3}>
             <p

@@ -51,17 +51,17 @@ export default function YearsStatement({
       )}
 
       {/* Content */}
-      <div className="relative z-10 flex h-[100svh] flex-col justify-between px-6 pt-6 pb-4 sm:px-10 sm:pb-8 lg:px-12 lg:pb-12">
+      <div className="relative z-10 flex h-[100svh] mobile-stable-viewport-h flex-col justify-between px-6 pt-6 pb-4 sm:px-10 sm:pb-8 lg:px-12 lg:pb-12">
         {/* Top Section - 32 YEARS */}
         <SectionContent delay={0.1}>
           <div className="md:max-w-[33dvw] max-w-[50dvw]">
             <div className="mb-4 font-bold" style={{ lineHeight: "0.75", letterSpacing: "-0.10em", fontSize: "clamp(4rem, 50dvw, 32rem)" }}>
               32
             </div>
-            <div className="mb-6 font-bold uppercase" style={{ lineHeight: "0.65", letterSpacing: "-0.10em", fontSize: "clamp(1.5rem, 20dvw, 12.5rem)" }}>
+            <div className="mb-6 font-bold uppercase" style={{ lineHeight: "0.6", letterSpacing: "-0.10em", fontSize: "clamp(1.5rem, 20dvw, 12.5rem)" }}>
               YEARS
             </div>
-            <p className="text-white" style={{ lineHeight: "0.9", letterSpacing: "-0.05em", fontSize: "clamp(0.75rem, 7dvw, 2.5rem)", paddingBottom: "clamp(2rem, 6dvw, 8rem)" }}>
+            <p className="text-white" style={{ lineHeight: "0.9", letterSpacing: "-0.05em", fontSize: "clamp(0.75rem, 7dvw, 2.5rem)" }}>
               OF PUSHING THE LIMITS OF AUTOMOTIVE CUSTOMIZATION AND
               EXPRESSION...
             </p>

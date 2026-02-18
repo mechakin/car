@@ -15,7 +15,7 @@ export default function EventsHero({
   return (
     <Section id="events-hero" className="relative">
       {/* Background Image */}
-      <div className="absolute inset-0 h-[100svh] bg-black overflow-hidden">
+      <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h bg-black overflow-hidden">
         {backgroundImage && (
           <Image
             src={backgroundImage}
@@ -46,7 +46,7 @@ export default function EventsHero({
       <div className="absolute bottom-0 left-0 right-0 z-10 px-6 pb-6 sm:pb-10 lg:pb-12">
         <SectionContent delay={0.2}>
           <div className="mx-auto text-center">
-            <h2 className="font-bold uppercase text-white mb-2 sm:mb-3" style={{ lineHeight: "0.8", fontSize: "clamp(6rem, 18dvw, 18rem)" }}>
+            <h2 className="font-bold uppercase text-white mb-2 sm:mb-3" style={{ lineHeight: "0.8", fontSize: "clamp(5rem, 15dvw, 15rem)" }}>
               EVENTS
             </h2>
             <p className="uppercase" style={{ letterSpacing: "clamp(0.2em, 2dvw, 0.8em)", fontSize: "clamp(0.75rem, 2dvw, 1.5rem)", lineHeight: "1" }}>

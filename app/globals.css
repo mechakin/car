@@ -24,14 +24,13 @@
   --background: #000000;
   --foreground: #ffffff;
   --accent: #0a56ff;
+  --app-height: 100vh; /* Set by ViewportHeight, stable on mobile scroll */
 }
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100%;
-  /* Prevent mobile viewport shift when address bar hides */
-  height: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -44,9 +43,21 @@ body {
   overflow-x: hidden;
   width: 100%;
   max-width: 100dvw;
-  /* Prevent mobile scroll shift - use min-height instead of height for flexibility */
-  min-height: 100%;
-  min-height: -webkit-fill-available;
+}
+
+/* Mobile: use stable --app-height for viewport-sized elements to prevent address bar shift */
+@media (max-width: 767px) {
+  html {
+    height: 100%;
+  }
+
+  .mobile-stable-viewport {
+    min-height: var(--app-height, 100vh) !important;
+  }
+
+  .mobile-stable-viewport-h {
+    height: var(--app-height, 100vh) !important;
+  }
 }
 
 h1,
