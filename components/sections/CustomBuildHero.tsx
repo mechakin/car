@@ -48,8 +48,7 @@ export default function CustomBuildHero({
           <div className="mx-auto text-center">
             <h2 className="font-bold uppercase text-white mb-2 sm:mb-3" style={{ lineHeight: "0.8", fontSize: "clamp(4.5rem, 10dvw, 14rem)" }}>
               <span className="block">CUSTOM</span>
-              <span className="block">BUILD</span>
-              <span className="block" style={{ color: "#0A56FF" }}>INQUIRY</span>
+              <span className="block" style={{ color: "#0A56FF" }}>BUILD</span>
             </h2>
             <p className="uppercase text-white" style={{ letterSpacing: "clamp(0.2em, 2dvw, 0.8em)", fontSize: "clamp(0.5rem, 1.5dvw, 1.25rem)", lineHeight: "1" }}>
               BLOOD SWEAT TEARS SINCE 1993
