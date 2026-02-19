@@ -57,24 +57,14 @@ export default function ScheduleForm({
     setSubmitStatus("idle");
 
     try {
-      // Simulate sending email (fake email service)
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate API call
-      
-      // Log form data (in production, this would send to an email service)
-      console.log("Form submitted:", formData);
-      
-      // Simulate email sending
-      const emailContent = `
-        Schedule Visit Inquiry
-        
-        Name: ${formData.name}
-        Email: ${formData.email}
-        Phone: ${formData.phone}
-      `;
-      
-      console.log("Email would be sent to: schedule@westcoastcustoms.com");
-      console.log("Email content:", emailContent);
-      
+      const VISIT_EMAIL = "Frontdesk@westcoastcustoms.com";
+      const body = `Schedule Visit Inquiry
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}`;
+      const mailto = `mailto:${VISIT_EMAIL}?subject=Schedule%20Visit%20Inquiry&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
       setSubmitStatus("success");
       setFormData({ name: "", email: "", phone: "" });
       
@@ -109,7 +99,7 @@ export default function ScheduleForm({
       </div>
 
       {/* Content - fixed structure to prevent layout shift */}
-      <div className="relative z-10 flex min-h-screen flex-col px-6 pb-8 sm:px-10 sm:pb-12 lg:pb-0 xl:px-12 pt-16 sm:pt-20 lg:pt-20">
+      <div className="relative z-10 flex min-h-screen flex-col px-6 pb-8 sm:px-10 sm:pb-12 xl:px-12 pt-16 sm:pt-20">
         {/* Top Section */}
         <div className="flex-shrink-0 mx-auto text-center mb-4 sm:mb-6">
           <SectionContent delay={0.1}>
@@ -122,10 +112,10 @@ export default function ScheduleForm({
           </SectionContent>
         </div>
 
-        {/* Main Content - Form Left, Carousel Right */}
-        <div className="flex-1 min-h-0 flex flex-col lg:flex-row gap-3 lg:gap-4 xl:gap-6 overflow-hidden">
-          {/* Form - Left Side */}
-          <div className="flex-1 flex flex-col items-start justify-center min-w-0 py-4 lg:py-6">
+        {/* Main Content - Stacked layout (mobile style on all screens) */}
+        <div className="flex-1 min-h-0 flex flex-col gap-3 overflow-auto">
+          {/* Form - flex-shrink-0 so carousel stays in consistent position */}
+          <div className="flex-shrink-0 flex flex-col items-center min-w-0 py-4">
           <form id="schedule-form" ref={formRef} onSubmit={handleSubmit} className="flex-1 flex flex-col w-full max-w-[min(90dvw,56rem)]" style={{ gap: "clamp(0.375rem, 1dvw, 1.75rem)" }}>
           <SectionContent delay={0.2}>
             <div>
@@ -178,8 +168,8 @@ export default function ScheduleForm({
               />
             </div>
           </SectionContent>
-          {/* Submit Button - Inside form on small screens */}
-          <div className="lg:hidden mt-8 flex flex-col items-center">
+          {/* Submit Button */}
+          <div className="mt-8 flex flex-col items-center">
             <SectionContent delay={0.6}>
               <button
                 type="button"
@@ -209,9 +199,9 @@ export default function ScheduleForm({
         </form>
           </div>
 
-          {/* Carousel - Right Side */}
+          {/* Carousel - flex-shrink-0 so it doesn't shift with viewport */}
           {isCarouselOpen && (
-            <div className="flex-1 flex flex-col items-center justify-center relative min-w-0 w-full py-4 lg:py-6">
+            <div className="flex-shrink-0 flex flex-col items-center justify-center relative min-w-0 w-full py-4">
               <div className="relative w-full max-w-5xl aspect-video border border-white/30 overflow-hidden">
                 {/* Close Button - Top Left */}
                 <button
@@ -262,8 +252,8 @@ export default function ScheduleForm({
           )}
         </div>
         
-        {/* Submit Button - Fixed slot (hidden on small screens, shown on lg+) */}
-        <div className="hidden lg:flex flex-shrink-0 h-[3.5rem] items-center justify-center z-20">
+        {/* Submit Button - Desktop slot (hidden - using mobile layout) */}
+        <div className="hidden flex-shrink-0 h-[3.5rem] items-center justify-center z-20">
           <SectionContent delay={0.6}>
             <button
               type="button"
@@ -291,8 +281,8 @@ export default function ScheduleForm({
           )}
         </div>
 
-        {/* Bottom Image Strip - Fixed height, in flow */}
-        <div className="hidden lg:block flex-shrink-0 z-0 h-56 sm:h-64 xl:h-72 overflow-hidden -mx-6 sm:-mx-10 xl:-mx-12">
+        {/* Bottom Image Strip - Hidden (mobile layout on all screens) */}
+        <div className="hidden flex-shrink-0 z-0 h-56 sm:h-64 xl:h-72 overflow-hidden -mx-6 sm:-mx-10 xl:-mx-12">
         <div className="grid h-full grid-cols-5">
           {/* Image 1 */}
           {image1 && (

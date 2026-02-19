@@ -23,10 +23,10 @@ export default function YearsStatement({
         <SectionContent delay={0.3}>
           <div className="relative z-30 text-center px-6 sm:px-10 lg:px-12">
             <div className="font-bold uppercase text-white" style={{ lineHeight: "0.8", letterSpacing: "-.3em" }}>
-              <div style={{ fontSize: "clamp(2.5rem, 18dvw, 18rem)" }}>
+              <div className="we-arent" style={{ fontSize: "clamp(2.5rem, 18dvw, 18rem)" }}>
                 WE AREN&apos;T
               </div>
-              <div style={{ fontSize: "clamp(1.5rem, 10dvw, 10rem)" }}>
+              <div className="going-anywhere" style={{ fontSize: "clamp(1.5rem, 10dvw, 10rem)" }}>
                 GOING ANYWHERE
               </div>
             </div>
@@ -54,14 +54,14 @@ export default function YearsStatement({
       <div className="relative z-10 flex h-[100svh] mobile-stable-viewport-h flex-col justify-between px-6 pt-6 pb-4 sm:px-10 sm:pb-8 lg:px-12 lg:pb-12">
         {/* Top Section - 32 YEARS */}
         <SectionContent delay={0.1}>
-          <div className="md:max-w-[33dvw] max-w-[50dvw]">
-            <div className="mb-4 font-bold" style={{ lineHeight: "0.75", letterSpacing: "-0.10em", fontSize: "clamp(4rem, 50dvw, 32rem)" }}>
+          <div className="years-statement-content md:max-w-[33dvw] max-w-[50dvw]">
+            <div className="years-32 font-bold mb-2 sm:mb-4" style={{ lineHeight: "0.75", letterSpacing: "-0.10em", fontSize: "clamp(4rem, 50dvw, 32rem)" }}>
               32
             </div>
-            <div className="mb-6 font-bold uppercase" style={{ lineHeight: "0.6", letterSpacing: "-0.10em", fontSize: "clamp(1.5rem, 20dvw, 12.5rem)" }}>
+            <div className="years-years font-bold uppercase mb-3 min-[1600px]:mb-6" style={{ lineHeight: "0.6", letterSpacing: "-0.10em", fontSize: "clamp(1.5rem, 20dvw, 12.5rem)" }}>
               YEARS
             </div>
-            <p className="text-white" style={{ lineHeight: "0.9", letterSpacing: "-0.05em", fontSize: "clamp(0.75rem, 7dvw, 2.5rem)" }}>
+            <p className="years-statement-body text-white" style={{ lineHeight: "0.9", letterSpacing: "-0.05em", fontSize: "clamp(0.75rem, 7dvw, 2.5rem)" }}>
               OF PUSHING THE LIMITS OF AUTOMOTIVE CUSTOMIZATION AND
               EXPRESSION...
             </p>

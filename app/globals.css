@@ -92,6 +92,80 @@ p {
   }
 }
 
+/* SINCE 1993 - mobile: pull left (too far right), Mac/PC: keep as is */
 #built-by-dreamers .since-text {
-  margin-left: calc(4ch + clamp(1rem, 3dvw, 1.5rem) + clamp(8rem, 42dvw, 62.0rem));
+  margin-left: calc(4ch + clamp(0.5rem, 1dvw, 1rem) + clamp(4rem, 30dvw, 40rem));
+}
+@media (min-width: 1024px) and (max-width: 1599px) {
+  #built-by-dreamers .since-text {
+    margin-left: calc(4ch + clamp(1.5rem, 4dvw, 2rem) + clamp(10rem, 45dvw, 65rem)) !important;
+  }
+}
+@media (min-width: 1600px) {
+  #built-by-dreamers .since-text {
+    margin-left: calc(4ch + clamp(1.5rem, 4dvw, 2rem) + clamp(14rem, 50dvw, 74rem)) !important;
+  }
+}
+
+/* Who What body text - larger on PC (wide viewports) where same px size looks smaller on big monitors */
+.who-what-body {
+  font-size: clamp(1rem, 2.5dvw, 2rem);
+}
+@media (min-width: 1600px) {
+  .who-what-body {
+    font-size: clamp(1.25rem, 2.5dvw, 2.5rem);
+  }
+}
+
+/* 32 years section - smaller on MacBook (1024px-1600px) */
+@media (min-width: 1024px) and (max-width: 1599px) {
+  #years-statement .years-32 {
+    font-size: clamp(3rem, 35dvw, 20rem) !important;
+  }
+  #years-statement .years-years {
+    font-size: clamp(1.25rem, 14dvw, 8rem) !important;
+  }
+  #years-statement .years-statement-body {
+    font-size: clamp(0.7rem, 5dvw, 1.75rem) !important;
+  }
+  #years-statement .we-arent {
+    font-size: clamp(2rem, 12dvw, 12rem) !important;
+  }
+  #years-statement .going-anywhere {
+    font-size: clamp(1.25rem, 7dvw, 6rem) !important;
+  }
+}
+
+/* Storage hero - smaller on Mac (1024px-1600px) */
+@media (min-width: 1024px) and (max-width: 1599px) {
+  #storage-hero .storage-hero-heading {
+    font-size: clamp(1.5rem, 8dvw, 8rem) !important;
+  }
+  #storage-hero .storage-hero-caption {
+    font-size: clamp(0.75rem, 1.5dvw, 1rem) !important;
+    letter-spacing: 0.7em !important;
+  }
+}
+
+/* Academy - smaller text on iPhone so it fits */
+@media (max-width: 639px) {
+  #academy .academy-headline {
+    font-size: clamp(1rem, 5dvw, 1.5rem) !important;
+  }
+  #academy .academy-subhead {
+    font-size: clamp(0.75rem, 3.5dvw, 1.25rem) !important;
+  }
+}
+
+/* Academy - smaller on Mac (1024px-1600px) */
+@media (min-width: 1024px) and (max-width: 1599px) {
+  #academy .academy-logo {
+    max-width: 400px !important;
+  }
+  #academy .academy-headline {
+    font-size: clamp(1.5rem, 5dvw, 5rem) !important;
+  }
+  #academy .academy-subhead {
+    font-size: clamp(1rem, 3dvw, 3rem) !important;
+  }
 }
