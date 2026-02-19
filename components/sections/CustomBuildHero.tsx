@@ -46,7 +46,7 @@ export default function CustomBuildHero({
       <div className="absolute bottom-0 left-0 right-0 z-10 px-6 pb-6 sm:pb-10 lg:pb-12">
         <SectionContent delay={0.2}>
           <div className="mx-auto text-center">
-            <h2 className="font-bold uppercase text-white mb-2 sm:mb-3" style={{ lineHeight: "0.8", fontSize: "clamp(4.5rem, 10dvw, 14rem)" }}>
+            <h2 className="custom-build-heading font-bold uppercase text-white mb-2 sm:mb-3" style={{ lineHeight: "0.8", fontSize: "clamp(4.5rem, 10dvw, 14rem)" }}>
               <span>CUSTOM</span> <span style={{ color: "#0A56FF" }}>BUILD</span>
             </h2>
             <p className="uppercase text-white" style={{ letterSpacing: "clamp(0.2em, 2dvw, 0.8em)", fontSize: "clamp(0.5rem, 1.5dvw, 1.25rem)", lineHeight: "1" }}>

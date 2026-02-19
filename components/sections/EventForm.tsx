@@ -31,24 +31,31 @@ export default function EventForm() {
     }));
   };
 
-  const EVENT_EMAIL = "events@westcoastcustoms.com";
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
     try {
-      const body = `Event Space Rental Inquiry
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "event",
+          formData: {
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email,
+            eventDetails: formData.eventDetails,
+          },
+        }),
+      });
 
-Name: ${formData.name}
-Phone: ${formData.phone}
-Email: ${formData.email}
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.error ?? "Failed to send");
+      }
 
-Date and details:
-${formData.eventDetails}`;
-      const mailto = `mailto:${EVENT_EMAIL}?subject=Event%20Space%20Rental%20Inquiry&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
       setSubmitStatus("success");
       setFormData({ name: "", phone: "", email: "", eventDetails: "" });
       setTimeout(() => setSubmitStatus("idle"), 5000);
