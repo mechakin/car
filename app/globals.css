@@ -117,6 +117,19 @@ p {
   }
 }
 
+/* 32 years section - smaller on mobile */
+@media (max-width: 767px) {
+  #years-statement .years-32 {
+    font-size: clamp(3rem, 35dvw, 20rem) !important;
+  }
+  #years-statement .years-years {
+    font-size: clamp(1.25rem, 15dvw, 8rem) !important;
+  }
+  #years-statement .years-statement-body {
+    font-size: clamp(0.7rem, 6dvw, 1.75rem) !important;
+  }
+}
+
 /* 32 years section - smaller on MacBook (1024px-1600px) */
 @media (min-width: 1024px) and (max-width: 1599px) {
   #years-statement .years-32 {
