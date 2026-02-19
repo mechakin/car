@@ -1,7 +1,18 @@
 import { Resend } from "resend";
+import { Ratelimit } from "@upstash/ratelimit";
+import { Redis } from "@upstash/redis";
 import { NextRequest } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+
+const ratelimit =
+  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+    ? new Ratelimit({
+        redis: Redis.fromEnv(),
+        limiter: Ratelimit.slidingWindow(5, "1 h"),
+        analytics: true,
+      })
+    : null;
 
 const FORM_CONFIG: Record<
   string,
@@ -89,10 +100,23 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const { formType, formData } = (await request.json()) as {
+    const json = await request.json();
+    const { formType, formData } = json as {
       formType: string;
       formData: Record<string, string>;
     };
+
+    // Rate limit (optional - only when Upstash is configured)
+    if (ratelimit) {
+      const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? request.headers.get("x-real-ip") ?? "anonymous";
+      const { success } = await ratelimit.limit(ip);
+      if (!success) {
+        return Response.json(
+          { error: "Too many submissions. Please try again later." },
+          { status: 429 }
+        );
+      }
+    }
 
     const config = FORM_CONFIG[formType];
     if (!config) {
