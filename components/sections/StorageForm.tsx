@@ -56,22 +56,28 @@ export default function StorageForm({
     setSubmitStatus("idle");
 
     try {
-      const CONCIERGE_EMAILS = "sales@westcoastcustoms.com,info@westcoastcustoms.com";
-      const body = `Premium Storage Concierge Inquiry
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "storage",
+          formData: {
+            name: formData.name,
+            vehicle: formData.vehicle,
+            email: formData.email,
+            phone: formData.phone,
+          },
+        }),
+      });
 
-Name: ${formData.name}
-Vehicle: ${formData.vehicle}
-Email: ${formData.email}
-Phone: ${formData.phone}`;
-      const mailto = `mailto:${CONCIERGE_EMAILS}?subject=Premium%20Storage%20Concierge%20Inquiry&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.error ?? "Failed to send");
+      }
+
       setSubmitStatus("success");
       setFormData({ name: "", vehicle: "", email: "", phone: "" });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus("idle");
-      }, 5000);
+      setTimeout(() => setSubmitStatus("idle"), 5000);
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitStatus("error");

@@ -60,32 +60,28 @@ export default function AcademyForm({
     setSubmitStatus("idle");
 
     try {
-      // Simulate sending email (fake email service)
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate API call
-      
-      // Log form data (in production, this would send to an email service)
-      console.log("Form submitted:", formData);
-      
-      // Simulate email sending
-      const emailContent = `
-        West Coast Customs Academy Inquiry
-        
-        Name: ${formData.name}
-        Passion: ${formData.passion}
-        Email: ${formData.email}
-        Phone: ${formData.phone}
-      `;
-      
-      console.log("Email would be sent to: academy@westcoastcustoms.com");
-      console.log("Email content:", emailContent);
-      
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "academy",
+          formData: {
+            name: formData.name,
+            passion: formData.passion,
+            email: formData.email,
+            phone: formData.phone,
+          },
+        }),
+      });
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.error ?? "Failed to send");
+      }
+
       setSubmitStatus("success");
       setFormData({ name: "", passion: "", email: "", phone: "" });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus("idle");
-      }, 5000);
+      setTimeout(() => setSubmitStatus("idle"), 5000);
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitStatus("error");

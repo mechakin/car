@@ -70,32 +70,40 @@ export default function CustomBuildForm() {
     setSubmitStatus("idle");
 
     try {
-      const CUSTOM_BUILD_EMAILS = "sales@westcoastcustoms.com,info@westcoastcustoms.com";
-      const body = `Custom Build Inquiry
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "custom-build",
+          formData: {
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            organization: formData.organization,
+            streetAddress: formData.streetAddress,
+            city: formData.city,
+            state: formData.state,
+            phone: formData.phone,
+            email: formData.email,
+            yearMakeModel: formData.yearMakeModel,
+            currentColor: formData.currentColor,
+            investRange: formData.investRange,
+            exterior: formData.exterior,
+            interior: formData.interior,
+            engine: formData.engine,
+            suspension: formData.suspension,
+            wheelsRims: formData.wheelsRims,
+            tires: formData.tires,
+            performance: formData.performance,
+            moreInfo: formData.moreInfo,
+          },
+        }),
+      });
 
-Name: ${formData.firstName} ${formData.lastName}
-Organization: ${formData.organization}
-Address: ${formData.streetAddress}, ${formData.city}, ${formData.state}
-Phone: ${formData.phone}
-Email: ${formData.email}
-Year/Make/Model: ${formData.yearMakeModel}
-Current Color: ${formData.currentColor}
-Investment Range: ${formData.investRange}
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.error ?? "Failed to send");
+      }
 
-Services:
-Exterior: ${formData.exterior}
-Interior: ${formData.interior}
-Engine: ${formData.engine}
-Suspension: ${formData.suspension}
-Wheels/Rims: ${formData.wheelsRims}
-Tires: ${formData.tires}
-Performance: ${formData.performance}
-
-More Info: ${formData.moreInfo}
-
-(Note: File attachments must be added manually in your email client)`;
-      const mailto = `mailto:${CUSTOM_BUILD_EMAILS}?subject=Custom%20Build%20Inquiry&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
       setSubmitStatus("success");
       setFormData({
         firstName: "",
