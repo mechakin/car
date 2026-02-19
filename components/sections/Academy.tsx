@@ -15,12 +15,12 @@ export default function Academy({
   workshopImage = "/images/academy-workshop.jpg",
 }: AcademyProps) {
   return (
-    <Section id="academy" className="!min-h-[50svh] h-[66.6svh] sm:!min-h-[100svh] sm:h-[100svh]">
+    <Section id="academy" className="!min-h-[50svh] h-[50svh] sm:!min-h-[100svh] sm:h-[100svh]">
       <div className="relative h-full flex">
         {/* Left Side - Black Background with Logo and Text */}
-        <div className="relative w-1/2 bg-black text-white flex flex-col px-6 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12">
-          {/* Logo in corner */}
-          <div className="relative w-full max-w-[340px] sm:max-w-[425px] lg:max-w-[510px] xl:max-w-[595px] 2xl:max-w-[680px] aspect-square mb-8 sm:mb-10 lg:mb-12">
+        <div className="relative w-1/2 bg-black text-white flex flex-col px-6 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12 min-w-0 overflow-y-auto">
+          {/* Logo in corner - smaller on mobile so text fits */}
+          <div className="academy-logo relative w-full max-w-[200px] sm:max-w-[425px] lg:max-w-[510px] xl:max-w-[595px] 2xl:max-w-[680px] aspect-square mb-4 sm:mb-10 lg:mb-12 flex-shrink-0">
             {logoImage && (
               <Image
                 src={logoImage}
@@ -36,11 +36,11 @@ export default function Academy({
 
           {/* Text below logo */}
           <SectionContent delay={0.2}>
-            <div className="space-y-1 sm:space-y-2">
-              <p className="font-bold uppercase leading-none text-white tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1.5rem, 7dvw, 5.5rem)" }}>
+            <div className="space-y-1 sm:space-y-2 min-w-0 flex-shrink-0">
+              <p className="academy-headline font-bold uppercase leading-none text-white tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1.5rem, 7dvw, 8rem)" }}>
                 WHERE THE LEADERS OF TOMORROW ARE BUILT
               </p>
-              <p className="uppercase leading-none !text-[#0A56FF] tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 4rem)" }}>
+              <p className="academy-subhead uppercase leading-none !text-[#0A56FF] tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 4.5rem)" }}>
                 IN LOS ANGELES CALIFORNIA
               </p>
             </div>
