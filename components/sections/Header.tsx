@@ -135,7 +135,9 @@ export default function Header() {
             EVENTS
           </Link>
           <Link
-            href="/academy"
+            href="https://westcoastcustomsacademy.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-3xl sm:text-4xl font-bold uppercase tracking-tighter hover:text-[#0A56FF] transition-colors"
             onClick={closeMenu}
             style={{ letterSpacing: "-0.075em" }}

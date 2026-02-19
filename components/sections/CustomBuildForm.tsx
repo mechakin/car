@@ -70,8 +70,32 @@ export default function CustomBuildForm() {
     setSubmitStatus("idle");
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      console.log("Form submitted:", formData, "Files:", files);
+      const CUSTOM_BUILD_EMAILS = "sales@westcoastcustoms.com,info@westcoastcustoms.com";
+      const body = `Custom Build Inquiry
+
+Name: ${formData.firstName} ${formData.lastName}
+Organization: ${formData.organization}
+Address: ${formData.streetAddress}, ${formData.city}, ${formData.state}
+Phone: ${formData.phone}
+Email: ${formData.email}
+Year/Make/Model: ${formData.yearMakeModel}
+Current Color: ${formData.currentColor}
+Investment Range: ${formData.investRange}
+
+Services:
+Exterior: ${formData.exterior}
+Interior: ${formData.interior}
+Engine: ${formData.engine}
+Suspension: ${formData.suspension}
+Wheels/Rims: ${formData.wheelsRims}
+Tires: ${formData.tires}
+Performance: ${formData.performance}
+
+More Info: ${formData.moreInfo}
+
+(Note: File attachments must be added manually in your email client)`;
+      const mailto = `mailto:${CUSTOM_BUILD_EMAILS}?subject=Custom%20Build%20Inquiry&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
       setSubmitStatus("success");
       setFormData({
         firstName: "",

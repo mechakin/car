@@ -31,14 +31,24 @@ export default function EventForm() {
     }));
   };
 
+  const EVENT_EMAIL = "events@westcoastcustoms.com";
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      console.log("Event form submitted:", formData);
+      const body = `Event Space Rental Inquiry
+
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+
+Date and details:
+${formData.eventDetails}`;
+      const mailto = `mailto:${EVENT_EMAIL}?subject=Event%20Space%20Rental%20Inquiry&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
       setSubmitStatus("success");
       setFormData({ name: "", phone: "", email: "", eventDetails: "" });
       setTimeout(() => setSubmitStatus("idle"), 5000);
