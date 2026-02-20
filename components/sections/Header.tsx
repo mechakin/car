@@ -60,7 +60,7 @@ export default function Header() {
           <Link href="/" className="flex-shrink-0" onClick={closeMenu}>
             <div className="relative w-16 h-16 sm:w-20 sm:h-20">
               <Image
-                src="/images/wcc-logo.png"
+                src="/images/logo.png"
                 alt="West Coast Customs Logo"
                 fill
                 className="object-contain brightness-0 invert"
