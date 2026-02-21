@@ -1,5 +1,6 @@
 import Academy from "@/components/sections/Academy";
 import ApparelHero from "@/components/sections/ApparelHero";
+import KitSection from "@/components/sections/KitSection";
 import BuiltByDreamers from "@/components/sections/BuiltByDreamers";
 import EventsHero from "@/components/sections/EventsHero";
 import CustomBuildHero from "@/components/sections/CustomBuildHero";
@@ -24,6 +25,7 @@ export default function Home() {
           logoImage="/images/academy-logo.jpg"
           workshopImage="/images/academy-workshop.jpg"
         />
+        <KitSection />
         <ScheduleVisit image="/images/schedule-visit-left.jpg" />
         <CustomBuildHero backgroundImage="/images/custom-build.jpg" />
         <StorageHero backgroundImage="/images/storage-hero-bg.jpg" />
