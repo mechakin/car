@@ -73,12 +73,31 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Business Hours & Social */}
-            <div className="flex-1 text-center md:text-left space-y-4">
-              <p className="text-white text-xl">
+            {/* Business Hours, Address & Phone */}
+            <div className="flex-1 text-center md:text-left space-y-1">
+              <p className="text-white text-base sm:text-lg">
                 Business Hours: 9:00 AM - 5:00 PM
               </p>
-              <div className="flex items-center justify-center md:justify-start gap-4">
+              <p className="text-white text-base sm:text-lg">
+                <Link
+                  href="https://maps.google.com/?q=2101+Empire+Ave+Burbank+CA+91504"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white/90 transition-colors"
+                >
+                  2101 Empire Ave, Burbank, CA 91504
+                </Link>
+              </p>
+              <p className="text-white text-base sm:text-lg">
+                <Link href="tel:+18182371287" className="hover:text-white/90 transition-colors">
+                  Contact: (818) 237-1287
+                </Link>
+              </p>
+            </div>
+
+            {/* Social Links & Copyright */}
+            <div className="flex-shrink-0 flex flex-col items-center md:items-end gap-4 text-center md:text-right">
+              <div className="flex items-center gap-4">
                 {SOCIAL_LINKS.map(({ name, href, icon }) => (
                   <Link
                     key={name}
@@ -92,10 +111,6 @@ export default function Footer() {
                   </Link>
                 ))}
               </div>
-            </div>
-
-            {/* Copyright */}
-            <div className="flex-shrink-0 text-center md:text-right">
               <p className="text-white/60 text-sm sm:text-lg">
                 © {currentYear} West Coast Customs
               </p>

@@ -6,8 +6,8 @@ import Section from "./Section";
 
 export default function KitSection() {
   return (
-    <Section id="thicc-kits" className="!min-h-0">
-      <div className="relative w-full" style={{ height: "100svh" }}>
+    <Section id="thicc-kits">
+      <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h w-full relative overflow-hidden">
         {/* Top right - Shop Now */}
         <div className="absolute left-0 right-0 z-20 flex justify-end" style={{ top: "clamp(1.5rem, 3dvw, 3rem)", paddingRight: "clamp(1.5rem, 3dvw, 3rem)" }}>
           <Link
@@ -22,9 +22,9 @@ export default function KitSection() {
         </div>
 
         {/* Top image - kit1.png, half viewport */}
-        <div className="relative w-full h-[50dvh]">
+        <div className="relative w-full h-[50svh]">
           <Image
-            src="/images/kit1.png"
+            src="/images/kit1.jpg"
             alt="Thicc Kits"
             fill
             className="object-cover"
@@ -37,9 +37,9 @@ export default function KitSection() {
           <p className="!text-[#0A56FF] uppercase text-center m-0" style={{ fontSize: "clamp(0.75rem, 2dvw, 1.25rem)", letterSpacing: "clamp(0.02em, 1dvw, 1.2em)" }}>designed by west coast customs</p>
         </div>
         {/* Bottom image - kit2.png, half viewport */}
-        <div className="relative w-full h-[50dvh]">
+        <div className="relative w-full h-[50svh]">
           <Image
-            src="/images/kit2.png"
+            src="/images/kit2.jpg"
             alt="Thicc Kits"
             fill
             className="object-cover"

@@ -60,10 +60,10 @@ export default function Header() {
           <Link href="/" className="flex-shrink-0" onClick={closeMenu}>
             <div className="relative w-16 h-16 sm:w-20 sm:h-20">
               <Image
-                src="/images/logo.png"
+                src="/images/x_pfp.jpg"
                 alt="West Coast Customs Logo"
                 fill
-                className="object-contain brightness-0 invert"
+                className="object-contain rounded-full"
                 sizes="(max-width: 640px) 64px, 80px"
                 priority
               />
@@ -143,6 +143,16 @@ export default function Header() {
             style={{ letterSpacing: "-0.075em" }}
           >
             ACADEMY
+          </Link>
+          <Link
+            href="https://shop.westcoastcustoms.com/collections/thicc-kits"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl sm:text-4xl font-bold uppercase tracking-tighter hover:text-[#0A56FF] transition-colors"
+            onClick={closeMenu}
+            style={{ letterSpacing: "-0.075em" }}
+          >
+            THICC KITS
           </Link>
           <Link
             href="/schedule"
