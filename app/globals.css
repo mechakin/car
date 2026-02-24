@@ -183,8 +183,10 @@ p {
     text-shadow:
       0 0 8px rgba(255, 255, 255, 0.9),
       0 0 16px rgba(255, 255, 255, 0.6),
-      0 0 32px rgba(10, 86, 255, 0.8),
-      0 0 48px rgba(10, 86, 255, 0.5) !important;
+      0 0 32px rgba(255, 255, 255, 0.4) !important;
+  }
+  .hero-link-mobile-glow .hero-link-arrow {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.25) !important;
   }
 }
 

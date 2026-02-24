@@ -29,7 +29,7 @@ export default function ApparelHero({
       </div>
 
       {/* Top Right - Shop Button */}
-      <div className="absolute top-20 right-6 sm:right-10 lg:right-12 z-10">
+      <div className="absolute left-0 right-0 z-10 flex justify-end" style={{ top: "clamp(1.5rem, 3dvw, 3rem)", paddingRight: "clamp(1.5rem, 3dvw, 3rem)" }}>
         <SectionContent delay={0.1}>
           <a
             href="https://westcoastcustomsshop.com/"
@@ -38,7 +38,7 @@ export default function ApparelHero({
             className="hero-link-mobile-glow font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block"
             style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 3rem)" }}
           >
-            SHOP NOW <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>→</span>
+            SHOP NOW <span className="hero-link-arrow" style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>→</span>
           </a>
         </SectionContent>
       </div>
