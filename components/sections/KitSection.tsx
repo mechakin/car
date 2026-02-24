@@ -34,7 +34,7 @@ export default function KitSection() {
         </div>
 <div className="absolute top-0 left-0 items-center justify-center flex flex-col w-full h-full z-10 pointer-events-none" style={{ transform: "translateY(0.5rem)" }}>
           <div className="font-bold uppercase text-white text-center" style={{ fontSize: "clamp(5rem, 15dvw, 15rem)", letterSpacing: "-0.05em", lineHeight: "0.8" }}>THICC KITS</div>
-          <p className="!text-[#0A56FF] uppercase text-center m-0" style={{ fontSize: "clamp(0.75rem, 2dvw, 1.25rem)", letterSpacing: "clamp(0.02em, 1dvw, 1.2em)" }}>powered by west coast customs</p>
+          <p className="!text-[#0A56FF] uppercase text-center m-0" style={{ fontSize: "clamp(0.75rem, 2dvw, 1.25rem)", letterSpacing: "clamp(0.02em, 1dvw, 1.2em)" }}>designed by west coast customs</p>
         </div>
         {/* Bottom image - kit2.png, half viewport */}
         <div className="relative w-full h-[50dvh]">
