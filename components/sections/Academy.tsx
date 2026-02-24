@@ -65,7 +65,7 @@ export default function Academy({
           <div className="absolute left-0 right-0 z-10 flex justify-end" style={{ top: "clamp(1.5rem, 3dvw, 3rem)", paddingRight: "clamp(1.5rem, 3dvw, 3rem)" }}>
             <SectionContent delay={0.1}>
               <Link href="https://westcoastcustomsacademy.com/" target="_blank" rel="noopener noreferrer" className="hero-link-mobile-glow font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 3rem)" }}>
-                LEARN MORE <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>→</span>
+                LEARN MORE <span className="hero-link-arrow" style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>→</span>
               </Link>
             </SectionContent>
           </div>
