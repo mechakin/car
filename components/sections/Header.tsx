@@ -56,17 +56,19 @@ export default function Header() {
       >
       <div className="px-6 py-3 sm:px-10 lg:px-12">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex-shrink-0" onClick={closeMenu}>
-            <div className="relative w-16 h-16 sm:w-20 sm:h-20">
-              <Image
-                src="/images/x_pfp.jpg"
-                alt="West Coast Customs Logo"
-                fill
-                className="object-contain rounded-full"
-                sizes="(max-width: 640px) 64px, 80px"
-                priority
-              />
+          {/* Logo - scaled up visually, container keeps header layout stable */}
+          <Link href="/" className="flex-shrink-0 overflow-visible" onClick={closeMenu}>
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+              <div className="absolute inset-0 scale-125 sm:scale-150">
+                <Image
+                  src="/images/white png.png"
+                  alt="West Coast Customs Logo"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 80px, 120px"
+                  priority
+                />
+              </div>
             </div>
           </Link>
 
