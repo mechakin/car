@@ -37,7 +37,7 @@ export default function StorageHero({
         <SectionContent delay={0.1}>
           <button 
             onClick={() => router.push("/storage")}
-            className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block" 
+            className="hero-link-mobile-glow font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block" 
             style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 3rem)" }}
           >
             GET STARTED <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>→</span>
