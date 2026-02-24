@@ -59,7 +59,7 @@ export default function Header() {
           {/* Logo - scaled up visually, container keeps header layout stable */}
           <Link href="/" className="flex-shrink-0 overflow-visible" onClick={closeMenu}>
             <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-              <div className="absolute inset-0 scale-125 sm:scale-150">
+              <div className="absolute inset-0 scale-150 sm:scale-150">
                 <Image
                   src="/images/white png.png"
                   alt="West Coast Customs Logo"
