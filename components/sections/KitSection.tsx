@@ -8,13 +8,13 @@ export default function KitSection() {
   return (
     <Section id="thicc-kits" className="!min-h-0">
       <div className="relative w-full" style={{ height: "100svh" }}>
-        {/* Top left - Shop Now */}
-        <div className="absolute top-20 left-6 sm:left-10 lg:left-12 z-20">
+        {/* Top right - Shop Now */}
+        <div className="absolute top-20 right-6 sm:right-10 lg:right-12 z-20">
           <Link
             href="https://shop.westcoastcustoms.com/collections/thicc-kits"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block"
+            className="hero-link-mobile-glow font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block"
             style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 3rem)" }}
           >
             SHOP NOW <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>→</span>
