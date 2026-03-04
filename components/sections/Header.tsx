@@ -61,7 +61,7 @@ export default function Header() {
             <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
               <div className="absolute inset-0 scale-150 sm:scale-150">
                 <Image
-                  src="/images/wcc_logo_for_website.png"
+                  src="/images/wcc_logo_for_website_fixed.png"
                   alt="West Coast Customs Logo"
                   fill
                   className="object-contain"
