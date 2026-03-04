@@ -9,7 +9,7 @@ export default function SchedulePage() {
     <div className="bg-black text-white min-h-screen flex flex-col">
       <Header />
       <main className="flex-1 flex flex-col items-center justify-center pt-[5.5rem] sm:pt-[6.5rem] px-6 sm:px-10 lg:px-12">
-        <div className="text-center max-w-xl">
+        <div className="text-center w-full max-w-4xl mx-auto">
         <div className="absolute top-30 left-6 sm:left-10 lg:left-12 z-50">
         <SectionContent delay={0.1}>
           <Link
@@ -24,10 +24,11 @@ export default function SchedulePage() {
           <h1 className="font-bold uppercase text-white mb-4" style={{ fontSize: "clamp(2rem, 8dvw, 5rem)", letterSpacing: "-0.05em" }}>
             Temporarily Closed
           </h1>
-          <p className="text-white/70 text-lg sm:text-xl mb-8">
-            Schedule a visit is temporarily closed. Tours and visits will reopen in fall of 2026.
-          </p>
-          
+          <div className="flex justify-center mb-8">
+            <p className="text-white/70 text-lg sm:text-xl whitespace-nowrap">
+              Schedule a visit is temporarily closed. Tours and visits will reopen in fall of 2026.
+            </p>
+          </div>
         </div>
       </main>
       <Footer />

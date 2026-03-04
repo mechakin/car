@@ -47,7 +47,9 @@ export default function EventsHero({
         <SectionContent delay={0.2}>
           <div className="mx-auto text-center">
             <h2 className="font-bold uppercase text-white mb-2 sm:mb-3" style={{ lineHeight: "0.8", fontSize: "clamp(5rem, 15dvw, 15rem)" }}>
-              EVENTS
+              <Link href="/events" className="inline-block">
+                EVENTS
+              </Link>
             </h2>
             <p className="uppercase" style={{ letterSpacing: "clamp(0.2em, 2dvw, 0.8em)", fontSize: "clamp(0.75rem, 2dvw, 1.5rem)", lineHeight: "1" }}>
               <span className="block text-white">AT THE ICONIC</span>

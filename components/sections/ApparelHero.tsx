@@ -48,7 +48,14 @@ export default function ApparelHero({
         <SectionContent delay={0.2}>
           <div className="mx-auto text-center">
             <h2 className="font-bold uppercase text-white mb-2 sm:mb-3" style={{ lineHeight: "0.8", fontSize: "clamp(5rem, 15dvw, 15rem)" }}>
-              APPAREL
+              <a
+                href="https://westcoastcustomsshop.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                APPAREL
+              </a>
             </h2>
             <p className="uppercase" style={{ color: "#0A56FF", letterSpacing: "clamp(0.2em, 2dvw, 0.8em)", fontSize: "clamp(1rem, 3dvw, 2rem)", lineHeight: "0.8" }}>
               DROPS & CLASSICS

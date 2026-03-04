@@ -47,15 +47,21 @@ export default function StorageHero({
         {/* Top Right - Main Headline */}
         <div className="absolute right-0 top-20 " style={{ paddingRight: "max(1.5rem, 3dvw)" }}>
           <SectionContent delay={0.2}>
-            <h2 className="storage-hero-heading mb-3 font-bold uppercase text-right min-w-max" style={{ lineHeight: "0.9", fontSize: "clamp(1.5rem, 12dvw, 13rem)" }}>
-              <span className="block">PREMIUM</span>
-              <span className="block">STORAGE</span>
-              <span className="block">CONCIERGE</span>
-            </h2>
-            <p className="storage-hero-caption max-w-[60dvw] text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl uppercase text-white text-right ml-auto" style={{ letterSpacing: ".8em", transform: "translateX(clamp(0.5rem, 3dvw, 2rem))" }}>
-              AT THE ICONIC{" "}
-              <span className="text-[#0A56FF]">WEST COAST CUSTOMS</span>
-            </p>
+            <button
+              type="button"
+              onClick={() => router.push("/storage")}
+              className="text-right cursor-pointer"
+            >
+              <h2 className="storage-hero-heading mb-3 font-bold uppercase text-right min-w-max" style={{ lineHeight: "0.9", fontSize: "clamp(1.5rem, 12dvw, 13rem)" }}>
+                <span className="block">PREMIUM</span>
+                <span className="block">STORAGE</span>
+                <span className="block">CONCIERGE</span>
+              </h2>
+              <p className="storage-hero-caption max-w-[60dvw] text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl uppercase text-white text-right ml-auto" style={{ letterSpacing: ".8em", transform: "translateX(clamp(0.5rem, 3dvw, 2rem))" }}>
+                AT THE ICONIC{" "}
+                <span className="text-[#0A56FF]">WEST COAST CUSTOMS</span>
+              </p>
+            </button>
           </SectionContent>
         </div>
 
