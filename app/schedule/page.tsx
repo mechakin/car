@@ -22,7 +22,7 @@ export default function SchedulePage() {
         </SectionContent>
       </div>
           <h1 className="font-bold uppercase text-white mb-4" style={{ fontSize: "clamp(2rem, 8dvw, 5rem)", letterSpacing: "-0.05em" }}>
-            Temporarily Closed
+            Temporarily <span className="text-red-500">Closed</span>
           </h1>
           <div className="flex justify-center mb-8">
             <p className="text-white/70 text-lg sm:text-xl">
