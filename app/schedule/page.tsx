@@ -8,7 +8,7 @@ export default function SchedulePage() {
   return (
     <div className="bg-black text-white min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 flex flex-col items-center justify-center pt-[5.5rem] sm:pt-[6.5rem] px-6 sm:px-10 lg:px-12">
+      <main className="flex-1 flex flex-col items-center justify-center pt-[5.5rem] sm:pt-[6.5rem] px-6 sm:px-10 lg:px-12 min-h-[100dvh]">
         <div className="text-center w-full max-w-4xl mx-auto">
         <div className="absolute top-30 left-6 sm:left-10 lg:left-12 z-50">
         <SectionContent delay={0.1}>
@@ -25,7 +25,7 @@ export default function SchedulePage() {
             Temporarily Closed
           </h1>
           <div className="flex justify-center mb-8">
-            <p className="text-white/70 text-lg sm:text-xl whitespace-nowrap">
+            <p className="text-white/70 text-lg sm:text-xl">
               Schedule a visit is temporarily closed. Tours and visits will reopen in fall of 2026.
             </p>
           </div>
