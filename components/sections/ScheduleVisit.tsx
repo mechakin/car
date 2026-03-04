@@ -33,14 +33,14 @@ export default function ScheduleVisit({
       <div className="relative z-10 flex h-[100svh] mobile-stable-viewport-h flex-col justify-between px-6 py-20 sm:px-10 lg:px-12">
         {/* Top Left - Schedule A Visit */}
         <SectionContent delay={0.1}>
-          <div className="max-w-md">
+          <Link href="/schedule" className="max-w-md block">
             <h2 className="schedule-text mb-2 font-bold uppercase text-white whitespace-nowrap" style={{ lineHeight: "0.2", fontSize: "clamp(1.5rem, 8dvw, 9rem)" }}>
               SCHEDULE
             </h2>
             <h2 className="visit-text font-bold uppercase text-[#0A56FF]" style={{ lineHeight: "0.95", fontSize: "clamp(2rem, 18dvw, 20.25rem)" }}>
               VISIT
             </h2>
-          </div>
+          </Link>
         </SectionContent>
 
         {/* Top Right - Schedule CTA */}
