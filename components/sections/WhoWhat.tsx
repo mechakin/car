@@ -66,11 +66,7 @@ export default function WhoWhat({
                 WHAT WE DO
               </h2>
               <p className="who-what-body leading-relaxed text-white max-w-2xl mx-auto text-balance" style={{ lineHeight: "2" }}>
-                You may have seen some of our one-of-a-kind, multi-million-dollar
-                custom car builds on our TV show or in the news, but we also
-                specialize in smaller customizations. From wraps to wheels and
-                everything in between, contact us today to inquire about our
-                services.
+                At West Coast Customs, we specialize in turning automotive dreams into reality. No vision is too bold, no build too complex — Whether you&apos;re a brand, a person, or an enthusiast... if you can imagine it, we can bring it to life.
               </p>
             </div>
           </SectionContent>
