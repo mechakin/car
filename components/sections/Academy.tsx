@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Section from "./Section";
@@ -14,6 +15,41 @@ export default function Academy({
   logoImage = "/images/academy-logo.jpg",
   workshopImage = "/images/academy-workshop.jpg",
 }: AcademyProps) {
+  const [sizeVariant, setSizeVariant] = useState<"pc" | "mac" | "electron">("pc");
+
+  useEffect(() => {
+    if (typeof navigator !== "undefined") {
+      const ua = navigator.userAgent;
+      if (/Electron/i.test(ua)) {
+        setSizeVariant("electron");
+      } else if (/Mac|iPhone|iPad/i.test(navigator.platform)) {
+        setSizeVariant("mac");
+      } else {
+        setSizeVariant("pc");
+      }
+    }
+  }, []);
+
+  const isSmall = sizeVariant === "mac" || sizeVariant === "electron";
+
+  const logoClass = isSmall
+    ? "relative w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[400px] xl:max-w-[460px] 2xl:max-w-[520px] aspect-square mb-6 sm:mb-8 lg:mb-10 block"
+    : "relative w-full max-w-[340px] sm:max-w-[425px] lg:max-w-[510px] xl:max-w-[595px] 2xl:max-w-[680px] aspect-square mb-8 sm:mb-10 lg:mb-12 block";
+
+  const headlineStyle =
+    sizeVariant === "electron"
+      ? { letterSpacing: "-0.075em" as const, lineHeight: "0.9" as const, fontSize: "clamp(1.5rem, 5.5dvw, 6rem)" }
+      : sizeVariant === "mac"
+        ? { letterSpacing: "-0.075em" as const, lineHeight: "0.9" as const, fontSize: "clamp(1.5rem, 6dvw, 6.5rem)" }
+        : { letterSpacing: "-0.075em" as const, lineHeight: "0.9" as const, fontSize: "clamp(1.5rem, 7dvw, 8rem)" };
+
+  const subheadStyle =
+    sizeVariant === "electron"
+      ? { letterSpacing: "-0.075em" as const, lineHeight: "0.9" as const, fontSize: "clamp(1rem, 3dvw, 3.5rem)" }
+      : sizeVariant === "mac"
+        ? { letterSpacing: "-0.075em" as const, lineHeight: "0.9" as const, fontSize: "clamp(1rem, 3.5dvw, 3.75rem)" }
+        : { letterSpacing: "-0.075em" as const, lineHeight: "0.9" as const, fontSize: "clamp(1rem, 4dvw, 4.5rem)" };
+
   return (
     <Section id="academy" className="!min-h-[50svh] h-[50svh] sm:!min-h-[100svh] sm:h-[100svh]">
       <div className="relative h-full flex">
@@ -24,7 +60,7 @@ export default function Academy({
             href="https://westcoastcustomsacademy.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative w-full max-w-[340px] sm:max-w-[425px] lg:max-w-[510px] xl:max-w-[595px] 2xl:max-w-[680px] aspect-square mb-8 sm:mb-10 lg:mb-12 block"
+            className={logoClass}
           >
             {logoImage && (
               <Image
@@ -42,10 +78,10 @@ export default function Academy({
           {/* Text below logo */}
           <SectionContent delay={0.2}>
             <div className="space-y-1 sm:space-y-2">
-              <p className="font-bold uppercase leading-none text-white tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1.5rem, 7dvw, 8rem)" }}>
+              <p className="font-bold uppercase leading-none text-white tracking-tighter" style={headlineStyle}>
                 WHERE THE LEADERS OF TOMORROW ARE BUILT
               </p>
-              <p className="uppercase leading-none !text-[#0A56FF] tracking-tighter" style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 4.5rem)" }}>
+              <p className="uppercase leading-none !text-[#0A56FF] tracking-tighter" style={subheadStyle}>
                 IN LOS ANGELES CALIFORNIA
               </p>
             </div>
