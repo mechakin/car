@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Section from "./Section";
@@ -11,24 +10,19 @@ type AcademyProps = {
   workshopImage?: string;
 };
 
+function getSizeVariant(): "pc" | "mac" | "electron" {
+  if (typeof navigator === "undefined") return "pc";
+  const ua = navigator.userAgent;
+  if (/Electron/i.test(ua)) return "electron";
+  if (/Mac|iPhone|iPad/i.test(navigator.platform)) return "mac";
+  return "pc";
+}
+
 export default function Academy({
   logoImage = "/images/academy-logo.jpg",
   workshopImage = "/images/academy-workshop.jpg",
 }: AcademyProps) {
-  const [sizeVariant, setSizeVariant] = useState<"pc" | "mac" | "electron">("pc");
-
-  useEffect(() => {
-    if (typeof navigator !== "undefined") {
-      const ua = navigator.userAgent;
-      if (/Electron/i.test(ua)) {
-        setSizeVariant("electron");
-      } else if (/Mac|iPhone|iPad/i.test(navigator.platform)) {
-        setSizeVariant("mac");
-      } else {
-        setSizeVariant("pc");
-      }
-    }
-  }, []);
+  const sizeVariant = getSizeVariant();
 
   const logoClass =
     sizeVariant === "electron"
