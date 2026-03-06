@@ -64,12 +64,26 @@ export default function CustomBuildForm() {
     setFiles((prev) => prev.filter((_, i) => i !== index));
   };
 
+  const fileToBase64 = (file: File): Promise<{ filename: string; content: string }> =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const base64 = (reader.result as string).split(",")[1];
+        if (base64) resolve({ filename: file.name, content: base64 });
+        else reject(new Error("Failed to read file"));
+      };
+      reader.onerror = () => reject(reader.error);
+      reader.readAsDataURL(file);
+    });
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
     try {
+      const attachments = await Promise.all(files.map(fileToBase64));
+
       const res = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -96,6 +110,7 @@ export default function CustomBuildForm() {
             performance: formData.performance,
             moreInfo: formData.moreInfo,
           },
+          attachments,
         }),
       });
 

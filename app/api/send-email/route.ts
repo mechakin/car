@@ -101,9 +101,10 @@ export async function POST(request: NextRequest) {
 
   try {
     const json = await request.json();
-    const { formType, formData } = json as {
+    const { formType, formData, attachments } = json as {
       formType: string;
       formData: Record<string, string>;
+      attachments?: Array<{ filename: string; content: string }>;
     };
 
     // Rate limit (optional - only when Upstash is configured)
@@ -126,11 +127,23 @@ export async function POST(request: NextRequest) {
     const body = config.buildBody(formData);
     const from = process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev";
 
+    const resendAttachments =
+      Array.isArray(attachments) && attachments.length > 0
+        ? attachments
+            .filter((a): a is { filename: string; content: string } => Boolean(a?.filename && a?.content))
+            .slice(0, 10)
+            .map((a) => ({
+              filename: a.filename,
+              content: Buffer.from(a.content, "base64"),
+            }))
+        : undefined;
+
     const { data, error } = await resend.emails.send({
       from,
       to: config.to,
       subject: config.subject,
       text: body,
+      ...(resendAttachments?.length ? { attachments: resendAttachments } : {}),
     });
 
     if (error) {
