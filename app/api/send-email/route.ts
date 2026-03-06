@@ -130,7 +130,7 @@ export async function POST(request: NextRequest) {
     const resendAttachments =
       Array.isArray(attachments) && attachments.length > 0
         ? attachments
-            .filter((a): a is { filename: string; content: string } => a?.filename && a?.content)
+            .filter((a): a is { filename: string; content: string } => Boolean(a?.filename && a?.content))
             .slice(0, 10)
             .map((a) => ({
               filename: a.filename,
