@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
 
@@ -84,19 +83,6 @@ export default function BuiltByDreamers({
             </div>
           </SectionContent>
         </div>
-      </div>
-
-        {/* Top Right - Discover */}
-      <div className="absolute left-0 right-0 z-30 flex justify-end" style={{ top: "clamp(1.5rem, 3dvw, 3rem)", paddingRight: "clamp(1.5rem, 3dvw, 3rem)" }}>
-        <SectionContent delay={0.1}>
-          <Link
-            href="/founder"
-            className="hero-link-mobile-glow font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block"
-            style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 3rem)" }}
-          >
-            DISCOVER <span className="hero-link-arrow" style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>→</span>
-          </Link>
-        </SectionContent>
       </div>
 
       {/* Content Overlay - Bottom Left Text */}
