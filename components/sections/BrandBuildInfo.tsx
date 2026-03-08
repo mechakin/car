@@ -6,9 +6,21 @@ import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
 
-// Placeholder images - replace with actual brand build images when provided
-const brandBuildImages = [
-  "/images/brand-build.jpg",
+const brandBuildImages: { src: string; alt: string }[] = [
+  { src: "/images/brand-builds/nest-fire-truck.png", alt: "Nest branded fire truck" },
+  { src: "/images/brand-builds/black-panther-lexus.png", alt: "Black Panther themed Lexus LC 500" },
+  { src: "/images/brand-builds/wcc-facility-skype.png", alt: "West Coast Customs facility with Skype van and custom Airstream" },
+  { src: "/images/brand-builds/madden-cruiser.png", alt: "EA Sports Madden Cruiser tour bus" },
+  { src: "/images/brand-builds/cdw-technoliner.png", alt: "CDW Technoliner branded vehicle" },
+  { src: "/images/brand-builds/dr-pepper-tailgate.png", alt: "Dr Pepper Tailgate 2000 van" },
+  { src: "/images/brand-builds/xbox-vw-bus.png", alt: "Xbox themed Volkswagen bus" },
+  { src: "/images/brand-builds/pubg-xbox-van.png", alt: "Summer of PUBG Xbox van" },
+  { src: "/images/brand-builds/dr-pepper-tailgate-party.png", alt: "Dr Pepper tailgate party RV" },
+  { src: "/images/brand-builds/nascar-camry.png", alt: "West Coast Customs NASCAR Toyota Camry" },
+  { src: "/images/brand-builds/ps5-van.png", alt: "PlayStation 5 themed Mercedes Sprinter van" },
+  { src: "/images/brand-builds/darth-vader-vw.png", alt: "Darth Vader themed Volkswagen" },
+  { src: "/images/brand-builds/black-panther-lexus-2.png", alt: "Black Panther Lexus custom build" },
+  { src: "/images/brand-builds/barbie-bus.png", alt: "Barbie themed custom bus" },
 ];
 
 export default function BrandBuildInfo() {
@@ -53,8 +65,8 @@ export default function BrandBuildInfo() {
               <div className="relative w-full aspect-video mb-16 overflow-hidden border border-white/20">
                 {brandBuildImages[imageIndex] && (
                   <Image
-                    src={brandBuildImages[imageIndex]!}
-                    alt={`Brand Build ${imageIndex + 1}`}
+                    src={brandBuildImages[imageIndex]!.src}
+                    alt={brandBuildImages[imageIndex]!.alt}
                     fill
                     className="object-cover"
                     sizes="100vw"

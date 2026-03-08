@@ -46,17 +46,13 @@ export default function BrandBuildHero({
       <div className="absolute bottom-0 left-0 right-0 z-10 px-6 pb-6 sm:pb-10 lg:pb-12">
         <SectionContent delay={0.2}>
           <div className="mx-auto text-center">
-            <p className="uppercase mb-2 sm:mb-3 whitespace-nowrap" style={{ color: "#0A56FF", letterSpacing: "clamp(0.35em, 3.5dvw, 1.2em)", fontSize: "clamp(0.75rem, 2.5dvw, 1.75rem)", lineHeight: "0.8" }}>
-              BRING YOUR BRANDS
-            </p>
+            
             <h2 className="font-bold uppercase text-white mb-2 sm:mb-3 whitespace-nowrap" style={{ lineHeight: "0.8", fontSize: "clamp(1.5rem, 10dvw, 15rem)" }}>
               <Link href="/brand-build" className="inline-block">
-                AUTOMOTIVE DREAM
+                BRAND <span className="text-[#0A56FF]">BUILD</span>
               </Link>
             </h2>
-            <p className="uppercase" style={{ color: "#0A56FF", letterSpacing: "clamp(0.5em, 5dvw, 1.8em)", fontSize: "clamp(1rem, 3dvw, 2rem)", lineHeight: "0.8" }}>
-              TO LIFE
-            </p>
+            
           </div>
         </SectionContent>
       </div>
