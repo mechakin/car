@@ -190,6 +190,14 @@ p {
   }
 }
 
+/* Back link glow - all screen sizes (dark backgrounds) */
+.back-link-glow {
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.9),
+    0 0 16px rgba(255, 255, 255, 0.6),
+    0 0 32px rgba(255, 255, 255, 0.4) !important;
+}
+
 /* Academy - smaller on Mac (1024px-1600px) */
 @media (min-width: 1024px) and (max-width: 1599px) {
   #academy .academy-logo {

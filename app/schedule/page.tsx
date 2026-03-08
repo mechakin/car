@@ -13,6 +13,7 @@ const CAROUSEL_IMAGES = [
   "/images/schedule-form-3.jpg",
   "/images/schedule-form-4.jpg",
   "/images/schedule-form-5.jpg",
+  "/images/schedule-form-6.png",
 ];
 
 export default function SchedulePage() {

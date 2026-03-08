@@ -7,20 +7,23 @@ import Section from "./Section";
 import SectionContent from "./SectionContent";
 
 const brandBuildImages: { src: string; alt: string }[] = [
-  { src: "/images/brand-builds/nest-fire-truck.png", alt: "Nest branded fire truck" },
-  { src: "/images/brand-builds/black-panther-lexus.png", alt: "Black Panther themed Lexus LC 500" },
-  { src: "/images/brand-builds/wcc-facility-skype.png", alt: "West Coast Customs facility with Skype van and custom Airstream" },
-  { src: "/images/brand-builds/madden-cruiser.png", alt: "EA Sports Madden Cruiser tour bus" },
+  { src: "/images/brand-builds/barbie-bus.png", alt: "Barbie themed custom bus" },
+  { src: "/images/brand-builds/black-panther-lexus.png", alt: "Black Panther themed Lexus" },
+  { src: "/images/brand-builds/brand-build-0852.png", alt: "West Coast Customs brand build" },
+  { src: "/images/brand-builds/brand-build-3529.png", alt: "West Coast Customs brand build" },
+  { src: "/images/brand-builds/brand-build-3686.png", alt: "West Coast Customs brand build" },
+  { src: "/images/brand-builds/brand-build-4148.png", alt: "West Coast Customs brand build" },
+  { src: "/images/brand-builds/brand-build-7209.png", alt: "West Coast Customs brand build" },
+  { src: "/images/brand-builds/brand-build-unknown.jpg", alt: "West Coast Customs brand build" },
   { src: "/images/brand-builds/cdw-technoliner.png", alt: "CDW Technoliner branded vehicle" },
   { src: "/images/brand-builds/dr-pepper-tailgate.png", alt: "Dr Pepper Tailgate 2000 van" },
-  { src: "/images/brand-builds/xbox-vw-bus.png", alt: "Xbox themed Volkswagen bus" },
-  { src: "/images/brand-builds/pubg-xbox-van.png", alt: "Summer of PUBG Xbox van" },
   { src: "/images/brand-builds/dr-pepper-tailgate-party.png", alt: "Dr Pepper tailgate party RV" },
+  { src: "/images/brand-builds/madden-cruiser.png", alt: "EA Sports Madden Cruiser tour bus" },
   { src: "/images/brand-builds/nascar-camry.png", alt: "West Coast Customs NASCAR Toyota Camry" },
+  { src: "/images/brand-builds/nest-fire-truck.png", alt: "Nest branded fire truck" },
   { src: "/images/brand-builds/ps5-van.png", alt: "PlayStation 5 themed Mercedes Sprinter van" },
-  { src: "/images/brand-builds/darth-vader-vw.png", alt: "Darth Vader themed Volkswagen" },
-  { src: "/images/brand-builds/black-panther-lexus-2.png", alt: "Black Panther Lexus custom build" },
-  { src: "/images/brand-builds/barbie-bus.png", alt: "Barbie themed custom bus" },
+  { src: "/images/brand-builds/pubg-xbox-van.png", alt: "Summer of PUBG Xbox van" },
+  { src: "/images/brand-builds/wcc-facility-skype.png", alt: "West Coast Customs facility with Skype van and custom Airstream" },
 ];
 
 export default function BrandBuildInfo() {
@@ -102,7 +105,7 @@ export default function BrandBuildInfo() {
               <SectionContent delay={0.2}>
                 <div className="p-6 border border-white/20 h-full min-h-[180px] flex flex-col">
                   <h3 className="text-[#0A56FF] font-bold uppercase mb-3" style={{ fontSize: "clamp(1rem, 2dvw, 1.5rem)" }}>
-                    CUSTOM CONCEPTS
+                    CONCEPT CREATION
                   </h3>
                   <p className="text-white/90 flex-1">
                     From initial concept to final build, we work with your brand to create vehicles that tell your story.
