@@ -7,26 +7,38 @@ import SectionContent from "./SectionContent";
 
 type BrandBuildHeroProps = {
   backgroundImage?: string;
+  mobileImage?: string;
 };
 
 export default function BrandBuildHero({
   backgroundImage = "/images/brand-build.jpg",
+  mobileImage = "/images/brand-build-mobile.png",
 }: BrandBuildHeroProps) {
   return (
     <Section id="brand-build-hero" className="relative">
-      {/* Background Image */}
-      <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h bg-black overflow-hidden">
-        {backgroundImage && (
-          <Image
-            src={backgroundImage}
-            alt="West Coast Customs Brand Build"
-            fill
-            className="object-cover"
-            priority
-            quality={100}
-            sizes="100dvw"
-          />
-        )}
+      {/* Background Image - Mobile */}
+      <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h bg-black overflow-hidden md:hidden">
+        <Image
+          src={mobileImage}
+          alt="West Coast Customs Brand Build"
+          fill
+          className="object-cover"
+          priority
+          quality={100}
+          sizes="100dvw"
+        />
+      </div>
+      {/* Background Image - Desktop */}
+      <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h bg-black overflow-hidden hidden md:block">
+        <Image
+          src={backgroundImage}
+          alt="West Coast Customs Brand Build"
+          fill
+          className="object-cover"
+          priority
+          quality={100}
+          sizes="100dvw"
+        />
       </div>
 
       {/* Top Right - Get Started */}
