@@ -52,7 +52,9 @@ export default function BrandBuildHero({
                 BRAND <span className="text-[#0A56FF]">BUILD</span>
               </Link>
             </h2>
-            
+            <p className="uppercase text-white" style={{ letterSpacing: "clamp(0.2em, 2dvw, 0.8em)", fontSize: "clamp(0.5rem, 1.5dvw, 1.25rem)", lineHeight: "1" }}>
+              BLOOD SWEAT TEARS SINCE 1993
+            </p>
           </div>
         </SectionContent>
       </div>
