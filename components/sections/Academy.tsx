@@ -1,5 +1,6 @@
 "use client";
 
+import { useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Section from "./Section";
@@ -10,7 +11,9 @@ type AcademyProps = {
   workshopImage?: string;
 };
 
-function getSizeVariant(): "pc" | "mac" | "electron" {
+type SizeVariant = "pc" | "mac" | "electron";
+
+function getSizeVariant(): SizeVariant {
   if (typeof navigator === "undefined") return "pc";
   const ua = navigator.userAgent;
   if (/Electron/i.test(ua)) return "electron";
@@ -18,11 +21,19 @@ function getSizeVariant(): "pc" | "mac" | "electron" {
   return "pc";
 }
 
+function getServerSnapshot(): SizeVariant {
+  return "pc";
+}
+
+function subscribe(): () => void {
+  return () => {}; // Size variant doesn't change during session
+}
+
 export default function Academy({
   logoImage = "/images/academy-logo.jpg",
   workshopImage = "/images/academy-workshop.jpg",
 }: AcademyProps) {
-  const sizeVariant = getSizeVariant();
+  const sizeVariant = useSyncExternalStore(subscribe, getSizeVariant, getServerSnapshot);
 
   const logoClass =
     sizeVariant === "electron"

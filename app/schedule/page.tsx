@@ -44,11 +44,19 @@ export default function SchedulePage() {
 
         <div className="text-center w-full max-w-4xl mx-auto flex flex-col items-center gap-8">
           <h1 className="font-bold uppercase text-white" style={{ fontSize: "clamp(2rem, 8dvw, 5rem)", letterSpacing: "-0.05em" }}>
-            Temporarily <span className="text-red-500">Closed</span>
+            TOURS
           </h1>
-          <p className="text-white/70 text-lg sm:text-xl">
-            Tours of the facility will re-open in fall of 2026.
-          </p>
+          <div className="text-white/90 text-lg sm:text-xl leading-relaxed space-y-4 text-center max-w-2xl mx-auto">
+            <p>
+              Visit the world-famous show room, classic arcade game lounge, and exclusive merchandise boutique daily 9 AM to 5 PM.
+            </p>
+            <p>
+              On Friday afternoons, visit West Coast Smash Burgers, serving gourmet smash burgers from 12 noon to 6 PM, on our outdoor open-air patio.
+            </p>
+            <p>
+              Temporarily closed to the public are the West Coast Customs Experience tour; an all-new tour experience will reopen to the public at the end of August 2026.
+            </p>
+          </div>
 
           {/* Carousel */}
           <div className="relative w-full max-w-5xl aspect-video border border-white/30 overflow-hidden mt-4">
