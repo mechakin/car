@@ -7,6 +7,7 @@ import Section from "./Section";
 import SectionContent from "./SectionContent";
 
 const brandBuildImages: { src: string; alt: string }[] = [
+  { src: "/images/brand-builds/nest-fire-truck.png", alt: "Nest branded fire truck" },
   { src: "/images/brand-builds/barbie-bus.png", alt: "Barbie themed custom bus" },
   { src: "/images/brand-builds/black-panther-lexus.png", alt: "Black Panther themed Lexus" },
   { src: "/images/brand-builds/brand-build-0852.png", alt: "West Coast Customs brand build" },
@@ -20,7 +21,6 @@ const brandBuildImages: { src: string; alt: string }[] = [
   { src: "/images/brand-builds/dr-pepper-tailgate-party.png", alt: "Dr Pepper tailgate party RV" },
   { src: "/images/brand-builds/madden-cruiser.png", alt: "EA Sports Madden Cruiser tour bus" },
   { src: "/images/brand-builds/nascar-camry.png", alt: "West Coast Customs NASCAR Toyota Camry" },
-  { src: "/images/brand-builds/nest-fire-truck.png", alt: "Nest branded fire truck" },
   { src: "/images/brand-builds/ps5-van.png", alt: "PlayStation 5 themed Mercedes Sprinter van" },
   { src: "/images/brand-builds/pubg-xbox-van.png", alt: "Summer of PUBG Xbox van" },
   { src: "/images/brand-builds/wcc-facility-skype.png", alt: "West Coast Customs facility with Skype van and custom Airstream" },
@@ -56,7 +56,7 @@ export default function BrandBuildInfo() {
             {/* Hero Section */}
             <SectionContent delay={0.1}>
               <h1 className="mb-4 font-bold uppercase text-center" style={{ fontSize: "clamp(2rem, 8dvw, 6rem)" }}>
-                BRAND BUILDS
+                BRAND <span className="text-[#0A56FF]">BUILDS</span>
               </h1>
               <p className="text-white/90 text-center text-lg sm:text-xl leading-relaxed mb-12">
                 Bring your brand&apos;s automotive vision to life with West Coast Customs. Our team creates custom vehicle builds that embody your brand identity—from concept to completion. Whether it&apos;s a one-of-a-kind show car, a fleet of branded vehicles, or an automotive activation, we deliver the iconic West Coast Customs quality that turns heads and drives engagement.
