@@ -13,14 +13,14 @@ export default function FounderPage() {
       <Header />
       <main className="flex-1 pt-[5.5rem] sm:pt-[6.5rem]">
         {/* First Section - 60% viewport height, Schedule Visit style */}
-        <Section id="founder-1" className="!min-h-[60dvh] h-[60dvh]">
+        <Section id="founder-1" className="!min-h-[60svh] h-[60svh] md:!min-h-[60dvh] md:h-[60dvh] overflow-hidden">
           {/* Background Image - Mobile */}
           <div className="absolute inset-0 md:hidden">
             <Image
               src="/images/backup/founder-1-mobile.png"
               alt="West Coast Customs Founder"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               priority
               quality={100}
               sizes="100vw"
@@ -61,7 +61,7 @@ export default function FounderPage() {
                   className="hero-link-mobile-glow back-link-glow font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block"
                   style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 3rem)" }}
                 >
-                  <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>←</span> BACK
+                  <span className="hero-link-arrow" style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>←</span> BACK
                 </Link>
               </SectionContent>
             </div>
@@ -73,7 +73,7 @@ export default function FounderPage() {
                   className="text-white/90 text-xs sm:text-base md:text-lg leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-center"
                   style={{ letterSpacing: "-0.02em" }}
                 >
-                  FOUNDED IN 1993 WITH A $10,000 LOAN FROM MY GRANDPA I TURNED <span className="text-[#0A56FF]">WEST COAST CUSTOMS</span> INTO A GLOBAL EMPIRE AND ONE STOP SHOP FOR ALL THINGS AUTOMOTIVE AND BEYOND. HARD WORK & DEDICATION ARE AT THE CORE OF OUR BRANDS FOUNDATION. NO MATTER THE SIZE OF YOUR DREAM WE CAN MAKE IT A <span className="text-[#0A56FF]">REALITY</span>.
+                  FOUNDED IN 1993 WITH A $5,000 LOAN FROM MY GRANDPA I TURNED <span className="text-[#0A56FF]">WEST COAST CUSTOMS</span> INTO A GLOBAL EMPIRE AND ONE STOP SHOP FOR ALL THINGS AUTOMOTIVE AND BEYOND. HARD WORK & DEDICATION ARE AT THE CORE OF OUR BRANDS FOUNDATION. NO MATTER THE SIZE OF YOUR DREAM WE CAN MAKE IT A <span className="text-[#0A56FF]">REALITY</span>.
                 </p>
               </SectionContent>
             </div>
@@ -81,7 +81,7 @@ export default function FounderPage() {
         </Section>
 
         {/* Second Section - 40% viewport height - two halves */}
-        <Section id="founder-2" className="!min-h-[40dvh] h-[40dvh]">
+        <Section id="founder-2" className="!min-h-[40svh] h-[40svh] md:!min-h-[40dvh] md:h-[40dvh] overflow-hidden">
           <div className="absolute inset-0 flex">
             {/* Left half - left portion of image */}
             <div className="relative w-1/2 h-full overflow-hidden">

@@ -101,16 +101,16 @@ export default function BuiltByDreamers({
 
       {/* Content Overlay - Bottom Left Text */}
       <div className="relative z-10 flex h-[100dvh] mobile-stable-viewport-h flex-col justify-end px-6 pb-8 sm:pb-20 sm:px-10 lg:px-12 pointer-events-none">
-        <div className="max-sm:max-w-[70vw] sm:max-w-2xl space-y-4 lg:max-w-4xl xl:max-w-5xl pointer-events-auto">
+        <div className="sm:max-w-2xl space-y-4 lg:max-w-4xl xl:max-w-5xl pointer-events-auto">
           <SectionContent delay={0.3}>
             <p
-              className="text-xl font-semibold leading-tight sm:text-3xl lg:text-4xl xl:text-5xl"
+              className="text-xl font-semibold leading-tight sm:text-3xl lg:text-4xl xl:text-5xl max-sm:max-w-[60vw]"
               style={{ letterSpacing: "-0.075em", color: "#0A56FF", lineHeight: "0.9" }}
             >
               Built by Dreamers is more than a phrase
             </p>
             <p
-              className="mt-2 text-white text-md sm:text-xl lg:text-2xl xl:text-3xl"
+              className="mt-2 text-white text-md sm:text-xl lg:text-2xl xl:text-3xl max-sm:max-w-[65vw]"
               style={{
                 letterSpacing: "-0.075em",
                 textTransform: "none",
@@ -123,7 +123,7 @@ export default function BuiltByDreamers({
 
           <SectionContent delay={0.4}>
             <p
-              className="text-md leading-tight text-white sm:text-xl lg:text-2xl xl:text-3xl"
+              className="text-md leading-tight text-white sm:text-xl lg:text-2xl xl:text-3xl max-sm:max-w-[65vw]"
               style={{
                 letterSpacing: "-0.075em",
                 textTransform: "none",
@@ -137,7 +137,7 @@ export default function BuiltByDreamers({
 
           <SectionContent delay={0.5}>
             <p
-              className="text-md leading-tight text-white sm:text-xl lg:text-2xl xl:text-3xl"
+              className="text-md leading-tight text-white sm:text-xl lg:text-2xl xl:text-3xl max-sm:max-w-[65vw]"
               style={{
                 letterSpacing: "-0.075em",
                 textTransform: "none",
