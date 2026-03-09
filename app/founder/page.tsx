@@ -70,7 +70,7 @@ export default function FounderPage() {
             <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-6 sm:pb-10 lg:pb-12 px-6 sm:px-10 lg:px-12">
               <SectionContent delay={0.3}>
                 <p
-                  className="text-white/90 text-xs sm:text-base md:text-lg leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-center"
+                  className="text-white/90 text-xs sm:text-base md:text-lg leading-relaxed max-w-6xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-center"
                   style={{ letterSpacing: "-0.02em" }}
                 >
                   FOUNDED IN 1993 WITH A $5,000 LOAN FROM MY GRANDPA I TURNED <span className="text-[#0A56FF]">WEST COAST CUSTOMS</span> INTO A GLOBAL EMPIRE AND ONE STOP SHOP FOR ALL THINGS AUTOMOTIVE AND BEYOND. HARD WORK & DEDICATION ARE AT THE CORE OF OUR BRANDS FOUNDATION. NO MATTER THE SIZE OF YOUR DREAM WE CAN MAKE IT A <span className="text-[#0A56FF]">REALITY</span>.

@@ -86,8 +86,8 @@ export default function BuiltByDreamers({
         </div>
       </div>
 
-        {/* Discover - bottom right on mobile, top right on desktop */}
-      <div className="absolute left-0 right-0 z-30 flex justify-end bottom-6 top-auto sm:bottom-auto sm:top-[clamp(1.5rem,3dvw,3rem)] pr-6 sm:pr-[clamp(1.5rem,3dvw,3rem)]">
+        {/* Discover - bottom right */}
+      <div className="absolute left-0 right-0 z-30 flex justify-end bottom-6 sm:bottom-10 lg:bottom-12 pr-6 sm:pr-10 lg:pr-12">
         <SectionContent delay={0.1}>
           <Link
             href="/founder"
