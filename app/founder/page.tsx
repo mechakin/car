@@ -14,12 +14,25 @@ export default function FounderPage() {
       <main className="flex-1 pt-[5.5rem] sm:pt-[6.5rem]">
         {/* First Section - 60% viewport height, Schedule Visit style */}
         <Section id="founder-1" className="!min-h-[60dvh] h-[60dvh]">
-          <div className="absolute inset-0">
+          {/* Background Image - Mobile */}
+          <div className="absolute inset-0 md:hidden">
+            <Image
+              src="/images/backup/founder-1-mobile.png"
+              alt="West Coast Customs Founder"
+              fill
+              className="object-cover"
+              priority
+              quality={100}
+              sizes="100vw"
+            />
+          </div>
+          {/* Background Image - Desktop */}
+          <div className="absolute inset-0 hidden md:block">
             <Image
               src="/images/backup/founder-1.png"
               alt="West Coast Customs Founder"
               fill
-              className="object-cover object-left md:object-center"
+              className="object-cover object-center"
               priority
               quality={100}
               sizes="100vw"
@@ -29,12 +42,12 @@ export default function FounderPage() {
           {/* Content overlay - like Schedule Visit */}
           <div className="relative z-10 flex h-full flex-col justify-between px-6 py-20 sm:px-10 lg:px-12 pointer-events-none">
             {/* Top Left - Our Founder (like Schedule Visit) */}
-            <SectionContent delay={0.1} className="pointer-events-auto -mt-4">
+            <SectionContent delay={0.1} className="pointer-events-auto -mt-8">
               <div className="max-w-md block">
-                <h2 className="font-bold uppercase text-white whitespace-nowrap" style={{ lineHeight: "0.9", fontSize: "clamp(2rem, 18dvw, 20.25rem)" }}>
+                <h2 className="font-bold uppercase text-white whitespace-nowrap" style={{ lineHeight: "0.75", fontSize: "clamp(2rem, 18dvw, 20.25rem)" }}>
                   OUR
                 </h2>
-                <h2 className="font-bold uppercase text-[#0A56FF]" style={{ lineHeight: "0.95", fontSize: "clamp(1.75rem, 9dvw, 10rem)" }}>
+                <h2 className="font-bold uppercase text-[#0A56FF]" style={{ lineHeight: "0.8", fontSize: "clamp(1.75rem, 9dvw, 10rem)" }}>
                   FOUNDER
                 </h2>
               </div>
@@ -67,25 +80,25 @@ export default function FounderPage() {
           </div>
         </Section>
 
-        {/* Second Section - 40% viewport height, mirrored symmetry: left half original, right half rotated 180┬░ */}
+        {/* Second Section - 40% viewport height - two halves */}
         <Section id="founder-2" className="!min-h-[40dvh] h-[40dvh]">
           <div className="absolute inset-0 flex">
-            {/* Left half - flipped horizontally, hidden on mobile */}
-            <div className="hidden md:block relative w-1/2 h-full overflow-hidden">
+            {/* Left half - left portion of image */}
+            <div className="relative w-1/2 h-full overflow-hidden">
               <Image
                 src="/images/backup/founder-2.png"
                 alt="West Coast Customs Founder"
                 fill
-                className="object-cover object-left scale-x-[-1]"
+                className="object-cover object-left"
                 priority
                 quality={100}
                 sizes="50vw"
               />
             </div>
-            {/* Right half - right portion, full width on mobile */}
-            <div className="relative w-full md:w-1/2 h-full overflow-hidden">
+            {/* Right half - right portion of image */}
+            <div className="relative w-1/2 h-full overflow-hidden">
               <Image
-                src="/images/backup/founder-2.png"
+                src="/images/backup/founder-3.png"
                 alt="West Coast Customs Founder"
                 fill
                 className="object-cover object-right"
