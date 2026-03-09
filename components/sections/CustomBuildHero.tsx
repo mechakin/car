@@ -51,7 +51,7 @@ export default function CustomBuildHero({
                 <span>CUSTOM</span> <span style={{ color: "#0A56FF" }}>BUILD</span>
               </Link>
             </h2>
-            <p className="uppercase text-white" style={{ letterSpacing: "clamp(0.2em, 2dvw, 0.8em)", fontSize: "clamp(0.5rem, 1.5dvw, 1.25rem)", lineHeight: "1" }}>
+            <p className="uppercase text-white" style={{ letterSpacing: "clamp(0.2em, 2dvw, 0.8em)", fontSize: "clamp(0.75rem, 2dvw, 1.5rem)", lineHeight: "1" }}>
               WHERE DREAMS DRIVE
             </p>
           </div>

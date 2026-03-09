@@ -59,12 +59,12 @@ export default function BrandBuildHero({
         <SectionContent delay={0.2}>
           <div className="mx-auto text-center">
             
-            <h2 className="font-bold uppercase text-white mb-2 sm:mb-3 whitespace-nowrap" style={{ lineHeight: "0.8", fontSize: "clamp(1.5rem, 10dvw, 15rem)" }}>
+            <h2 className="brand-build-heading font-bold uppercase text-white mb-2 sm:mb-3 whitespace-nowrap" style={{ lineHeight: "0.8", fontSize: "clamp(4.5rem, 10dvw, 14rem)" }}>
               <Link href="/brand-build" className="inline-block">
                 BRAND <span className="text-[#0A56FF]">BUILD</span>
               </Link>
             </h2>
-            <p className="uppercase text-white" style={{ letterSpacing: "clamp(0.2em, 2dvw, 0.8em)", fontSize: "clamp(0.5rem, 1.5dvw, 1.25rem)", lineHeight: "1" }}>
+            <p className="uppercase text-white" style={{ letterSpacing: "clamp(0.2em, 2dvw, 0.8em)", fontSize: "clamp(0.75rem, 2dvw, 1.5rem)", lineHeight: "1" }}>
               BUILT WITHOUT LIMITS
             </p>
           </div>

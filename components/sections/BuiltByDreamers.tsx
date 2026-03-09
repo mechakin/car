@@ -86,8 +86,8 @@ export default function BuiltByDreamers({
         </div>
       </div>
 
-        {/* Top Right - Discover */}
-      <div className="absolute left-0 right-0 z-30 flex justify-end" style={{ top: "clamp(1.5rem, 3dvw, 3rem)", paddingRight: "clamp(1.5rem, 3dvw, 3rem)" }}>
+        {/* Discover - bottom right on mobile, top right on desktop */}
+      <div className="absolute left-0 right-0 z-30 flex justify-end bottom-6 top-auto sm:bottom-auto sm:top-[clamp(1.5rem,3dvw,3rem)] pr-6 sm:pr-[clamp(1.5rem,3dvw,3rem)]">
         <SectionContent delay={0.1}>
           <Link
             href="/founder"
@@ -101,11 +101,11 @@ export default function BuiltByDreamers({
 
       {/* Content Overlay - Bottom Left Text */}
       <div className="relative z-10 flex h-[100dvh] mobile-stable-viewport-h flex-col justify-end px-6 pb-8 sm:pb-20 sm:px-10 lg:px-12 pointer-events-none">
-        <div className="max-w-2xl space-y-4 lg:max-w-4xl xl:max-w-5xl pointer-events-auto">
+        <div className="max-sm:max-w-[70vw] sm:max-w-2xl space-y-4 lg:max-w-4xl xl:max-w-5xl pointer-events-auto">
           <SectionContent delay={0.3}>
             <p
               className="text-xl font-semibold leading-tight sm:text-3xl lg:text-4xl xl:text-5xl"
-              style={{ letterSpacing: "-0.075em", color: "#0A56FF", lineHeight: "0.5" }}
+              style={{ letterSpacing: "-0.075em", color: "#0A56FF", lineHeight: "0.9" }}
             >
               Built by Dreamers is more than a phrase
             </p>
