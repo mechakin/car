@@ -58,7 +58,7 @@ export default function FounderPage() {
               <SectionContent delay={0.2}>
                 <Link
                   href="/"
-                  className="hero-link-mobile-glow back-link-glow font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block"
+                  className="hero-link-mobile-glow font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block"
                   style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 3rem)" }}
                 >
                   <span className="hero-link-arrow" style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>←</span> BACK
