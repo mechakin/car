@@ -162,7 +162,7 @@ export default function Header() {
             onClick={closeMenu}
             style={{ letterSpacing: "-0.075em" }}
           >
-            SCHEDULE
+            TOURS
           </Link>
           <Link
             href="/custom"
@@ -171,6 +171,14 @@ export default function Header() {
             style={{ letterSpacing: "-0.075em" }}
           >
             CUSTOM BUILD
+          </Link>
+          <Link
+            href="/brand-build"
+            className="text-3xl sm:text-4xl font-bold uppercase tracking-tighter hover:text-[#0A56FF] transition-colors"
+            onClick={closeMenu}
+            style={{ letterSpacing: "-0.075em" }}
+          >
+            BRAND BUILD
           </Link>
           <Link
             href="/storage"

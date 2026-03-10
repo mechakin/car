@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
 
@@ -85,18 +86,31 @@ export default function BuiltByDreamers({
         </div>
       </div>
 
+        {/* Discover - bottom right */}
+      <div className="absolute left-0 right-0 z-30 flex justify-end bottom-6 sm:bottom-10 lg:bottom-12 pr-6 sm:pr-10 lg:pr-12">
+        <SectionContent delay={0.1}>
+          <Link
+            href="/founder"
+            className="hero-link-mobile-glow font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block"
+            style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 3rem)" }}
+          >
+            DISCOVER <span className="hero-link-arrow" style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>→</span>
+          </Link>
+        </SectionContent>
+      </div>
+
       {/* Content Overlay - Bottom Left Text */}
-      <div className="relative z-10 flex h-[100dvh] mobile-stable-viewport-h flex-col justify-end px-6 pb-8 sm:pb-20 sm:px-10 lg:px-12">
-        <div className="max-w-2xl space-y-4 lg:max-w-4xl xl:max-w-5xl">
+      <div className="relative z-10 flex h-[100dvh] mobile-stable-viewport-h flex-col justify-end px-6 pb-8 sm:pb-20 sm:px-10 lg:px-12 pointer-events-none">
+        <div className="sm:max-w-2xl space-y-4 lg:max-w-4xl xl:max-w-5xl pointer-events-auto">
           <SectionContent delay={0.3}>
             <p
-              className="text-xl font-semibold leading-tight sm:text-3xl lg:text-4xl xl:text-5xl"
-              style={{ letterSpacing: "-0.075em", color: "#0A56FF", lineHeight: "0.5" }}
+              className="text-xl font-semibold leading-tight sm:text-3xl lg:text-4xl xl:text-5xl max-sm:max-w-[60vw]"
+              style={{ letterSpacing: "-0.075em", color: "#0A56FF", lineHeight: "0.9" }}
             >
               Built by Dreamers is more than a phrase
             </p>
             <p
-              className="mt-2 text-white text-md sm:text-xl lg:text-2xl xl:text-3xl"
+              className="mt-2 text-white text-md sm:text-xl lg:text-2xl xl:text-3xl max-sm:max-w-[65vw]"
               style={{
                 letterSpacing: "-0.075em",
                 textTransform: "none",
@@ -109,7 +123,7 @@ export default function BuiltByDreamers({
 
           <SectionContent delay={0.4}>
             <p
-              className="text-md leading-tight text-white sm:text-xl lg:text-2xl xl:text-3xl"
+              className="text-md leading-tight text-white sm:text-xl lg:text-2xl xl:text-3xl max-sm:max-w-[65vw]"
               style={{
                 letterSpacing: "-0.075em",
                 textTransform: "none",
@@ -123,7 +137,7 @@ export default function BuiltByDreamers({
 
           <SectionContent delay={0.5}>
             <p
-              className="text-md leading-tight text-white sm:text-xl lg:text-2xl xl:text-3xl"
+              className="text-md leading-tight text-white sm:text-xl lg:text-2xl xl:text-3xl max-sm:max-w-[65vw]"
               style={{
                 letterSpacing: "-0.075em",
                 textTransform: "none",

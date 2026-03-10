@@ -1,5 +1,6 @@
 import Academy from "@/components/sections/Academy";
 import ApparelHero from "@/components/sections/ApparelHero";
+import BrandBuildHero from "@/components/sections/BrandBuildHero";
 import KitSection from "@/components/sections/KitSection";
 import BuiltByDreamers from "@/components/sections/BuiltByDreamers";
 import EventsHero from "@/components/sections/EventsHero";
@@ -20,6 +21,7 @@ export default function Home() {
         <YearsStatement />
         <WhoWhat />
         <ApparelHero backgroundImage="/images/apparel.jpg" />
+        <BrandBuildHero backgroundImage="/images/brand-build.jpg" />
         <CustomBuildHero backgroundImage="/images/custom-build.jpg" />
         <Academy
           logoImage="/images/academy-logo.jpg"

@@ -122,6 +122,9 @@ p {
   #custom-build-hero .custom-build-heading {
     font-size: clamp(2.5rem, 12dvw, 4.5rem) !important;
   }
+  #brand-build-hero .brand-build-heading {
+    font-size: clamp(2.5rem, 12dvw, 4.5rem) !important;
+  }
 }
 
 /* 32 years section - smaller on mobile */
@@ -188,6 +191,14 @@ p {
   .hero-link-mobile-glow .hero-link-arrow {
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.25) !important;
   }
+}
+
+/* Back link glow - all screen sizes (dark backgrounds) */
+.back-link-glow {
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.9),
+    0 0 16px rgba(255, 255, 255, 0.6),
+    0 0 32px rgba(255, 255, 255, 0.4) !important;
 }
 
 /* Academy - smaller on Mac (1024px-1600px) */

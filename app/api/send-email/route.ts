@@ -78,6 +78,32 @@ Performance: ${d.performance}
 
 More Info: ${d.moreInfo}`,
   },
+  "brand-build": {
+    to: ["sales@westcoastcustoms.com", "info@westcoastcustoms.com"],
+    subject: "Brand Build Inquiry",
+    buildBody: (d) =>
+      `Brand Build Inquiry
+
+Name: ${d.firstName} ${d.lastName}
+Company Name: ${d.companyName}
+Address: ${d.streetAddress}, ${d.city}, ${d.state}
+Phone: ${d.phone}
+Email: ${d.email}
+Year/Make/Model: ${d.yearMakeModel}
+Current Color: ${d.currentColor}
+Investment Range: ${d.investRange}
+
+Services:
+Exterior: ${d.exterior}
+Interior: ${d.interior}
+Engine: ${d.engine}
+Suspension: ${d.suspension}
+Wheels/Rims: ${d.wheelsRims}
+Tires: ${d.tires}
+Performance: ${d.performance}
+
+More Info: ${d.moreInfo}`,
+  },
   academy: {
     to: ["academy@westcoastcustoms.com"],
     subject: "West Coast Customs Academy Inquiry",
