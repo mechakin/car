@@ -8,12 +8,17 @@ import Header from "@/components/sections/Header";
 import SectionContent from "@/components/sections/SectionContent";
 
 const CAROUSEL_IMAGES = [
+  "/images/schedule-visit-left.jpg",
   "/images/schedule-form-1.jpg",
   "/images/schedule-form-2.jpg",
   "/images/schedule-form-3.jpg",
   "/images/schedule-form-4.jpg",
   "/images/schedule-form-5.jpg",
   "/images/schedule-form-6.png",
+  "/images/schedule-mural-reflection.png",
+  "/images/schedule-showroom-cars.png",
+  "/images/schedule-merchandise-store.png",
+  "/images/schedule-smash-burgers.png",
 ];
 
 export default function SchedulePage() {
