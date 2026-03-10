@@ -43,13 +43,16 @@ export default function FounderPage() {
           <div className="relative z-10 flex h-full flex-col justify-between px-6 py-20 sm:px-10 lg:px-12 pointer-events-none">
             {/* Top Left - Our Founder (like Schedule Visit) */}
             <SectionContent delay={0.1} className="pointer-events-auto -mt-8">
-              <div className="max-w-md block">
+              <div className="max-w-full block">
                 <h2 className="font-bold uppercase text-white whitespace-nowrap" style={{ lineHeight: "0.75", fontSize: "clamp(2rem, 18dvw, 20.25rem)" }}>
                   OUR
                 </h2>
                 <h2 className="font-bold uppercase text-[#0A56FF]" style={{ lineHeight: "0.8", fontSize: "clamp(1.75rem, 9dvw, 10rem)" }}>
                   FOUNDER
                 </h2>
+                <p className="founder-name uppercase text-white/50 mt-1 sm:mt-2" style={{ fontSize: "clamp(0.75rem, 2dvw, 1.5rem)", lineHeight: "1" }}>
+                  Ryan Friedlinghaus
+                </p>
               </div>
             </SectionContent>
 

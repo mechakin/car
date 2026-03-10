@@ -1,24 +1,6 @@
 @import "tailwindcss";
 
-/* Century Gothic font faces - self-hosted */
-/* Place font files in public/fonts/ directory */
-@font-face {
-  font-family: "Century Gothic";
-  src: url("/fonts/CenturyGothic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  font-feature-settings: normal;
-}
-
-@font-face {
-  font-family: "Century Gothic";
-  src: url("/fonts/CenturyGothic-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  font-feature-settings: normal;
-}
+/* Century Gothic loaded via next/font/local in layout.tsx */
 
 :root {
   --background: #000000;
@@ -37,7 +19,6 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Century Gothic", "CenturyGothic", "AppleGothic", Arial, sans-serif;
   text-rendering: optimizeLegibility;
   letter-spacing: -0.075em;
   overflow-x: hidden;
@@ -114,6 +95,22 @@ p {
 @media (min-width: 1919px) {
   .who-what-body {
     font-size: clamp(1.25rem, 2.5dvw, 2.5rem);
+  }
+}
+
+/* Founder name - letter-spacing: tight on mobile, wide on desktop to match FOUNDER width */
+.founder-name {
+  color: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 767px) {
+  .founder-name {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.25em !important;
+  }
+}
+@media (min-width: 768px) {
+  .founder-name {
+    letter-spacing: 0.70em !important;
   }
 }
 
