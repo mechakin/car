@@ -13,7 +13,6 @@ const brandBuildImages: { src: string; alt: string }[] = [
   { src: "/images/brand-builds/brand-build-0852.png", alt: "West Coast Customs brand build" },
   { src: "/images/brand-builds/brand-build-3529.png", alt: "West Coast Customs brand build" },
   { src: "/images/brand-builds/brand-build-3686.png", alt: "West Coast Customs brand build" },
-  { src: "/images/brand-builds/brand-build-4148.png", alt: "West Coast Customs brand build" },
   { src: "/images/brand-builds/brand-build-7209.png", alt: "West Coast Customs brand build" },
   { src: "/images/brand-builds/brand-build-unknown.jpg", alt: "West Coast Customs brand build" },
   { src: "/images/brand-builds/cdw-technoliner.png", alt: "CDW Technoliner branded vehicle" },
