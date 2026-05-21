@@ -12,10 +12,7 @@ export default function BrandBuildPage() {
     <div className="bg-black text-white">
       <Header />
       <main className="pt-[5.5rem] sm:pt-[6.5rem]">
-        <BrandBuildHero
-          backgroundImage={BRAND_BUILD_4148}
-          mobileImage={BRAND_BUILD_4148}
-        />
+        <BrandBuildHero backgroundImage={BRAND_BUILD_4148} />
         <BrandBuildInfo />
       </main>
       <Footer />

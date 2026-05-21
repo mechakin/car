@@ -10,16 +10,23 @@ type BrandBuildHeroProps = {
   mobileImage?: string;
 };
 
+const DEFAULT_BACKGROUND = "/images/brand-build.jpg";
+const DEFAULT_MOBILE = "/images/brand-build-mobile.png";
+
 export default function BrandBuildHero({
-  backgroundImage = "/images/brand-build.jpg",
-  mobileImage = "/images/brand-build-mobile.png",
+  backgroundImage = DEFAULT_BACKGROUND,
+  mobileImage,
 }: BrandBuildHeroProps) {
+  const resolvedMobileImage =
+    mobileImage ??
+    (backgroundImage === DEFAULT_BACKGROUND ? DEFAULT_MOBILE : backgroundImage);
+
   return (
     <Section id="brand-build-hero" className="relative">
       {/* Background Image - Mobile */}
       <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h bg-black overflow-hidden md:hidden">
         <Image
-          src={mobileImage}
+          src={resolvedMobileImage}
           alt="West Coast Customs Brand Build"
           fill
           className="object-cover"
