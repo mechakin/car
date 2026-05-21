@@ -21,7 +21,7 @@ export default function Home() {
         <YearsStatement />
         <WhoWhat />
         <ApparelHero backgroundImage="/images/apparel.jpg" />
-        <BrandBuildHero backgroundImage="/images/brand-build.jpg" />
+        <BrandBuildHero backgroundImage="/images/brand-build-4148.jpg" />
         <CustomBuildHero backgroundImage="/images/custom-build.jpg" />
         <Academy
           logoImage="/images/academy-logo.jpg"
