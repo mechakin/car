@@ -54,13 +54,13 @@ export default function SchedulePage() {
           </h1>
           <div className="text-white/90 text-lg sm:text-xl leading-relaxed space-y-4 text-center max-w-2xl mx-auto">
             <p>
-              Visit the world-famous show room, classic arcade game lounge, and exclusive merchandise boutique daily 9 AM to 5 PM.
+              Visit the world-famous show room, classic arcade game lounge, and exclusive merchandise boutique daily 12PM to 8PM.
             </p>
             <p>
-              On Friday afternoons, visit West Coast Smash Burgers, serving gourmet smash burgers from 12 noon to 6 PM, on our outdoor open-air patio.
+              On Friday afternoons, visit West Coast Smash Burgers, serving gourmet smash burgers from 10AM to 5PM, on our outdoor open-air patio.
             </p>
-            <p>
-              Temporarily closed to the public are the West Coast Customs Experience tour; an all-new tour experience will reopen to the public at the end of August 2026.
+            <p>k
+              Temporarily closed to the public are the West Coast Customs Experience tour; an all-new tour experience will reopen to the public at the end of Fall 2026.
             </p>
           </div>
 

@@ -27,7 +27,7 @@ export default function Home() {
           logoImage="/images/academy-logo.jpg"
           workshopImage="/images/academy-workshop.jpg"
         />
-        <KitSection />
+        {/* <KitSection /> */}
         <ScheduleVisit image="/images/schedule-visit-left.jpg" />
         <EventsHero backgroundImage="/images/events.png" />
         <StorageHero backgroundImage="/images/storage-hero-bg.jpg" />
