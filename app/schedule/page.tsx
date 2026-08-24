@@ -29,7 +29,9 @@ export default function SchedulePage() {
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length);
+    setCurrentImageIndex(
+      (prev) => (prev - 1 + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length,
+    );
   };
 
   return (
@@ -41,26 +43,46 @@ export default function SchedulePage() {
             <Link
               href="/"
               className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block"
-              style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 3rem)" }}
+              style={{
+                letterSpacing: "-0.075em",
+                lineHeight: "0.9",
+                fontSize: "clamp(1rem, 4dvw, 3rem)",
+              }}
             >
-              <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>←</span> BACK
+              <span
+                style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}
+              >
+                ←
+              </span>{" "}
+              BACK
             </Link>
           </SectionContent>
         </div>
 
         <div className="text-center w-full max-w-4xl mx-auto flex flex-col items-center gap-8">
-          <h1 className="font-bold uppercase text-white" style={{ fontSize: "clamp(2rem, 8dvw, 5rem)", letterSpacing: "-0.05em" }}>
+          <h1
+            className="font-bold uppercase text-white"
+            style={{
+              fontSize: "clamp(2rem, 8dvw, 5rem)",
+              letterSpacing: "-0.05em",
+            }}
+          >
             TOURS
           </h1>
           <div className="text-white/90 text-lg sm:text-xl leading-relaxed space-y-4 text-center max-w-2xl mx-auto">
             <p>
-              Visit the world-famous show room, classic arcade game lounge, and exclusive merchandise boutique daily 12PM to 8PM.
+              Visit the world-famous show room, classic arcade game lounge, and
+              exclusive merchandise boutique daily 12PM to 8PM.
             </p>
             <p>
-              On Friday afternoons, visit West Coast Smash Burgers, serving gourmet smash burgers from 10AM to 5PM, on our outdoor open-air patio.
+              On Friday afternoons, visit West Coast Smash Burgers, serving
+              gourmet smash burgers from 10AM to 5PM, on our outdoor open-air
+              patio.
             </p>
-            <p>k
-              Temporarily closed to the public are the West Coast Customs Experience tour; an all-new tour experience will reopen to the public at the end of Fall 2026.
+            <p>
+              Temporarily closed to the public are the West Coast Customs
+              Experience tour; an all-new tour experience will reopen to the
+              public at the end of Fall 2026.
             </p>
           </div>
 
@@ -86,7 +108,16 @@ export default function SchedulePage() {
               className="absolute left-4 top-1/2 -translate-y-1/2 z-30 text-white hover:opacity-70 transition-opacity bg-black/20 hover:bg-black/40 p-2 rounded-full"
               aria-label="Previous image"
             >
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <path d="M15 18l-6-6 6-6" />
               </svg>
             </button>
@@ -97,7 +128,16 @@ export default function SchedulePage() {
               className="absolute right-4 top-1/2 -translate-y-1/2 z-30 text-white hover:opacity-70 transition-opacity bg-black/20 hover:bg-black/40 p-2 rounded-full"
               aria-label="Next image"
             >
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <path d="M9 18l6-6-6-6" />
               </svg>
             </button>

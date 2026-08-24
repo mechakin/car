@@ -17,7 +17,8 @@ const SERVICE_FIELDS = [
 
 const inputClass =
   "w-full border-b border-white/30 bg-transparent px-0 py-1 sm:py-2 text-sm sm:text-base md:text-lg text-white placeholder-white/50 focus:border-white/60 focus:outline-none";
-const labelClass = "mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg uppercase";
+const labelClass =
+  "mb-1 sm:mb-2 block text-sm sm:text-base md:text-lg uppercase";
 
 export default function BrandBuildForm() {
   const [formData, setFormData] = useState({
@@ -43,12 +44,16 @@ export default function BrandBuildForm() {
   });
   const [files, setFiles] = useState<File[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
   const formRef = useRef<HTMLFormElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -64,7 +69,9 @@ export default function BrandBuildForm() {
     setFiles((prev) => prev.filter((_, i) => i !== index));
   };
 
-  const fileToBase64 = (file: File): Promise<{ filename: string; content: string }> =>
+  const fileToBase64 = (
+    file: File,
+  ): Promise<{ filename: string; content: string }> =>
     new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.onload = () => {
@@ -162,15 +169,25 @@ export default function BrandBuildForm() {
           <Link
             href="/brand-build"
             className="font-bold uppercase leading-none text-white tracking-tighter hover:opacity-80 transition-opacity inline-block"
-            style={{ letterSpacing: "-0.075em", lineHeight: "0.9", fontSize: "clamp(1rem, 4dvw, 3rem)" }}
+            style={{
+              letterSpacing: "-0.075em",
+              lineHeight: "0.9",
+              fontSize: "clamp(1rem, 4dvw, 3rem)",
+            }}
           >
-            <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>←</span> BACK
+            <span style={{ fontWeight: 900, WebkitTextStroke: "0.5px white" }}>
+              ←
+            </span>{" "}
+            BACK
           </Link>
         </SectionContent>
       </div>
 
       {/* Form Content */}
-      <div className="relative z-10 px-6 pb-16 sm:px-10 lg:px-12" style={{ paddingTop: "clamp(4.5rem, 8dvw, 5.5rem)" }}>
+      <div
+        className="relative z-10 px-6 pb-16 sm:px-10 lg:px-12"
+        style={{ paddingTop: "clamp(4.5rem, 8dvw, 5.5rem)" }}
+      >
         <div className="max-w-2xl mx-auto">
           <form ref={formRef} onSubmit={handleSubmit} className="space-y-8">
             {/* Tell us about you */}
@@ -303,7 +320,8 @@ export default function BrandBuildForm() {
 
                 <div>
                   <label htmlFor="yearMakeModel" className={labelClass}>
-                    Year/Make/Model of your car <span className="text-[#0A56FF]">*</span>
+                    Year/Make/Model of your car{" "}
+                    <span className="text-[#0A56FF]">*</span>
                   </label>
                   <input
                     type="text"
@@ -333,7 +351,8 @@ export default function BrandBuildForm() {
 
                 <div>
                   <label htmlFor="investRange" className={labelClass}>
-                    What range are you looking to invest? <span className="text-[#0A56FF]">*</span>
+                    What range are you looking to invest?{" "}
+                    <span className="text-[#0A56FF]">*</span>
                   </label>
                   <input
                     type="text"
@@ -351,11 +370,14 @@ export default function BrandBuildForm() {
             {/* What're You Looking to Do */}
             <SectionContent delay={0.2}>
               <h2 className="mb-6 font-bold uppercase text-2xl sm:text-3xl md:text-4xl">
-                What&apos;re You Looking to Do
+                What Are You Looking to Do
               </h2>
               <div className="space-y-4">
                 {SERVICE_FIELDS.map((field) => {
-                  const name = field === "Wheels/Rims" ? "wheelsRims" : field.toLowerCase();
+                  const name =
+                    field === "Wheels/Rims"
+                      ? "wheelsRims"
+                      : field.toLowerCase();
                   return (
                     <div key={field}>
                       <label htmlFor={name} className={labelClass}>
@@ -365,7 +387,9 @@ export default function BrandBuildForm() {
                         type="text"
                         id={name}
                         name={name}
-                        value={formData[name as keyof typeof formData] as string}
+                        value={
+                          formData[name as keyof typeof formData] as string
+                        }
                         onChange={handleChange}
                         className={inputClass}
                       />
@@ -411,17 +435,31 @@ export default function BrandBuildForm() {
                         key={`${file.name}-${i}-${file.lastModified}`}
                         className="flex items-center gap-2 rounded border border-white/30 bg-white/5 pl-3 pr-1 py-2 text-sm text-white/90"
                       >
-                        <span className="truncate max-w-[8rem] sm:max-w-[12rem]" title={file.name}>
+                        <span
+                          className="truncate max-w-[8rem] sm:max-w-[12rem]"
+                          title={file.name}
+                        >
                           {file.name}
                         </span>
-                        <span className="text-white/50 text-xs shrink-0">({(file.size / 1024).toFixed(1)} KB)</span>
+                        <span className="text-white/50 text-xs shrink-0">
+                          ({(file.size / 1024).toFixed(1)} KB)
+                        </span>
                         <button
                           type="button"
                           onClick={() => removeFile(i)}
                           className="ml-1 p-1 rounded hover:bg-white/20 text-white/70 hover:text-white transition-colors"
                           aria-label={`Remove ${file.name}`}
                         >
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
                             <path d="M18 6L6 18M6 6l12 12" />
                           </svg>
                         </button>
@@ -443,10 +481,14 @@ export default function BrandBuildForm() {
                 {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
               </button>
               {submitStatus === "success" && (
-                <p className="mt-4 text-[#0A56FF]">Thank you! Your inquiry has been sent.</p>
+                <p className="mt-4 text-[#0A56FF]">
+                  Thank you! Your inquiry has been sent.
+                </p>
               )}
               {submitStatus === "error" && (
-                <p className="mt-4 text-red-500">There was an error. Please try again.</p>
+                <p className="mt-4 text-red-500">
+                  There was an error. Please try again.
+                </p>
               )}
             </SectionContent>
           </form>
