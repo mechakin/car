@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
@@ -17,14 +16,10 @@ export default function ScheduleVisit({
       {/* Background - Single Image */}
       <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h">
         {image && (
-          <Image
+          <img
             src={image}
             alt="Schedule a visit"
-            fill
-            className="object-cover"
-            priority
-            quality={100}
-            sizes="100dvw"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         )}
       </div>

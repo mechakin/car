@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
 
@@ -38,13 +37,10 @@ export default function YearsStatement({
       {logoImage && (
         <div className="absolute top-[30%] left-0 right-0 z-10 px-6 sm:px-10 lg:px-12 lg:top-[28%]">
           <div className="relative w-full lg:h-[50dvw] h-[78svh] ">
-            <Image
+            <img
               src={logoImage}
               alt="West Coast Customs Logo"
-              fill
-              className="object-contain"
-              priority
-              sizes="100dvw"
+              className="absolute inset-0 h-full w-full object-contain"
             />
           </div>
         </div>

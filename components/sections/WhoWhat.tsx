@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
 
@@ -26,13 +25,10 @@ export default function WhoWhat({
       {logoImage && (
         <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
           <div className="relative w-full h-full">
-            <Image
+            <img
               src={logoImage}
               alt="West Coast Customs Logo"
-              fill
-              className="object-contain"
-              priority
-              sizes="100dvw"
+              className="absolute inset-0 h-full w-full object-contain"
               style={{ transform: "rotate(90deg)" }}
             />
           </div>

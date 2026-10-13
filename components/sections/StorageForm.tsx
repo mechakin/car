@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
@@ -238,13 +237,10 @@ export default function StorageForm({
                 {/* Main Carousel Image */}
                 {carouselImages[currentImageIndex] && (
                   <div className="relative w-full h-full">
-                    <Image
+                    <img
                       src={carouselImages[currentImageIndex]!}
                       alt={`Storage ${currentImageIndex + 1}`}
-                      fill
-                      className="object-cover"
-                      priority
-                      quality={100}
+                      className="absolute inset-0 h-full w-full object-cover"
                     />
                   </div>
                 )}
@@ -311,52 +307,40 @@ export default function StorageForm({
           {/* Image 1 */}
           {image1 && (
             <div className="relative">
-              <Image
+              <img
                 src={image1}
                 alt="Storage"
-                fill
-                className="object-cover"
-                priority
-                quality={100}
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
           )}
           {/* Image 2 */}
           {image2 && (
             <div className="relative">
-              <Image
+              <img
                 src={image2}
                 alt="Storage"
-                fill
-                className="object-cover"
-                priority
-                quality={100}
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
           )}
           {/* Image 3 */}
           {image3 && (
             <div className="relative">
-              <Image
+              <img
                 src={image3}
                 alt="Storage"
-                fill
-                className="object-cover"
-                priority
-                quality={100}
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
           )}
           {/* Image 4 */}
           {image4 && (
             <div className="relative">
-              <Image
+              <img
                 src={image4}
                 alt="Storage"
-                fill
-                className="object-cover"
-                priority
-                quality={100}
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
           )}

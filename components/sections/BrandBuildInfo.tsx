@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
@@ -66,12 +65,10 @@ export default function BrandBuildInfo() {
             <SectionContent delay={0.2}>
               <div className="relative w-full aspect-video mb-16 overflow-hidden border border-white/20">
                 {brandBuildImages[imageIndex] && (
-                  <Image
+                  <img
                     src={brandBuildImages[imageIndex]!.src}
                     alt={brandBuildImages[imageIndex]!.alt}
-                    fill
-                    className="object-cover"
-                    sizes="100vw"
+                    className="absolute inset-0 h-full w-full object-cover"
                   />
                 )}
                 {brandBuildImages.length > 1 && (

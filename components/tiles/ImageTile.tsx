@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 
 type ImageTileProps = {
@@ -33,13 +32,10 @@ export default function ImageTile({
         whileHover={reduceMotion ? undefined : { scale: 1.03 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <Image
+        <img
           src={src}
           alt={alt}
-          fill
-          sizes="(min-width: 1024px) 25dvw, (min-width: 768px) 33dvw, 100dvw"
-          className="object-cover"
-          priority={false}
+          className="absolute inset-0 h-full w-full object-cover"
         />
       </motion.div>
       {(title || subtitle) && (

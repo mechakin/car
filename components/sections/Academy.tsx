@@ -1,7 +1,6 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
@@ -69,14 +68,10 @@ export default function Academy({
             className={logoClass}
           >
             {logoImage && (
-              <Image
+              <img
                 src={logoImage}
                 alt="West Coast Customs Academy Logo"
-                fill
-                className="object-contain"
-                priority
-                sizes="(max-width: 640px) 340px, (max-width: 1024px) 425px, (max-width: 1280px) 510px, (max-width: 1536px) 595px, 680px"
-                quality={100}
+                className="absolute inset-0 h-full w-full object-contain"
               />
             )}
           </Link>
@@ -97,14 +92,10 @@ export default function Academy({
         {/* Right Side - Workshop Image */}
         <div className="relative w-1/2">
           {workshopImage && (
-            <Image
+            <img
               src={workshopImage}
               alt="West Coast Customs Academy Workshop"
-              fill
-              className="object-cover"
-              priority
-              quality={100}
-              sizes="50dvw"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           )}
           

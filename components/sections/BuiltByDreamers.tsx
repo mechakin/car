@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
@@ -17,14 +16,10 @@ export default function BuiltByDreamers({
       {/* Background Image */}
       <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h">
         {backgroundImage && (
-          <Image
+          <img
             src={backgroundImage}
             alt="Car storage facility"
-            fill
-            className="object-cover"
-            priority
-            sizes="100dvw"
-            quality={100}
+            className="absolute inset-0 h-full w-full object-cover"
           />
         )}
       </div>

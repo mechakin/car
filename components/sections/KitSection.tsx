@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Section from "./Section";
 
@@ -23,13 +22,10 @@ export default function KitSection() {
 
         {/* Top image - kit1.png, half viewport */}
         <div className="relative w-full h-[50svh]">
-          <Image
+          <img
             src="/images/kit1.jpg"
             alt="Thicc Kits"
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
         <div className="absolute top-0 left-0 items-center justify-center flex flex-col w-full h-full z-10 pointer-events-none" style={{ transform: "translateY(0.5rem)" }}>
@@ -49,12 +45,10 @@ export default function KitSection() {
         </div>
         {/* Bottom image - kit2.png, half viewport */}
         <div className="relative w-full h-[50svh]">
-          <Image
+          <img
             src="/images/kit2.jpg"
             alt="Thicc Kits"
-            fill
-            className="object-cover"
-            sizes="100vw"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
 

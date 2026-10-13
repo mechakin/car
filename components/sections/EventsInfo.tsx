@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
@@ -73,12 +72,10 @@ export default function EventsInfo() {
             <SectionContent delay={0.2}>
               <div className="relative w-full aspect-video mb-16 overflow-hidden border border-white/20">
                 {eventImages[eventIndex] && (
-                  <Image
+                  <img
                     src={eventImages[eventIndex]!}
                     alt={`Event ${eventIndex + 1}`}
-                    fill
-                    className="object-cover"
-                    sizes="100vw"
+                    className="absolute inset-0 h-full w-full object-cover"
                   />
                 )}
                 <button
@@ -141,12 +138,10 @@ export default function EventsInfo() {
               <div className="flex flex-col lg:flex-row gap-8 items-center mb-16">
                 <div className="flex-1 relative aspect-video min-h-[200px] overflow-hidden border border-white/20">
                   {arcadeImages[arcadeIndex] && (
-                    <Image
+                    <img
                       src={arcadeImages[arcadeIndex]!}
                       alt={`Arcade ${arcadeIndex + 1}`}
-                      fill
-                      className="object-cover"
-                      sizes="50vw"
+                      className="absolute inset-0 h-full w-full object-cover"
                     />
                   )}
                   <button
@@ -182,12 +177,10 @@ export default function EventsInfo() {
             {/* Map */}
             <SectionContent delay={0.35}>
               <div className="relative w-full aspect-video mb-16 overflow-hidden border border-white/20">
-                <Image
+                <img
                   src="/images/map.png"
                   alt="West Coast Customs Location"
-                  fill
-                  className="object-contain bg-black"
-                  sizes="100vw"
+                  className="absolute inset-0 h-full w-full object-contain bg-black"
                 />
               </div>
             </SectionContent>

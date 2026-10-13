@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/sections/Footer";
 import Header from "@/components/sections/Header";
@@ -90,14 +89,10 @@ export default function SchedulePage() {
           <div className="relative w-full max-w-5xl aspect-video border border-white/30 overflow-hidden mt-4">
             {CAROUSEL_IMAGES[currentImageIndex] && (
               <div className="relative w-full h-full">
-                <Image
+                <img
                   src={CAROUSEL_IMAGES[currentImageIndex]!}
                   alt={`Showroom ${currentImageIndex + 1}`}
-                  fill
-                  className="object-cover"
-                  priority
-                  quality={100}
-                  sizes="(max-width: 1024px) 100vw, 1024px"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
             )}

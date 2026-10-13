@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 type LogoProps = {
   className?: string;
 };
@@ -7,7 +5,7 @@ type LogoProps = {
 export default function Logo({ className = "" }: LogoProps) {
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      <Image
+      <img
         src="/images/w-logo.png"
         alt="West Coast Customs Logo"
         width={32}

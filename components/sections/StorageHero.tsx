@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
@@ -19,14 +18,10 @@ export default function StorageHero({
       {/* Background Image - Car Storage Facility */}
       <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h bg-black overflow-hidden">
         {backgroundImage && (
-          <Image
+          <img
             src={backgroundImage}
             alt="Premium Storage Concierge"
-            fill
-            className="object-cover"
-            priority
-            quality={100}
-            sizes="100dvw"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         )}
       </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Section from "./Section";
 
@@ -63,12 +62,10 @@ export default function Footer() {
             {/* Logo */}
             <div className="flex-shrink-0">
               <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32">
-                <Image
+                <img
                   src="/images/wcc-logo.png"
                   alt="West Coast Customs Logo"
-                  fill
-                  className="object-contain brightness-0 invert"
-                  sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
+                  className="absolute inset-0 h-full w-full object-contain brightness-0 invert"
                 />
               </div>
             </div>

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,13 +59,10 @@ export default function Header() {
           <Link href="/" className="flex-shrink-0 overflow-visible" onClick={closeMenu}>
             <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
               <div className="absolute inset-0 scale-150 sm:scale-150">
-                <Image
+                <img
                   src="/images/wcc_logo_for_website_fixed.png"
                   alt="West Coast Customs Logo"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 640px) 80px, 120px"
-                  priority
+                  className="absolute inset-0 h-full w-full object-contain"
                 />
               </div>
             </div>

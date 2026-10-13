@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Section from "./Section";
 import SectionContent from "./SectionContent";
@@ -25,26 +24,18 @@ export default function BrandBuildHero({
     <Section id="brand-build-hero" className="relative">
       {/* Background Image - Mobile */}
       <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h bg-black overflow-hidden md:hidden">
-        <Image
+        <img
           src={resolvedMobileImage}
           alt="West Coast Customs Brand Build"
-          fill
-          className="object-cover"
-          priority
-          quality={100}
-          sizes="100dvw"
+          className="absolute inset-0 h-full w-full object-cover"
         />
       </div>
       {/* Background Image - Desktop */}
       <div className="absolute inset-0 h-[100svh] mobile-stable-viewport-h bg-black overflow-hidden hidden md:block">
-        <Image
+        <img
           src={backgroundImage}
           alt="West Coast Customs Brand Build"
-          fill
-          className="object-cover"
-          priority
-          quality={100}
-          sizes="100dvw"
+          className="absolute inset-0 h-full w-full object-cover"
         />
       </div>
 

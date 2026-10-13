@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/sections/Footer";
 import Header from "@/components/sections/Header";
@@ -16,26 +15,18 @@ export default function FounderPage() {
         <Section id="founder-1" className="!min-h-[60svh] h-[60svh] md:!min-h-[60dvh] md:h-[60dvh] overflow-hidden">
           {/* Background Image - Mobile */}
           <div className="absolute inset-0 md:hidden">
-            <Image
+            <img
               src="/images/backup/founder-1-mobile.png"
               alt="West Coast Customs Founder"
-              fill
-              className="object-cover object-top"
-              priority
-              quality={100}
-              sizes="100vw"
+              className="absolute inset-0 h-full w-full object-cover object-top"
             />
           </div>
           {/* Background Image - Desktop */}
           <div className="absolute inset-0 hidden md:block">
-            <Image
+            <img
               src="/images/backup/founder-1.png"
               alt="West Coast Customs Founder"
-              fill
-              className="object-cover object-center"
-              priority
-              quality={100}
-              sizes="100vw"
+              className="absolute inset-0 h-full w-full object-cover object-center"
             />
           </div>
 
@@ -85,26 +76,18 @@ export default function FounderPage() {
           <div className="absolute inset-0 flex">
             {/* Left half - left portion of image */}
             <div className="relative w-1/2 h-full overflow-hidden">
-              <Image
+              <img
                 src="/images/backup/founder-2.png"
                 alt="West Coast Customs Founder"
-                fill
-                className="object-cover object-left"
-                priority
-                quality={100}
-                sizes="50vw"
+                className="absolute inset-0 h-full w-full object-cover object-left"
               />
             </div>
             {/* Right half - right portion of image */}
             <div className="relative w-1/2 h-full overflow-hidden">
-              <Image
+              <img
                 src="/images/backup/founder-3.png"
                 alt="West Coast Customs Founder"
-                fill
-                className="object-cover object-right"
-                priority
-                quality={100}
-                sizes="50vw"
+                className="absolute inset-0 h-full w-full object-cover object-right"
               />
             </div>
           </div>
