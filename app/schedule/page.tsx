@@ -79,9 +79,8 @@ export default function SchedulePage() {
               patio.
             </p>
             <p>
-              Temporarily closed to the public are the West Coast Customs
-              Experience tour; an all-new tour experience will reopen to the
-              public at the end of Fall 2026.
+              The West Coast Customs Experience tour runs daily from 10AM to
+              4PM. There are no tours at 12PM due to lunch.
             </p>
           </div>
 
